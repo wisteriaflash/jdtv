@@ -1,0 +1,32 @@
+1.活动页面三个app下载链接。
+2.奖项的领取方式是什么？
+3.获奖用户是调用真实的用户列表，还是手工填写的列表？
+
+
+//link
+if (ua.indexOf('iphone') > 0) {
+  window.location.href="http://itunes.apple.com/cn/app/id557825088?ls=1&mt=8";
+} else if (ua.indexOf('ipad') > 0) {
+  window.location.href="http://itunes.apple.com/cn/app/id725489675?ls=1&mt=8";
+} else if (ua.indexOf('android') > 0) {
+  window.location.href="http://softfile.3g.qq.com/51buy/51buy_cf.apk";
+
+//
+活动id = 17219;
+
+//bak
+http://event.yixun.com/event/16940b164.html
+
+//抽奖转盘对应规则
+1.奖品，从左至右顺时针填写，每个奖项都要填写。
+2.奖项的第一个奖品，应该是偏右侧的，也就是，指针正中指着的应该是最后一个奖项。
+
+
+//txt
+恭喜您获得1Q币，我们将会在10个工作日内发放到您的Q币账户
+
+//admin账号
+66382
+Abc123
+
+

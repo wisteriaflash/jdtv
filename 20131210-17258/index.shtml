@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="keywords" content="微信支付特权" />
+<meta name="description" content="在易迅网首次使用微信支付下单购物，专享微信支付特权，返10元易迅券。" />
+<title>首次使用微信支付返10元 - 财付通 会支付 会生活</title>
+<link href="http://st.icson.com/51buy_v3/css/gb.css?v=2012083011" rel="stylesheet" type="text/css" /> 
+<style>
+/* 整体框架样式*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {margin: 0;padding: 0;}
+ul{list-style-type:none;}
+.action-wrap {height:100%;min-width:1000px;overflow:hidden;position:relative;}
+.action-wrap .container {height:100%;left:50%;margin-left:-498px;position: absolute; width:996px;z-index:1;}
+.action-wrap .bg-container {position: relative;width: 100%;}
+.tex-title{font-size:0;line-height:0;text-indent:-9999em;}
+.bg-1{width:100%;height:257px;background:url(img_1.jpg) no-repeat center top;}
+.bg-2{width:100%;height:238px;background:url(img_2.jpg) no-repeat center top;}
+.bg-3{width:100%;height:241px;background:url(img_3.jpg) no-repeat center top;}
+.bg-4{width:100%;height:312px;background:url(img_4.jpg) no-repeat center top;}
+.bg-5{width:100%;height:356px;background:url(img_5.jpg) no-repeat center top;}
+
+.footer-cont{min-width:1000px;width:100%;background-color:#485E24;color:#FFF;}
+.rule{position:absolute;top:1124px;left:37px;}
+.rule ol{padding-left:25px;}
+.rule ol li{;color:#2E2E2E;line-height:22px;font-size:14px;}
+.rule .red{color:#FF0000;}
+.col-list{position:absolute;top:617px;left:37px;}
+.list-two{position:absolute;top:917px;left:37px;}
+.ma-top{margin-top:-10px;}
+.col-list li{width:185px;margin-right:53px;float:left;font-size:14px;color:#000;text-align:center;}
+
+.fix-lover{width:277px;height:322px;position:fixed;top:350px;left:46%;margin-left:561px;z-index:9;background:url(img_100.png) no-repeat;}
+.fix-lover a{width:100%;height:100%;display:block;}
+</style>
+</head>
+<body>
+
+<div class="action-wrap">
+<div class="fix-lover">
+</div>
+	<div class="container">
+<!-- 中间内容 [[-->
+	<h1 class="tex-title">微信支付特权</h1>
+	<p class="tex-title">在易迅首次使用微信支付返10元</p>
+	<ul class="col-list">
+		<li>在易迅网下单购物</li>
+		<li>首次使用微信支付</li>
+		<li>支付成功</li>
+		<li class="ma-top">每月20日/次月05日<br />登录易迅查收优惠券</li>
+	</ul>
+	<ul class="col-list list-two">
+		<li>二维码</li>
+		<li>登录微信扫一扫</li>
+		<li>轻松填写表单</li>
+		<li>支付成功</li>
+	</ul>
+	<div class="rule">
+		<ol>
+			<li>活动于2013年11月15日开始。</li>
+			<li>首次绑定使用微信支付，在易迅网和客户端下单支付成功的用户，即可返10元优惠券。 首次绑定使用微信支付，即用户为首次注册绑定并使用微信支付支付的用户。同一微信号、易迅号、手机号、银行卡、身份证号绑定过微信支付的，均不属于首次绑定使用微信支付的用户。</li>
+			<li>返券时间：<br />
+				1）每月20日，返还10元优惠券到当月1日-10日首次使用微信支付在易迅下单支付成功的用户；<br />
+				2）每月30日，返还10元优惠券到上月11日-20日首次使用微信支付在易迅下单支付成功的用户；<br />
+				3）次月10日，返还10元优惠券到上月21日-31日首次使用微信支付在易迅下单支付成功的用户；<br />
+				如遇法定节假日，返还日期顺延到工作日的第二天。</li> 
+			<li>用户订单发生退货、取消订单，将不给予返还10元优惠券。 </li>
+			<li>在法律许可的范畴内，本活动最终解释权归财付通和易迅所有，易迅客服电话：400-828-1878；财付通客服电话：0755-86013860</li>
+		</ol>
+	</div>
+<!-- 中间内容 ]]-->
+	</div>
+<!-- 背景 S[[-->
+	<div class="bg-container">
+		<div class="bg-1"></div>
+		<div class="bg-2"></div>
+		<div class="bg-3"></div>
+		<div class="bg-4"></div>
+		<div class="bg-5"></div>
+		<div class="bg-6"></div>
+		<div class="bg-7"></div>
+		<div class="bg-8"></div>
+		<div class="bg-9"></div>
+		<div class="bg-10"></div>
+	</div>
+<!-- 背景 E]]-->
+</div>
+</body>
+</html>

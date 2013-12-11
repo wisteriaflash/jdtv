@@ -1,0 +1,104 @@
+<!-- author:wisteriawei -->
+<!-- date:20131210 -->
+<script type="text/javascript" src="http://st.icson.com/static_v1/js/app/component.js"></script>
+<style type="text/css">
+.page_event {width:100%;text-align:left;background: #FAFAFA;}
+.page_event .event_wrap {width:985px;margin:0 auto;padding:0 5px;}
+.page_event .mod_item{background-position:center top;background-repeat:no-repeat;}
+.page_event .mod_1 {height:240px;}
+.page_event .mod_2 {height:265px;}
+.page_event .mod_3 {height:148px;}
+.page_event .mod_3 .event_wrap{position: relative; height: 148px;}
+.page_event .mod_3 .event_wrap a{display: block; width: 320px; height: 67px; position: absolute; left: 337px; top: 11px;}
+
+.page_event .mod_more {padding-top:32px;}
+.page_event .more_hd{height: 50px; background:url({@img_4}) no-repeat center top;}
+.page_event .more_bd {overflow:hidden;width:983px;margin-top:10px;border:1px #c1c1c1 solid;border-bottom:none;}
+.page_event .more_bd ul {width:985px;}
+.page_event .more_bd li {float:left;width:195px;height:353px;padding:0 25px;border-right:1px #c1c1c1 solid;border-bottom:1px #c1c1c1 solid; background-color: #fff;}
+.page_event .more_bd .img_wrap {position:relative;display:block;height:210px;text-align:center;line-height:210px;font-size:0;#font-size:180px;}
+.page_event .more_bd .img_wrap img {vertical-align:middle;}
+.page_event .more_bd .img_wrap .ss {position:absolute;top:0;right:-12px;width:59px;height:70px;background:url({@img_15}) no-repeat left top;}
+.page_event .more_bd .price strong {font-size:20px;font-family:arial;}
+.page_event .more_bd .name {display:block;height:36px;overflow:hidden;word-break:break-all;}
+.page_event .more_bd a:link, .page_event .more_bd a:visited, 
+.page_event .more_bd a:hover, .page_event .more_bd a:active {color:#333;}
+.page_event .more_bd .desc {overflow:hidden;height:18px;margin:5px 0 10px 0;color:#ff7200;white-space: nowrap;text-overflow: ellipsis;}
+.page_event .more_bd .btn_buy:link, .page_event .more_bd .btn_buy:visited,
+.page_event .more_bd .btn_buy:hover, .page_event .more_bd .btn_buy:active {overflow:hidden;display:block;width:117px;height:32px;background-color:#EE9A17;color:#fff;text-align:center;line-height:32px;font-size:18px;text-decoration:none;}
+.page_event .more_bd .btn_buy_disabled:link, .page_event .more_bd .btn_buy_disabled:visited, 
+.page_event .more_bd .btn_buy_disabled:hover, .page_event .more_bd .btn_buy_disabled:active {background-color:#f3f3f3;}
+
+
+.page_event .mod_rule{padding: 50px 0;}
+.page_event .mod_rule .event_wrap{height: 265px; margin: 0 auto; color: #888; overflow: hidden; background-color: #FFFFFF;}
+.page_event .mod_rule p, .page_event .mod_rule ul{margin: 0 16px;}
+.page_event .mod_rule p{color: #444; font-size: 14px; line-height: 20px; font-weight: bold; padding-top: 15px; margin-bottom: 8px;}
+.page_event .mod_rule  ul li{margin-bottom: 6px; font-size: 14px; line-height: 24px; position: relative; padding-left: 20px;}
+.page_event .mod_rule  ul li i{position: absolute; display: block; width: 20px; left: 0; top: 0;}
+</style>
+  <div class="page_event">
+    <div class="mod_item mod_1" data-oxlazy="{@img_1}"></div>
+    <div class="mod_item mod_2" data-oxlazy="{@img_2}"></div>
+    <div class="mod_item mod_3" data-oxlazy="{@img_3}">
+      <div class="event_wrap"><a href="http://www.yixun.com/?YTAG=0.1070200003300000" target="_blank" title="立即选购" target="_blank"></a></div>
+    </div>
+    <div class="mod_more event_wrap">
+      <div class="more_hd"></div>
+      <div class="more_bd">
+        <ul>
+          {@gdgroup_1}
+            <li>
+              <a href="{pd_url}" target="_blank" class="img_wrap"><img data-oxlazy="{pd_pic160}" src="http://st.icson.com/51buy_v3/img/gb/blank.gif" alt="{pd_name}"/><i class="ss"></i></a>
+              <p class="price">易迅售价：￥<strong>{pd_show_price}</strong></p>
+              <a href="{pd_url}" title="{pd_name}" target="_blank" class="name">{pd_name}</a>
+              <p class="desc" title="{pd_promotion}">{pd_promotion}</p>
+              {cart}
+            </li>
+          {/@gdgroup_1}
+        </ul>
+      </div>
+    </div>
+    <div class="mod_rule">
+      <div class="event_wrap">
+        <p>活动规则：</p>
+        <ul>
+          {@evt_desc}
+        </ul>  
+      </div>
+    </div>
+  </div>
+<script>
+function evt_callback_fun() {
+//加入购物车
+$('.btn_common').each(function() {
+  _thisHtml = $(this).html();
+  if (_thisHtml == '加入购物车') {
+     $(this).attr({'class':'btn_buy', 'title':'立即购买'});
+  } else {
+     $(this).attr({'class':'btn_buy btn_buy_disabled', 'title':'已售完', 'href':'javascript:;'});
+     $(this).removeAttr('target');
+  }
+});
+//修改角标
+$(".ss").each(function(){
+   if($(this).html() != ""){
+    $(this).css({
+       "display":"block"
+    })
+   }
+});
+}
+//ready
+$(document).ready(function () {
+    evt_callback_fun();
+});
+</script>
+<script>
+(function(a){var c=a(window);var b={flag:"data-oxlazy",init:function(){this.items=a.makeArray(a("["+this.flag+"]"));this.cnt=this.items.length;if(this.cnt===0){return false;
+}c.bind("scroll.oxlazy",function(d){b.detect();}).bind("resize.oxlazy",function(d){b.detect();});},detect:function(){var e=[];for(var d=0;d<this.cnt;d++){if(!b.rock(this.items[d])){e.push(this.items[d]);
+}}this.items=e;this.cnt=this.items.length;},isInView:function(f){var e=a(f),h=e.offset(),g=h.top-c.scrollTop(),d=c.height(),i=-(e.height());if((g<i)||(g>=d)){return false;
+}return e;},rock:function(i){var h=i.getAttribute(this.flag);if((!h)||(h==="")){return false;}var f=this.isInView(i);if(!f){return false;}var j=i.tagName==="IMG",e=i.tagName==="IFRAME",g=i.getAttribute(this.flag+"-timestamp")==="1",d=g?("?t="+this.getTimeStamp()):"";
+h=h+d;if(j||e){i.setAttribute("src",h);}else{f.css("background-image","url("+h+")");}i.removeAttribute(this.flag);return true;},getTimeStamp:function(){var d=new Date();
+return(d.getFullYear()+""+d.getMonth()+""+d.getDate());}};a(function(){b.init();b.detect();});})(jQuery);
+</script>

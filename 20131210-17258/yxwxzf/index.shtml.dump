@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gb2312" />
+<meta name="keywords" content="微信支付特权" />
+<meta name="description" content="在易迅网首次使用微信支付下单购物，专享微信支付特权，返10元易迅券。" />
+<title>首次使用微信支付返10元 - 财付通 会支付 会生活</title>
+<!--#include virtual="/inc/css_action_v4_1.html" --><!-- 活动公用css -->
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<!--[if IE 6]>
+<style>
+*html{background-image:url(about:blank);background-attachment:fixed;}
+.fix-lover{_position:absolute;_top:expression(eval(document.documentElement.scrollTop+250));}
+</style>
+<![endif]-->
+</head>
+<body>
+
+<div class="action-wrap">
+<div class="fix-lover">
+</div>
+	<div class="container">
+<!-- 中间内容 [[-->
+	<h1 class="tex-title">微信支付特权</h1>
+	<p class="tex-title">在易迅首次使用微信支付返10元</p>
+	<ul class="col-list">
+		<li>在易迅网下单购物</li>
+		<li>首次使用微信支付</li>
+		<li>支付成功</li>
+		<li class="ma-top">每月20日/次月05日<br />登录易迅查收优惠券</li>
+	</ul>
+	<ul class="col-list list-two">
+		<li>二维码</li>
+		<li>登录微信扫一扫</li>
+		<li>轻松填写表单</li>
+		<li>支付成功</li>
+	</ul>
+	<div class="rule">
+		<ol>
+			<li>活动于2013年11月15日开始。</li>
+			<li>首次绑定使用微信支付，在易迅网和客户端下单支付成功的用户，即可返10元优惠券。 首次绑定使用微信支付，即用户为首次注册绑定并使用微信支付支付的用户。同一微信号、易迅号、手机号、银行卡、身份证号绑定过微信支付的，均不属于首次绑定使用微信支付的用户。</li>
+			<li>返券时间：<br />
+				1）每月20日，返还10元优惠券到当月1日-10日首次使用微信支付在易迅下单支付成功的用户；<br />
+				2）每月30日，返还10元优惠券到上月11日-20日首次使用微信支付在易迅下单支付成功的用户；<br />
+				3）次月10日，返还10元优惠券到上月21日-31日首次使用微信支付在易迅下单支付成功的用户；<br />
+				如遇法定节假日，返还日期顺延到工作日的第二天。</li> 
+			<li>用户订单发生退货、取消订单，将不给予返还10元优惠券。 </li>
+			<li>在法律许可的范畴内，本活动最终解释权归财付通和易迅所有，易迅客服电话：400-828-1878；财付通客服电话：0755-86013860</li>
+		</ol>
+	</div>
+<!-- 中间内容 ]]-->
+	</div>
+<!-- 背景 S[[-->
+	<div class="bg-container">
+		<div class="bg-1"></div>
+		<div class="bg-2"></div>
+		<div class="bg-3"></div>
+		<div class="bg-4"></div>
+		<div class="bg-5"></div>
+		<div class="bg-6"></div>
+		<div class="bg-7"></div>
+		<div class="bg-8"></div>
+		<div class="bg-9"></div>
+		<div class="bg-10"></div>
+	</div>
+<!-- 背景 E]]-->
+</div>
+<!--#include virtual="/res/action/v3.0/inc/footer.shtml" --><!-- 活动公用脚 -->
+<!--#include virtual="/res/action/v3.0/inc/js_action_base_v6.html" -->
+</body>
+</html>
+<script type="text/javascript">
+	ActionBase.run("YUI",function(Y){
+		Y.Header.init();         //初始化头部
+	});
+</script>

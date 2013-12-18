@@ -129,7 +129,7 @@ function _createSwf(src,w,h,wmod,swfid){
 //lottery-list
 var _num = 0;
 G.app.old.Lottery.getRecentAwardList("17219",_getAwardList);
-var awardlist = ["谢谢你","50Q币","AK47","1Q币","防弹头盔","1Q币","高爆手雷","100Q币"];
+var awardlist = ["谢谢你","50Q币","AK47","10Q币","防弹头盔","1Q币","高爆手雷","100Q币"];
 var addAwardList = [{"nick":"36**14","success_code":"8"},{"nick":"81**44","success_code":"7"},{"nick":"12**00","success_code":"4"},{"nick":"39**58","success_code":"6"},{"nick":"17**09","success_code":"6"},{"nick":"27**73","success_code":"7"},{"nick":"30**51","success_code":"7"},{"nick":"55**20","success_code":"4"},{"nick":"38**90","success_code":"6"}];
 var listNum = 11;
 function _getAwardList(info){
@@ -196,7 +196,7 @@ $(document).ready(function () {
     var _url = encodeURIComponent('http://event.yixun.com/event/172192b63.html');//活动页面地址   
     var _pic=encodeURI("http://img3.icson.com/template/2013/12/09/138658957351083000_img_300.jpg");//微博广告图片,可以空
     $(".share-btn").click(function(){
-        var _u = 'http://v.t.qq.com/share/share.php?title='+encodeURIComponent(_t_huati+_t_evn)+'&url='+_url+'&appkey=801148568&site=www.51buy.com&pic='+_pic;
+        var _u = 'http://v.t.qq.com/share/share.php?title='+encodeURIComponent(_t_huati+_t_evn)+'&url='+_url+'&appkey=801148568&site=www.yixun.com&pic='+_pic;
         window.open(_u,'','width=600,height=300,top=0,left=0,toolbar=no,menubar=no,scrollbars=no,location=yes,resizable=no,status=no');
       })
 

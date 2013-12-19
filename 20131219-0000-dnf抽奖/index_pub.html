@@ -1,5 +1,6 @@
 <!-- author:wisteriawei -->
 <!-- date:20131219 -->
+<script type="text/javascript" src="http://st.icson.com/static_v1/js/app/component.js" charset="gb2312"></script>
 <style type="text/css">
 .page_event {width:100%;text-align:left;background:url({@img_0}) repeat #991E21;}
 .page_event .event_wrap {width:1050px;margin:0 auto;padding:0 5px;}
@@ -122,12 +123,10 @@ function _createSwf(src,w,h,wmod,swfid){
 }
 //lottery-list
 var _num = 0;
-if(G.app.old){
-  G.app.old.Lottery.getRecentAwardList("17626",_getAwardList);  
-}
+G.app.old.Lottery.getRecentAwardList("17626",_getAwardList); 
 var awardlist = ["谢谢你","DNF黑钻3个月","10Q币","遗忘河之水礼盒","100Q币","5Q币","DNF1000代币券","1Q币"];
 var addAwardList = [{"nick":"36**14","success_code":"8"},{"nick":"81**44","success_code":"7"},{"nick":"12**00","success_code":"4"},{"nick":"39**58","success_code":"6"},{"nick":"17**09","success_code":"6"},{"nick":"27**73","success_code":"7"},{"nick":"30**51","success_code":"7"},{"nick":"55**20","success_code":"4"},{"nick":"38**90","success_code":"6"}];
-var listNum = 11;
+var listNum = 12;
 function _getAwardList(info){
   //filter-data
   var arr = [];

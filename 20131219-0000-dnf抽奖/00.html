@@ -1,0 +1,204 @@
+<!-- author:wisteriawei -->
+<!-- date:20131209 -->
+<script type="text/javascript" src="http://st.icson.com/static_v1/js/app/component.js" charset="gb2312"></script>
+<style type="text/css">
+.page_event {width:100%;text-align:left;background:url({@img_0}) repeat-y center top #09090B;}
+.page_event .event_wrap {width:967px;margin:0 auto;padding:0 5px;}
+.page_event .mod_1 {height:399px;background:url({@img_1}) no-repeat center top;}
+.page_event .mod_2 {height:160px;background:url({@img_2}) no-repeat center top;}
+.page_event .mod_3 {height:578px;background:url({@img_3}) no-repeat center top;}
+.page_event .mod_4 {height:331px;background:url({@img_4}) no-repeat center top;}
+.page_event .mod_5 {height:381px;background:url({@img_5}) no-repeat center top;}
+.page_event .mod_5 .event_wrap {position: relative; height: 381px;}
+.page_event .mod_5 .event_wrap a{display: block; width: 211px; height: 56px; position: absolute; left: 228px; top: 132px;}
+.page_event .mod_5 .event_wrap .item_2{top: 197px;}
+.page_event .mod_5 .event_wrap .item_3{left: 498px; top: 166px;}
+.page_event .mod_6{height: 669px;background:url({@img_6}) no-repeat center top;}
+.page_event .mod_6 .event_wrap{width: 908px; position: relative;}
+.page_event .mod_6 .lottery{width: 498px; height: 498px; overflow: hidden; position: absolute; left: 8px; top: 132px;}
+.page_event .mod_6 .mod_bd{position: absolute; left: 510px; top: 140px;}
+.page_event .mod_6 .mod_bd .share-btn{position: absolute; top: 0; left: 0; width: 160px; height: 55px; cursor: pointer;}
+.page_event .mod_6 .mod_bd .share{color: #FFF; font-size: 24px; margin-left: 167px; line-height: 30px; width: 193px; height: 30px; overflow: hidden; padding-top: 12px;}
+.page_event .mod_6 .mod_bd .share em{color: #FFFD12; margin-right: 5px;}
+.page_event .mod_6 .mod_bd .award-title{margin-top: 70px; color: #000; font-size: 14px;}
+.page_event .mod_6 .mod_bd .award-title span{font-size: 20px; margin-right: 10px;}
+.page_event .mod_6 .mod_bd .award-title span, .page_event .mod_6 .mod_bd .award-title em{color: #E04C06; font-weight: bold;}
+.page_event .mod_6 .mod_bd .award-list{width: 345px; height: 289px; overflow: hidden; position: absolute; top: 149px; left: 0; font-size: 14px; padding: 10px; padding-top: 15px;}
+.page_event .mod_6 .mod_bd .award-list li{margin-bottom: 8px; clear: both;}
+.page_event .mod_6 .mod_bd .award-list li em{margin: 0 10px;}
+.page_event .mod_6 .mod_bd .award-list li .time{float: right; margin-bottom: 8px; *margin-top: -18px;}
+.page_event .mod_6 .mod_bd .award-list li .time em{margin-right: 0px;}
+
+.page_event .mod_rule{background:url({@img_7}) no-repeat center top; padding-bottom: 50px;}
+.page_event .mod_rule .event_wrap{position: relative; height: 278px; width: 908px; margin: 0 auto; color: #FFF; overflow: hidden;}
+.page_event .mod_rule .bg{background-color: #a4a4a4; opacity: 0.5; filter: alpha(opacity=50); width: 908px; height: 265px; position: absolute; left: 0; top: 13px;}
+.page_event .mod_rule p, .page_event .mod_rule ul{position: relative; z-index:2; margin: 0 16px;}
+.page_event .mod_rule p{color: #FEDD38; font-size: 26px; line-height: 35px; font-weight: bold; padding-top: 25px; margin-bottom: 8px;}
+.page_event .mod_rule  ul li{margin-bottom: 6px; font-size: 14px; line-height: 20px;}
+</style>
+
+<div class="page_event">
+  <div class="mod_1"></div>
+  <div class="mod_2"></div>
+  <div class="mod_3"></div>
+  <div class="mod_4"></div>
+  <div class="mod_5">
+    <div class="event_wrap">
+      <a href="http://softfile.3g.qq.com/51buy/51buy_cf.apk" class="item_1" title="安卓用户免费下载"></a>
+      <a href="http://itunes.apple.com/cn/app/id557825088?ls=1&mt=8" class="item_2" title="苹果用户免费下载"></a>
+      <a href="http://itunes.apple.com/cn/app/id725489675?ls=1&mt=8" class="item_3" title="iPad用户免费下载"></a>
+    </div>
+  </div>
+  <div class="mod_6">
+    <div class="event_wrap">
+      <div class="lottery" id="J_hd_loy_panel">
+      </div>
+      <div class="mod_bd">
+        <div class="share-btn"></div>
+        <p class="share"><em>123456</em>人已分享</p>
+        <div class="award-title">
+          <span>获奖用户</span>
+          <div style="display:none;">共有<em>123456</em>人参与了抽奖</div>
+        </div>
+        <div class="award-list" id="J_awardList">
+          <ul id="J_awardList1">
+            <li>暂无</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mod_rule">
+    <div class="event_wrap">
+      <span class="bg"></span>
+      <p>活动规则：</p>
+      <ul>
+        {@evt_desc}
+      </ul>  
+    </div>
+  </div>
+</div>
+
+<script>
+//中奖提醒
+var dialog;
+function showErrorByAs(errno,message,level) {
+    if (errno == 0) {//正常抽奖
+        if(level=='2'){
+            dialog = G.ui.popup.showMsg(message, 1);
+        }else{
+            dialog = G.ui.popup.showMsg(message, 3);
+        }
+    } else if (errno == 1) {//未登录
+        dialog = G.ui.popup.showMsg('您好，抽奖活动需要登录后才能参与。', 1, function(){location.href = 'https://base.yixun.com/login.html?url='+encodeURIComponent(location.href);},null,null,'马上登录','取消');
+    }  else if (message == '') {//错误
+        dialog = G.ui.popup.showMsg('抱歉，系统繁忙，请5秒钟后再试');
+    } else {
+        if (errno == 46) {
+            dialog = G.ui.popup.showMsg('您好，此抽奖活动需手机验证后才能参与。', 1, function(){window.open("http://base.yixun.com/myprofile.html");},null,null,'立即验证');
+        } else if(errno == 47) {
+            dialog = G.ui.popup.showMsg('您好，此抽奖活动需邮箱验证后才能参与。', 1, function(){window.open("http://base.yixun.com/myprofile.html");},null,null,'立即验证');
+        } else if(errno == 51) {
+            dialog = G.ui.popup.showMsg('很抱歉，您今天的抽奖次数已用完。请明天再来!', 1, null,null,null,'确定');
+        } else if(errno == 50) {
+            dialog = G.ui.popup.showMsg('很抱歉，您的抽奖次数已用完。', 1, null,null,null,'确定');
+        } else if(errno == 161 || errno == 162) {
+            dialog = G.ui.popup.showMsg("抱歉，先参与活动才能抽奖哦!", 1);
+        }else {
+            dialog = G.ui.popup.showMsg(message);
+        }
+    }
+}
+//抽奖转盘
+function _init_lottery(obj,src,w,h,wmod,swfid){
+    $(obj).removeClass("hd_loy_img").html(_createSwf(src,w,h,wmod,swfid));
+}
+function _createSwf(src,w,h,wmod,swfid){
+    var swf_html = '';
+    swf_html += '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="'+w+'" height="'+h+'" id="'+swfid+'">';
+    swf_html += '<param name="allowScriptAccess" value="always">';
+    swf_html += '<param name="movie" value="'+src+'">';
+    swf_html += '<param name="quality" value="best">';
+    swf_html += '<param name="bgcolor" value="#ccc">';
+    swf_html += '<PARAM NAME="wmode" VALUE="transparent">';
+    swf_html += '<param name="allowScriptAccess" value="always" />';
+    swf_html += '<embed src="'+src+'" quality="high" bgcolor="#ccc" width="'+w+'" height="'+h+'" name="'+swfid+'" allowScriptAccess="always" wmode="transparent" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">';
+    swf_html += '</object>';
+    return swf_html;
+}
+//lottery-list
+var _num = 0;
+G.app.old.Lottery.getRecentAwardList("17219",_getAwardList);
+var awardlist = ["谢谢你","50Q币","AK47","10Q币","防弹头盔","1Q币","高爆手雷","100Q币"];
+var addAwardList = [{"nick":"36**14","success_code":"8"},{"nick":"81**44","success_code":"7"},{"nick":"12**00","success_code":"4"},{"nick":"39**58","success_code":"6"},{"nick":"17**09","success_code":"6"},{"nick":"27**73","success_code":"7"},{"nick":"30**51","success_code":"7"},{"nick":"55**20","success_code":"4"},{"nick":"38**90","success_code":"6"}];
+var listNum = 11;
+function _getAwardList(info){
+  //filter-data
+  var arr = [];
+  var item, _single;
+  for(var j=0, len=info.length; j<len; j++){
+    if(arr.length==listNum){
+      break;
+    }
+    item = info[j];
+    if(item["success_code"]>1){
+      arr.push(item);
+    }
+  }
+  var _listinfo = "";
+  for(var i=0; i<listNum; i++){
+    if(i<arr.length){
+      _single = arr[i];
+    }else{
+      _single = addAwardList[i-arr.length];
+    }
+    if(_single == undefined){
+        break;
+    }
+    var _time = new Date(_single["time"]*1000),
+      _month = _time.getMonth()-0+1>9 ? _time.getMonth()-0+1 : "0"+(_time.getMonth()-0+1),
+      _day = _time.getDate()-0+1>9 ? _time.getDate()-0 : "0"+(_time.getDate()-0),
+      _minutes = _time.getMinutes()>9 ? _time.getMinutes() : "0"+_time.getMinutes(),
+      _hours = _time.getHours()>9 ? _time.getHours() : "0"+_time.getHours();
+    //
+    _listinfo += "<li>恭喜<em>"+ _single["nick"] + "</em>获得 " + awardlist[_single["success_code"]-1]+"<li>";
+  }
+  $("#J_awardList ul").html(_listinfo);
+}
+
+$(document).ready(function () {
+  //抽奖转盘
+  _init_lottery("#J_hd_loy_panel",'http://img3.icson.com/template/2013/09/18/137947283776547200_lottery_flash.swf?success_num=8&mod=lotteryge&act=order&oder_lottery=0&sn=17219&event_bg={@img_200}&event_bt={@img_201}',498,498,'','flash_dial');
+  //share-vote
+  function getNum(){
+      G.util.post('http://event.yixun.com/component-969/get_voted_num.html',{point_ids:"1"},function(ret){
+        if(!ret.errno) {
+          $(".share em").html(ret.voted_num[1]);
+        } else {
+           G.app.Component.getErrMsg(ret.errno, ret.errmsg);
+        }
+      });
+    }
+    getNum();
+    $(".share-btn").click(function(){
+      $.post("http://event.yixun.com/component-969/vote.html",{vote_point:"1"},function(res){
+        _num = $(".sharenum span").html() - 0;
+        $(".share span").html(_num+1);
+      })
+    });
+  //share
+  //微博转发代码
+    var max = 140;
+    var used = 0;
+    var _t_huati = "#下载登陆易迅客户端送CF礼包#";//广播墙话题
+    var _t_evn = "下载登陆易迅客户端送CF礼包啦！极品装备！百万Q币等你来拿！易迅无线惊喜无限，小伙伴快来！"; //活动广告语
+    var _t = "#"+_t_huati+"# "+_t_evn;
+    var _url = encodeURIComponent('http://event.yixun.com/event/172192b63.html');//活动页面地址   
+    var _pic=encodeURI("http://img3.icson.com/template/2013/12/09/138658957351083000_img_300.jpg");//微博广告图片,可以空
+    $(".share-btn").click(function(){
+        var _u = 'http://v.t.qq.com/share/share.php?title='+encodeURIComponent(_t_huati+_t_evn)+'&url='+_url+'&appkey=801148568&site=www.yixun.com&pic='+_pic;
+        window.open(_u,'','width=600,height=300,top=0,left=0,toolbar=no,menubar=no,scrollbars=no,location=yes,resizable=no,status=no');
+      })
+
+});
+</script>

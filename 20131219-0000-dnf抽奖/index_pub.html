@@ -1,0 +1,200 @@
+<!-- author:wisteriawei -->
+<!-- date:20131219 -->
+<style type="text/css">
+.page_event {width:100%;text-align:left;background:url({@img_0}) repeat #991E21;}
+.page_event .event_wrap {width:1050px;margin:0 auto;padding:0 5px;}
+.page_event .mod_1 {height:260px;background:url({@img_1}) no-repeat center top;}
+.page_event .mod_2 {height:276px;background:url({@img_2}) no-repeat center top;}
+.page_event .mod_3 {height:253px;background:url({@img_3}) no-repeat center top;}
+.page_event .mod_4 {height:280px;background:url({@img_4}) no-repeat center top;}
+.page_event .mod_5 {height:280px;background:url({@img_5}) no-repeat center top;}
+.page_event .mod_6 {height:280px;background:url({@img_6}) no-repeat center top;}
+.page_event .mod_7 {height:322px;background:url({@img_7}) no-repeat center top;}
+.page_event .mod_8 {height:452px;background:url({@img_8}) no-repeat center top;}
+.page_event .mod_8 .event_wrap {position: relative; height: 452px;}
+.page_event .mod_8 .event_wrap a{display: block; width: 260px; height: 93px; position: absolute; left: 425px; top: 185px;}
+.page_event .mod_8 .event_wrap .item_2{left: 714px;}
+.page_event .mod_8 .event_wrap .item_3{top: 300px;}
+.page_event .mod_9 {height:650px;background:url({@img_9}) no-repeat center top;}
+.page_event .mod_9 .event_wrap{width: 993px; position: relative;}
+.page_event .mod_9 .lottery{width: 511px; height: 511px; overflow: hidden; position: absolute; right: 10px; top: 132px;}
+.page_event .mod_9 .mod_bd{position: absolute; left: 100px; top: 179px;}
+.page_event .mod_9 .mod_bd .share-btn{position: absolute; top: 0; left: 0; width: 245px; height: 50px; cursor: pointer;}
+.page_event .mod_9 .mod_bd .share{color: #FFF; font-size: 16px; margin-left: 105px; line-height: 20px; width: 193px; height: 30px; overflow: hidden; padding-top: 16px;}
+.page_event .mod_9 .mod_bd .share em{ margin-right: 5px;}
+.page_event .mod_9 .mod_bd .award-list{width: 315px; height: 337px; overflow-x: hidden; position: absolute; top: 73px; left: 0; font-size: 14px; padding: 13px 10px; overflow-y: auto; color: #FFF;}
+.page_event .mod_9 .mod_bd .award-list li{margin-bottom: 10px; clear: both;}
+.page_event .mod_9 .mod_bd .award-list li em{margin: 0 5px;}
+.page_event .mod_9 .mod_bd .award-list li .time{float: right; margin-bottom: 8px; *margin-top: -18px;}
+.page_event .mod_9 .mod_bd .award-list li .time em{margin-right: 0px;}
+
+.page_event .mod_rule{padding-bottom: 50px;}
+.page_event .mod_rule .event_wrap{position: relative; height: 660px; width: 982px; margin: 20px auto; color: #000; overflow: hidden; background-color: #C02A2C; position: relative; left: 13px; top: 0;}
+.page_event .mod_rule p, .page_event .mod_rule ul{position: relative; z-index:2; margin: 0 16px;}
+.page_event .mod_rule p{font-size: 26px; line-height: 35px; font-weight: bold; padding-top: 25px; margin-bottom: 8px;}
+.page_event .mod_rule  ul li{margin-bottom: 6px; font-size: 24px; line-height: 33px;}
+</style>
+  <div class="page_event">
+    <div class="mod_1"></div>
+    <div class="mod_2"></div>
+    <div class="mod_3"></div>
+    <div class="mod_4"></div>
+    <div class="mod_5"></div>
+    <div class="mod_6"></div>
+    <div class="mod_7"></div>
+    <div class="mod_8">
+      <div class="event_wrap">
+        <a href="http://itunes.apple.com/cn/app/id557825088?ls=1&mt=8" class="item_1" title="下载易迅APP IOS版"></a>
+        <a href="http://itunes.apple.com/cn/app/id725489675?ls=1&mt=8" class="item_2" title="下载易迅APP IPad版"></a>
+        <a href="http://softfile.3g.qq.com/51buy/51buy_cf.apk" class="item_3" title="下载易迅APP Android版"></a>
+      </div>
+    </div>
+    <div class="mod_9">
+      <div class="event_wrap">
+        <div class="lottery" id="J_hd_loy_panel">
+        </div>
+        <div class="mod_bd">
+          <div class="share-btn"></div>
+          <p class="share"><em>123456</em>人已分享</p>
+          <div class="award-list" id="J_awardList">
+            <ul>
+              <li>暂无</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mod_rule">
+      <div class="event_wrap">
+        <p>活动规则：</p>
+        <ul>
+          {@evt_desc}
+        </ul>
+      </div>
+    </div>
+  </div>
+<script>
+//中奖提醒
+var dialog;
+function showErrorByAs(errno,message,level) {
+    if (errno == 0) {//正常抽奖
+        if(level=='2'){
+            dialog = G.ui.popup.showMsg(message, 1);
+        }else{
+            dialog = G.ui.popup.showMsg(message, 3);
+        }
+    } else if (errno == 1) {//未登录
+        dialog = G.ui.popup.showMsg('您好，抽奖活动需要登录后才能参与。', 1, function(){location.href = 'https://base.yixun.com/login.html?url='+encodeURIComponent(location.href);},null,null,'马上登录','取消');
+    }  else if (message == '') {//错误
+        dialog = G.ui.popup.showMsg('抱歉，系统繁忙，请5秒钟后再试');
+    } else {
+        if (errno == 46) {
+            dialog = G.ui.popup.showMsg('您好，此抽奖活动需手机验证后才能参与。', 1, function(){window.open("http://base.yixun.com/myprofile.html");},null,null,'立即验证');
+        } else if(errno == 47) {
+            dialog = G.ui.popup.showMsg('您好，此抽奖活动需邮箱验证后才能参与。', 1, function(){window.open("http://base.yixun.com/myprofile.html");},null,null,'立即验证');
+        } else if(errno == 51) {
+            dialog = G.ui.popup.showMsg('很抱歉，您今天的抽奖次数已用完。请明天再来!', 1, null,null,null,'确定');
+        } else if(errno == 50) {
+            dialog = G.ui.popup.showMsg('很抱歉，您的抽奖次数已用完。', 1, null,null,null,'确定');
+        } else if(errno == 161 || errno == 162) {
+            dialog = G.ui.popup.showMsg("抱歉，先参与活动才能抽奖哦!", 1);
+        }else {
+            dialog = G.ui.popup.showMsg(message);
+        }
+    }
+}
+//抽奖转盘
+function _init_lottery(obj,src,w,h,wmod,swfid){
+    $(obj).removeClass("hd_loy_img").html(_createSwf(src,w,h,wmod,swfid));
+}
+function _createSwf(src,w,h,wmod,swfid){
+    var swf_html = '';
+    swf_html += '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="'+w+'" height="'+h+'" id="'+swfid+'">';
+    swf_html += '<param name="allowScriptAccess" value="always">';
+    swf_html += '<param name="movie" value="'+src+'">';
+    swf_html += '<param name="quality" value="best">';
+    swf_html += '<param name="bgcolor" value="#ccc">';
+    swf_html += '<PARAM NAME="wmode" VALUE="transparent">';
+    swf_html += '<param name="allowScriptAccess" value="always" />';
+    swf_html += '<embed src="'+src+'" quality="high" bgcolor="#ccc" width="'+w+'" height="'+h+'" name="'+swfid+'" allowScriptAccess="always" wmode="transparent" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">';
+    swf_html += '</object>';
+    return swf_html;
+}
+//lottery-list
+var _num = 0;
+if(G.app.old){
+  G.app.old.Lottery.getRecentAwardList("17626",_getAwardList);  
+}
+var awardlist = ["谢谢你","DNF黑钻3个月","10Q币","遗忘河之水礼盒","100Q币","5Q币","DNF1000代币券","1Q币"];
+var addAwardList = [{"nick":"36**14","success_code":"8"},{"nick":"81**44","success_code":"7"},{"nick":"12**00","success_code":"4"},{"nick":"39**58","success_code":"6"},{"nick":"17**09","success_code":"6"},{"nick":"27**73","success_code":"7"},{"nick":"30**51","success_code":"7"},{"nick":"55**20","success_code":"4"},{"nick":"38**90","success_code":"6"}];
+var listNum = 11;
+function _getAwardList(info){
+  //filter-data
+  var arr = [];
+  var item, _single;
+  for(var j=0, len=info.length; j<len; j++){
+    if(arr.length==listNum){
+      break;
+    }
+    item = info[j];
+    if(item["success_code"]>1){
+      arr.push(item);
+    }
+  }
+  var _listinfo = "";
+  for(var i=0; i<listNum; i++){
+    if(i<arr.length){
+      _single = arr[i];
+    }else{
+      _single = addAwardList[i-arr.length];
+    }
+    if(_single == undefined){
+        break;
+    }
+    var _time = new Date(_single["time"]*1000),
+      _month = _time.getMonth()-0+1>9 ? _time.getMonth()-0+1 : "0"+(_time.getMonth()-0+1),
+      _day = _time.getDate()-0+1>9 ? _time.getDate()-0 : "0"+(_time.getDate()-0),
+      _minutes = _time.getMinutes()>9 ? _time.getMinutes() : "0"+_time.getMinutes(),
+      _hours = _time.getHours()>9 ? _time.getHours() : "0"+_time.getHours();
+    //
+    _listinfo += "<li>恭喜<em>"+ _single["nick"] + "</em>获得 " + awardlist[_single["success_code"]-1]+"<li>";
+  }
+  $("#J_awardList ul").html(_listinfo);
+}
+
+$(document).ready(function () {
+  //抽奖转盘
+  _init_lottery("#J_hd_loy_panel",'http://img3.icson.com/template/2013/09/18/137947283776547200_lottery_flash.swf?success_num=8&mod=lotteryge&act=order&oder_lottery=0&sn=17626&event_bg={@img_200}&event_bt={@img_201}',509,509,'','flash_dial');
+  //share-vote
+  function getNum(){
+      G.util.post('http://event.yixun.com/component-1064/get_voted_num.html',{point_ids:"1"},function(ret){
+        if(!ret.errno) {
+          $(".share em").html(ret.voted_num[1]);
+        } else {
+           G.app.Component.getErrMsg(ret.errno, ret.errmsg);
+        }
+      });
+    }
+    getNum();
+    $(".share-btn").click(function(){
+      $.post("http://event.yixun.com/component-1064/vote.html",{vote_point:"1"},function(res){
+        _num = $(".sharenum span").html() - 0;
+        $(".share span").html(_num+1);
+      })
+    });
+  //share
+  //微博转发代码
+    var max = 140;
+    var used = 0;
+    var _t_huati = "#下载登陆易迅客户端送DNF礼包#";//广播墙话题
+    var _t_evn = "下载登陆易迅客户端送DNF礼包啦！极品装备！百万Q币等你来拿！易迅无线惊喜无限，小伙伴快来！"; //活动广告语
+    var _t = "#"+_t_huati+"# "+_t_evn;
+    var _url = encodeURIComponent('http://event.yixun.com/event/176265c9d.html');//活动页面地址   
+    var _pic=encodeURI("http://img3.icson.com/template/2013/12/09/138658957351083000_img_300.jpg");//微博广告图片,可以空
+    $(".share-btn").click(function(){
+        var _u = 'http://v.t.qq.com/share/share.php?title='+encodeURIComponent(_t_huati+_t_evn)+'&url='+_url+'&appkey=801148568&site=www.yixun.com&pic='+_pic;
+        window.open(_u,'','width=600,height=300,top=0,left=0,toolbar=no,menubar=no,scrollbars=no,location=yes,resizable=no,status=no');
+      })
+
+});
+</script>

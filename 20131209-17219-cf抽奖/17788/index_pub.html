@@ -16,7 +16,7 @@
 .page_event .mod_6{height: 669px;background:url({@img_6}) no-repeat center top; margin-left: -7px;}
 .page_event .mod_6 .event_wrap{width: 908px; position: relative;}
 .page_event .mod_6 .lottery{width: 498px; height: 498px; overflow: hidden; position: absolute; left: 8px; top: 132px;}
-.page_event .mod_6 .mod_bd{position: absolute; left: 510px; top: 140px;}
+.page_event .mod_6 .mod_bd{position: absolute; left: 517px; top: 140px;}
 .page_event .mod_6 .mod_bd .share-btn{position: absolute; top: 0; left: 0; width: 160px; height: 55px; cursor: pointer;}
 .page_event .mod_6 .mod_bd .share{color: #FFF; font-size: 24px; margin-left: 167px; line-height: 30px; width: 193px; height: 30px; overflow: hidden; padding-top: 12px;}
 .page_event .mod_6 .mod_bd .share em{color: #FFFD12; margin-right: 5px;}
@@ -168,8 +168,8 @@ function _createSwf(src,w,h,wmod,swfid){
 }
 //lottery-list
 var _num = 0;
-G.app.old.Lottery.getRecentAwardList("17219",_getAwardList);
-var awardlist = ["谢谢你","50Q币","AK47","10Q币","防弹头盔","1Q币","高爆手雷","100Q币"];
+G.app.old.Lottery.getRecentAwardList("17788",_getAwardList);
+var awardlist = ["谢谢你","50Q币","AK47","10Q币","防弹头盔","1Q币","移动电源","100Q币"];
 var addAwardList = [{"nick":"36**14","success_code":"8"},{"nick":"81**44","success_code":"7"},{"nick":"12**00","success_code":"4"},{"nick":"39**58","success_code":"6"},{"nick":"17**09","success_code":"6"},{"nick":"27**73","success_code":"7"},{"nick":"30**51","success_code":"7"},{"nick":"55**20","success_code":"4"},{"nick":"38**90","success_code":"6"}];
 var listNum = 11;
 function _getAwardList(info){
@@ -220,12 +220,12 @@ function initBuyBtn() {
 }
 $(document).ready(function () {
   //抽奖转盘
-  _init_lottery("#J_hd_loy_panel",'http://img3.icson.com/template/2013/09/18/137947283776547200_lottery_flash.swf?success_num=8&mod=lotteryge&act=order&oder_lottery=0&sn=17219&event_bg={@img_200}&event_bt={@img_201}',498,498,'','flash_dial');
+  _init_lottery("#J_hd_loy_panel",'http://img3.icson.com/template/2013/09/18/137947283776547200_lottery_flash.swf?success_num=8&mod=lotteryge&act=order&oder_lottery=0&sn=17788&event_bg={@img_200}&event_bt={@img_201}',498,498,'','flash_dial');
   //init-btn
   initBuyBtn();
   //share-vote
   function getNum(){
-      G.util.post('http://event.yixun.com/component-969/get_voted_num.html',{point_ids:"1"},function(ret){
+      G.util.post('http://event.yixun.com/component-1119/get_voted_num.html',{point_ids:"1"},function(ret){
         if(!ret.errno) {
           $(".share em").html(ret.voted_num[1]);
         } else {
@@ -235,7 +235,7 @@ $(document).ready(function () {
     }
     getNum();
     $(".share-btn").click(function(){
-      $.post("http://event.yixun.com/component-969/vote.html",{vote_point:"1"},function(res){
+      $.post("http://event.yixun.com/component-1119/vote.html",{vote_point:"1"},function(res){
         _num = $(".sharenum span").html() - 0;
         $(".share span").html(_num+1);
       })
@@ -247,8 +247,8 @@ $(document).ready(function () {
     var _t_huati = "#下载登陆易迅客户端送CF礼包#";//广播墙话题
     var _t_evn = "下载登陆易迅客户端送CF礼包啦！极品装备！百万Q币等你来拿！易迅无线惊喜无限，小伙伴快来！"; //活动广告语
     var _t = "#"+_t_huati+"# "+_t_evn;
-    var _url = encodeURIComponent('http://event.yixun.com/event/172192b63.html');//活动页面地址   
-    var _pic=encodeURI("http://img3.icson.com/template/2013/12/09/138658957351083000_img_300.jpg");//微博广告图片,可以空
+    var _url = encodeURIComponent('http://event.yixun.com/event/17788fbb2.html');//活动页面地址   
+    var _pic=encodeURI("http://img3.icson.com/template/2013/12/23/138779297407392400_img_300.jpg");//微博广告图片,可以空
     $(".share-btn").click(function(){
         var _u = 'http://v.t.qq.com/share/share.php?title='+encodeURIComponent(_t_huati+_t_evn)+'&url='+_url+'&appkey=801148568&site=www.yixun.com&pic='+_pic;
         window.open(_u,'','width=600,height=300,top=0,left=0,toolbar=no,menubar=no,scrollbars=no,location=yes,resizable=no,status=no');

@@ -837,8 +837,8 @@ var BackPanel = {
         })
     }), $(".ranking").Jtab({}, function(t, e, i) {
         $(".ranking").find(".tab-arrow").animate({
-            left: 40 * i,
-            width: 4 == i ? 50 : 40
+            left: 42 * i,
+            width: 4 == i ? 52 : 42
         }, 500, "easeInOutQuint")
     }), $(".club .mc").each(function() {
         var t = $(this);

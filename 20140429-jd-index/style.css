@@ -911,9 +911,8 @@ img.err-price{width:81px;height:22px;background:url(http://misc.360buyimg.com/li
 .brands .smt .extra a{position:relative;float:right;padding-right:12px;line-height:18px;margin-left:18px}
 .brands .smt .extra b{position:absolute;right:0;top:2px;width:8px;height:13px;background-position:-130px -50px}
 .brands .smc{width:990px;height:35px;border-left-width:0}
-.brands .smc ul{width:990px}
-.brands .smc li{width:99px;height:36px;overflow:hidden; line-height: 35px;}
-.brands .smcbd{}
+.brands .smc ul, .ranking .lh-con ul{width:990px}
+.brands .smc li, .ranking .lh-con li{width:99px;height:36px;overflow:hidden; line-height: 35px;}
 .brands .smcbd .slide{height: 189px; border: 1px solid #E8E8E8; border-width: 0 1px 1px; position: relative;}
 .brands .smcbd .slide .slide-itemswrap{height: 175px; background-color: #FFF;}
 .brands .smcbd .slide .slide-items li{height: 162px; float: left;}
@@ -928,9 +927,9 @@ img.err-price{width:81px;height:22px;background:url(http://misc.360buyimg.com/li
 #clothing .brands .smt .extra-ico a{display:none;position:relative;top:-5px;width:115px;height:22px;background:url(http://misc.360buyimg.com/product/skin/2013/i/18.png) 0 0 no-repeat;line-height:1000px;overflow:hidden}
 .root61 .brands{width:220px}
 .root61 .brands .smt{display:block}
-.root61 .brands .smc{width:218px;height:189px;padding:0;border-width: 0 1px 1px; border-color: #E8E8E8; background-color: #F0F0F0;}
-.root61 .brands .smc ul{width:218px}
-.root61 .brands .smc li{width:90px; padding-left: 18px;}
+.root61 .brands .smc, .ranking .lh-con{width:218px;height:189px;padding:0;border-width: 0 1px 1px; border-color: #E8E8E8; background-color: #F0F0F0;}
+.root61 .brands .smc ul, .ranking .lh-con ul{width:218px; padding-top: 5px;}
+.root61 .brands .smc li, .root61 .ranking .lh-con li{width:90px; padding-left: 18px;}
 .root61 .brands .smc .fore1,.root61 .brands .smc .fore2{border-top:0}
 .root61 #clothing .brands .smt{display:block}
 .root61 #clothing .brands .smt .extra-ico a{display:block}
@@ -938,27 +937,29 @@ img.err-price{width:81px;height:22px;background:url(http://misc.360buyimg.com/li
 .infomation .smc{width:193px;height:92px;padding:9px 8px;border-right:0;border-bottom:1px solid #DDD}
 .infomation li{height:23px;line-height:23px;overflow:hidden}
 .root61 .infomation{display:block}
-.ranking .smc span{background-image:url(http://misc.360buyimg.com/product/skin/2013/i/20130330B_1.png);background-repeat:no-repeat}
+.ranking .smc span{background-color: #A0A0A0;}
 .ranking{display:none;position:relative;float:right;width:220px;padding-top:32px}
 .ranking .sm{margin-bottom:0}
-.ranking .smt{width:40px}
+.ranking .smt{width:42px; border-bottom: 2px solid #414141;}
 .ranking .smt h3{font-weight:400;font-size:12px}
-.ranking .fore1 .smt{left:0}
-.ranking .fore2 .smt{left:40px}
-.ranking .fore3 .smt{left:80px}
-.ranking .fore4 .smt{left:120px}
-.ranking .fore5 .smt{width:50px;left:160px}
-.ranking .smc{height:311px;padding-top:10px;border-left:1px solid #f1f1f1;border-bottom:1px solid #DDD}
+.ranking .fore1 .smt{left:0;}
+.ranking .fore2 .smt{left:42px}
+.ranking .fore3 .smt{left:84px}
+.ranking .fore4 .smt{left:126px}
+.ranking .fore5 .smt{width:52px;left:168px}
+.ranking .smc{height:184px;padding-top:5px;border-left:1px solid #f1f1f1;border-bottom:1px solid #DDD; overflow-y: hidden;}
 .ranking .smc li{float:left;width:200px;padding:4px 0 4px 5px;overflow:hidden}
-.ranking .smc span{float:left;width:18px;height:18px;margin:2px 5px 0 0;background-position:-25px -50px;text-align:center;line-height:19px;color:#CCC;overflow:hidden}
+.ranking .smc span{float:left;width:18px;height:18px;margin:2px 5px 0 0;background-position:-25px -50px;text-align:center;line-height:19px;color:#fff;overflow:hidden}
 .ranking .p-name,.ranking .p-price{float:left;height:22px;line-height:22px;overflow:hidden}
 .ranking .p-name{width:120px}
 .ranking .p-price{float:right;width:50px;text-align:right;color:#e4393c}
 .ranking .p-price strong{font-weight:400}
-.ranking li.fore1 span,.ranking li.fore2 span,.ranking li.fore3 span{background-position:0 -50px;color:#e4393c}
-.ranking .curr .smc{display:block}
+.ranking li.fore1 span,.ranking li.fore2 span,.ranking li.fore3 span{background-position:0 -50px;background-color:#e4393c}
+.ranking .curr .smc{display:block; border-top: none;}
 .ranking .tab-arrow{width:40px}
 .root61 .ranking{display:block}
+.ranking .lh-con{border-style: solid;}
+.ranking .lh-con li{float: left;}
 #sport .catalogue .mc,#sport .plist .smc{height:291px}
 #sport .loading-style1,#baby .loading-style1,#food .loading-style1{margin-top:120px}
 #clothing .accordion{width:900px}
@@ -1071,7 +1072,7 @@ img.err-price{width:81px;height:22px;background:url(http://misc.360buyimg.com/li
 #subscription .mt{margin-bottom:2px}
 #subscription .mc{overflow:visible}
 #subscription .form{position:relative;width:210px}
-#subscription .text{width:115px;height:32px;padding:1px 0 1px 25px;background:url(http://misc.360buyimg.com/product/skin/2013/i/20130330B_1.png) no-repeat -251px -40px;border:none;line-height:21px;color:#999}
+#subscription .text{width:115px;height:32px;padding:1px 0 1px 25px;background:url(img/new-sprite.png) no-repeat 6px -50px;border:none;line-height:21px;color:#999}
 #subscription .button{float:right;width:80px;height:34px;background:#CA1622;color:#fff;line-height:25px;font-weight:700; font-size: 14px;}
 #subscription .correct{border:1px solid #d9d3bb;background:#fffdee;color:#34772a}
 #subscription .incorrect{border:1px solid #c2a4a4;background:#fee9e8;color:#a31112}

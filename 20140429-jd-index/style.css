@@ -948,7 +948,7 @@ img.err-price{width:81px;height:22px;background:url(http://misc.360buyimg.com/li
 .ranking .fore4 .smt{left:126px}
 .ranking .fore5 .smt{width:52px;left:168px}
 .ranking .smc{height:184px;padding-top:5px;border-left:1px solid #f1f1f1;border-bottom:1px solid #DDD; overflow-y: hidden;}
-.ranking .smc li{float:left;width:200px;padding:4px 0 4px 5px;overflow:hidden}
+.ranking .smc li{float:left;width:200px;padding:4px 0 4px 10px;overflow:hidden}
 .ranking .smc span{float:left;width:18px;height:18px;margin:2px 5px 0 0;background-position:-25px -50px;text-align:center;line-height:19px;color:#fff;overflow:hidden}
 .ranking .p-name,.ranking .p-price{float:left;height:22px;line-height:22px;overflow:hidden}
 .ranking .p-name{width:120px}

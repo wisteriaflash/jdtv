@@ -784,10 +784,10 @@ var BackPanel = {
         source: "data-url",
         delay: 200
     }, function(t, e, i) {
-        var a = window.screen.width >= 1200 ? 77 : 52;
+        var a = 54;
         $("#virtuals").find(".tab-arrow").animate({
-            left: 0 == i ? 0 : i * a + 2,
-            width: 0 == i ? a + 2 : a
+            left: 0 == i ? 0 : i * (a+1)+2,
+            width: 0 == i ? a+2  : a
         }, 500, "easeInOutQuint"), t && (1210 > screen.width && (t += "?990"), e.html('<iframe scrolling="no" height="139px" frameborder="0" width="100%" src="' + t + '"></iframe>'))
     }), pageConfig.TPL_Timed = '<div class="countdown" id="timer${qid}">\u6b63\u5728\u52a0\u8f7d\u4e2d...</div>        {for item in pros}            {if item_index==0}                <div class="p-img ld"><a href="http://item.jd.com/${item.id}.html" target="_blank" title="${unescape(item.mc)}"><b class="pi pix1" id="icon${qid}"><span>${item.zk}</span><br />\u6298 </b><img src="${item.tp}" width="130" height="130" data-img="1" alt="${unescape(item.mc)}"></a></div>                <div class="p-name"><a href="http://item.jd.com/${item.id}.html" title="${unescape(item.mc)}" target="_blank">${unescape(item.mc)}</a></div>                <div class="p-price"><span>\u62a2\u8d2d\u4ef7\uff1a</span><strong>\uffe5${item.qg}</strong></div>            {/if}        {/for}', pageConfig.TIMER_Timed = [], pageConfig.FN_TimedInit = function() {
         $.Jtimer({
@@ -827,7 +827,7 @@ var BackPanel = {
         }, function(i, a, n) {
             if (t.find(".tab-arrow").animate({
                 left: n * e
-            }, 500, "easeInOutQuint"), i)
+            }, 400, "easeInOutQuint"), i)
                 if (a.parents(".plist").hasClass("promotion-place")) {
                     var s = a.find("img[trigger-lazy-img]");
                     s.length && s.each(function() {
@@ -850,7 +850,7 @@ var BackPanel = {
                 height: "73px"
             })
         }, 8e3)
-    }), $("#slide").Jslider({
+    }), $("#slide11").Jslider({
         data: pageConfig.DATA_MSlide,
         auto: !0,
         reInit: !0,
@@ -1115,10 +1115,10 @@ function(t) {
         })
     }
 }(jQuery), pageConfig.TPL_MScroll = '<ul class="lh">    {for slide in list}    <li class="item fore${parseInt(slide_index)+1}" clstag="homepage|keycount|home2013|09b${parseInt(slide_index)+1}">        <a href="${slide.href}" target="_blank">            <img width="202" height="159" src="http://misc.360buyimg.com/lib/img/e/blank.gif" class="loading-style2" data-lazyload="background:url(${slide.src}) no-repeat #fff center 0;" alt="${slide.alt}" /></a>    </li>    {/for}</ul>', $("#mscroll-list").imgScroll({
-    width: screen.width >= 1200 ? 203 : 163,
+    width: 190,
     height: 159,
-    visible: 3,
-    step: 3,
+    visible: 4,
+    step: 4,
     loop: !0,
     next: "#mscroll-ctrl-next",
     prev: "#mscroll-ctrl-prev",

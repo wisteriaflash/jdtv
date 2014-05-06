@@ -21,33 +21,44 @@
         .tab li,.tab a,.tab-item{float:left;cursor:pointer;text-align:center;}
         .btn-img,.button{display:inline-block;margin:0;padding:0;border:0;text-align:center;cursor:pointer;}
         .btn-text{margin:0;padding:0;text-align:center;cursor:pointer;}
-        body{font:12px/150% Arial,Verdana,"\5b8b\4f53";color:#666;background:#fff;_background-image:url(about:blank);_background-attachment:fixed;}
+        body{font:12px/150% Arial,Verdana,"\5b8b\4f53";color:#666;_background-image:url(about:blank);_background-attachment:fixed;}
         h1{font:20px "microsoft yahei","\5b8b\4f53";}
         h2,h3{font-size:14px;}
         h4,h5,h6{font-size:12px;}
         a:link,a:visited{color:#333;text-decoration:none;}
         a:hover{color:#C00;text-decoration:underline;}
         a:active{color:#900;}
-            /*virtuals-iframe*/
+        /*virtuals-iframe*/
         #chongzhi{width:200px;height:131px;padding:8px 0 0 8px;}
         #chongzhi .item{overflow:visible;padding:5px 0;line-height:22px;zoom:1;width: 200px;height: auto;float: left}
         #chongzhi .fl{width:140px;}
         #chongzhi label{width:50px;text-align:right;}
         #chongzhi select{height:22px;padding:2px;margin-right:5px;margin-left:0;}
         #chongzhi .select2{margin-right:0;}
-        #chongzhi .text1{width:113px;height:16px;padding:2px;border-width:1px; border-style:solid; border-color:#aaa #ddd #ddd #aaa;;margin-right:5px;}
-        #chongzhi .button{float:left;width:70px;height:21px;border-radius:3px;margin-right:5px;line-height:21px;background:#e4393c;color:#fff;}
+        #chongzhi .text1{width:202px;height:23px;padding:2px;border-width:1px; border-style:solid; border-color:#D2D2D2;margin-right:5px; background-color: transparent;}
+        #chongzhi .button{float:right;width:90px;height:28px;line-height:28px;background:#e4393c;color:#fff; margin-right: 12px; margin-top: 10px;}
         #chongzhi .button-gray{background:url(http://misc.360buyimg.com/201007/skin/df/i/20120709A.png) no-repeat;color:#CBCBCB;}
         #chongzhi .label{color:#999;}
         #chongzhi a{color:#005EA7;}
         #chongzhi strong,
         #chongzhi .error{color:#c30;}
         #chongzhi #promotwords{display:none;line-height:25px;}
+        #chongzhi .recharge{padding: 0;}
+        #chongzhi .recharge-list{border: 1px dotted #D5D1D2; border-width: 1px 0 0 1px; width: 204px;}
+        #chongzhi .recharge-list li{float: left; width: 50px; height: 44px; text-align: center; line-height: 44px; border: 1px dotted #D5D1D2; border-width: 0 1px 1px 0; position: relative; cursor: default;}
+        #chongzhi .recharge-list li .border{position: absolute; left: -1px; top: -1px; width: 48px; height: 42px; border: 2px solid #414141; display: none; z-index: 5;}
+        #chongzhi .recharge-list li.cur .border{display: block;}
+        #chongzhi .jd-price{margin-top: 6px; margin-left: 3px;}
+        #chongzhi .jd-price em{color: #333; display: block;}
+        #chongzhi .jd-price strong{color: #343233;}
+        #chongzhi .jd-price strong i{padding-left: 3px; font-style: normal;}
+        #promotwords i{width: 12px; height: 14px; background: url(img/new-sprite.png) no-repeat; background-position: -80px -40px; display: block; float: left; margin: 6px 5px 0 0;}
+        #promotwords a{color: #676767;}
         #gameWord{display: none}
-        .root61 #chongzhi{width:300px;}
+        .root61 #chongzhi{width:212px;}
         .root61 #chongzhi .fl{width:220px;}
-        .root61 #chongzhi #promotwords{display:block;}
-        .root61  #chongzhi .item{width: 300px}
+        .root61 #chongzhi #promotwords{display:block; margin-top: 2px; clear: both;}
+        .root61  #chongzhi .item{width: 212px}
         .game #chongzhi{width:190px;height:178px;background:#F9FAFE;padding: 0}
         .game #chongzhi .item{overflow:hidden;padding:5px 0;line-height:20px;zoom:1;}
         .game #chongzhi .fl{width:140px;}
@@ -66,7 +77,7 @@
         .game #gameWord{display: block;}
         .game #jdPrice{width:70px;text-align: left;}
         /*list*/
-    .item .list{line-height: 25px;width: 140px;position: relative;height: 47px;;float: left;}
+    .item .list{line-height: 25px;width: 140px;position: relative;height:34px;float: left;}
     .item .current{z-index: 2}
       .item .current .i-list{display: inline-block;z-index: 13}
     .item .i-list{position: absolute;width: 139px;height: auto;top: 21px;left: 0px;background: #fff;display: none;z-index: 13;}
@@ -162,17 +173,12 @@ function loadHiddenPriceJSON(paramStr) {
 </script><form action="" id="rechargePhone" method ="post" autocomplete ="off">
     <div class="form" id="chongzhi">
         <div class="item">
-            <label>手机号：</label>
             <div class="list" id="numlist">
         <div class="arrow"></div>
         <span class="clr"></span>
                 <input type="text"  id="txtPn"  name="txtPn" class="text1"  value="请输入手机号" maxlength="11"  style="color:#999"   onkeyup="LoadISPJSON()" onblur="showDefault()"  onkeydown="return (event.keyCode!=13)" onfocus="clearDefault()" />
         <span class="clr"></span>
         <div class="i-list"></div>
-        <span class="clr"></span>
-      <span id="defaultMobileInfo">
-        支持移动、联通、电信
-            </span>
                 <span class="clr"></span>
       <span id="ISPmodi" class="hide">
         <select onchange="changeEverything()" class="select1" name="area" id="area">
@@ -220,9 +226,18 @@ function loadHiddenPriceJSON(paramStr) {
       </span>
             </div>
         </div>
-        <div class="item">
-            <label>面值：</label>
-            <select  id="facePrice" name="facePrice"  onchange="changeEverything()">
+        <div class="item recharge">
+            <ul class="recharge-list clearfix"> 
+                <li id="pay1" data-price="10"><span>10</span><span class="border"></span></li>
+                <li id="pay2" data-price="20"><span>20</span><span class="border"></span></li>
+                <li id="pay3" data-price="30"><span>30</span><span class="border"></span></li>
+                <li id="pay4" data-price="50"><span>50</span><span class="border"></span></li>
+                <li class="cur" id="pay5" data-price="100"><span>100</span><span class="border"></span></li>
+                <li id="pay6" data-price="200"><span>200</span><span class="border"></span></li>
+                <li id="pay7" data-price="300"><span>300</span><span class="border"></span></li>
+                <li id="pay8" data-price="500"><span>500</span><span class="border"></span></li>
+            </ul>
+            <!-- <select  id="facePrice" name="facePrice"  onchange="changeEverything()">
                 <option value="10" id="pay1" >10元</option>
                 <option value="20" id="pay2" >20元</option>
                 <option value="30" id="pay3" >30元</option>
@@ -231,33 +246,22 @@ function loadHiddenPriceJSON(paramStr) {
                 <option value="200" id="pay6" >200元</option>
                 <option value="300" id="pay7" >300元</option>
                 <option value="500" id="pay8" >500元</option>
-            </select>
-            <span class="label"  id="jdPrice"><strong>98.0-100.0</strong></span>
+            </select> -->
         </div>
-        <div class="item">
-            <label>&nbsp;</label>
+        <div class="item jd-price">
+            <span class="label" id="jdPrice">
+                <em>售价</em>
+                <strong>￥<i id="J_jdPrice">98.0-100.0</i></strong>
+            </span>
             <input type="button"  id="submit" class="button" value="点击充值" onclick="submitPhone();try{window.parent.pageTracker._trackEvent('Button','TopUp','HomePage');}catch(err){}" />
-            <span id="promotwords" class="label"></span>
+            <div id="promotwords" class="label"><i></i><a href="#">充值送万达《催眠大师》影票</a></div>
         </div>
         <div class="item" id="gameWord">
-            <label>&nbsp;</label>
             <span id="gamePromotWords"></span>
         </div>
     </div>
     <input type="hidden" value="" id="skuId"/>
 </form>
-<script type="text/javascript">
-    (function(){
-var adContent="<A href='http://sale.jd.com/act/catKfVkT4hFLq6w.html?erpad_source=erpad'target='_blank'>\u4e0a\u6d77\u79fb\u52a8\uff0c\u5145\u591a\u5c11\u9001\u591a\u5c11</A>";
-document.getElementById("promotwords").innerHTML=adContent;
-document.getElementById("gamePromotWords").innerHTML=adContent;
-})();
-
-
-
-
-
-</script>
 <script type="text/javascript">
 //域名地址,线上改为:http://chongzhi.360buy.com
 var url = "";
@@ -497,6 +501,22 @@ var showDefault = function(){
     }
 }
 
+//recharge
+$('.recharge-list li').click(function(e){
+    //style
+    $('.recharge-list li').removeClass('cur');
+    var cur = $(this);
+    cur.addClass('cur');
+    //data
+    // changeEverything();
+    var jdPrice = $('#J_jdPrice')
+    for (var i = 0; i < priceRangeList.length; i++) {
+        if(priceRangeList[i].price == cur.attr('data-price')){
+            jdPrice.html(priceRangeList[i].facePrice);
+            return;
+        }
+    }
+});
 
 </script>
 
@@ -521,7 +541,7 @@ var showDefault = function(){
 </script>
 
 <script type="text/javascript">
-    document.domain="jd.com";
+    // document.domain="jd.com";
     var autoComplete = function(){
       var txt = $("#txtPn"),
         numlist = $("#numlist"),

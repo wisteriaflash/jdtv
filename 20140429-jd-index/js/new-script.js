@@ -92,6 +92,18 @@ $(function(){
     $("#my360buy-2014").Jdropdown({
         delay: 50
     })
+    //首屏banner
+    $('#slide').JsliderNew({
+        data:[1,2,3],
+        slideWidth: 760,
+        slideHeight: 350
+    });
+    $('#J_navCon').click(function(e){
+        $('#J_navCon .banner-bg-left').animate({
+            backgroundColor:'#000'
+        },500);
+    });
+    
     //slider
     var item, sw;
     var cateArr = $(".catalogue .mc .slide");

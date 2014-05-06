@@ -99,6 +99,7 @@ $(function(){
         slideHeight: 350
     });
     $('#J_navCon').click(function(e){
+        return;
         $('#J_navCon .banner-bg-left').animate({
             backgroundColor:'#000'
         },500);

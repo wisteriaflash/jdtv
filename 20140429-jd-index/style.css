@@ -1106,13 +1106,14 @@ img.err-price{width:81px;height:22px;background:url(http://misc.360buyimg.com/li
 #subscription .mt{margin-bottom:2px}
 #subscription .mc{overflow:visible}
 #subscription .form{position:relative;width:210px}
-#subscription .text{width:115px;height:32px;padding:1px 0 1px 25px;background:url(img/new-sprite.png) no-repeat 6px -50px;border:none;line-height:21px;color:#999}
+#subscription .text{width:115px;height:32px;padding:1px 0 1px 25px;border:none;line-height:21px;color:#999}
 #subscription .button{float:right;width:80px;height:34px;background:#CA1622;color:#fff;line-height:25px;font-weight:700; font-size: 14px;}
 #subscription .correct{border:1px solid #d9d3bb;background:#fffdee;color:#34772a}
 #subscription .incorrect{border:1px solid #c2a4a4;background:#fee9e8;color:#a31112}
 #subscription-prompt{position:absolute;top:26px;width:118px;padding:2px 0;text-align:center}
 .root61 #subscription{width:310px;}
-.root61 #subscription .form{width:310px; border: 1px solid #CA1622;}
+.root61 #subscription .form{width:310px; border: 1px solid #CA1622; position: relative;}
+.root61 #subscription .form i{width: 12px; height: 8px; background:url(img/new-sprite.png) no-repeat 0 -55px; position: absolute; left: 6px; top: 13px;}
 .root61 #subscription .text{width:205px}
 .root61 #subscription-prompt{width:240px}
 #treasure .research b,#guidelayer .close,#guidelayer .corner{background-image:url(http://misc.360buyimg.com/product/skin/2012/i/20120209D.png);background-repeat:no-repeat}

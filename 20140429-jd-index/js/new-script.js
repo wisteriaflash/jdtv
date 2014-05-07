@@ -17,7 +17,9 @@
                 delay: 150,
                 maxAmount: null,
                 template: null,
-                showControls: !0
+                showControls: !0,
+                arrowHide: true,
+                moveFun: null
             }, b || {}),
                 e = a(this),
                 f = null,
@@ -47,9 +49,36 @@
                     }).bind("mouseleave", function() {
                         clearTimeout(j), clearInterval(i), n()
                     }), f.bind("mouseover", function() {
-                        clearTimeout(j), clearInterval(i)
+                        clearTimeout(j), clearInterval(i);
                     }).bind("mouseleave", function() {
-                        n()
+                        n();
+                    });
+                    //arrow
+                    var arrow = e.find('.slide-arrow');
+                    if(arrow.length>0){
+                        arrow.find('.arrow-l').click(function(e){
+                            var index = d.defaultIndex-1;
+                            if(index<0){
+                                index = d.data.length-1;
+                            }
+                            m(index);
+                        });
+                        arrow.find('.arrow-r').click(function(e){
+                            var index = d.defaultIndex+1;
+                            if(index == d.data.length){
+                                index = 0;
+                            }
+                            m(index);
+                        });
+                    }
+                    e.bind('mouseover', function(){
+                        if(d.arrowHide && arrow.length>0){
+                            e.find('.slide-arrow').show();
+                        }
+                    }).bind('mouseleave', function(){
+                        if(d.arrowHide && arrow.length>0){
+                            e.find('.slide-arrow').hide();
+                        }
                     })
                 }, m = function(b) {
                     h.each(function(c) {
@@ -74,6 +103,8 @@
                     }, d.speed, function() {
                         d.defaultIndex = b
                     })
+                    //fun
+                    d.moveFun && d.moveFun(b);
                 }, n = function() {
                     d.auto && (i = setInterval(function() {
                         var a = d.defaultIndex;
@@ -88,52 +119,104 @@
 
 //ready
 $(function(){
-    //header-我的京东
-    $("#my360buy-2014").Jdropdown({
-        delay: 50
-    })
-    //首屏banner
-    $('#slide').JsliderNew({
-        data:[1,2,3],
-        slideWidth: 760,
-        slideHeight: 350
-    });
-    $('#J_navCon').click(function(e){
-        return;
-        $('#J_navCon .banner-bg-left').animate({
-            backgroundColor:'#000'
-        },500);
-    });
-    
-    //slider
-    var item, sw;
-    var cateArr = $(".catalogue .mc .slide");
-    for(var i=0, len=cateArr.length; i<len; i++){
-        item = $(cateArr[i]);
-        sw = item.find('li').width();
-        item.JsliderNew({
+
+//header-我的京东
+$("#my360buy-2014").Jdropdown({
+    delay: 50
+})
+//首屏banner
+var topBanner = {
+    navConNode: $('#J_navCon'),
+    slideNode: $('#slide'),
+    init: function(){
+        var me = this;
+        me.initNavCon();
+        me.initNavSlide();
+        me.bindHanlder();
+    },
+    initNavCon: function(){
+        var me = this;
+        var sw = $(window).width();
+        var swExtra = parseInt((sw - 1210)/2);
+        //left
+        var navLeft = me.navConNode.find('.banner-bg-left');
+        var offsetL = 229;
+        navLeft.css('width',(swExtra+offsetL));
+        //right
+        var navRight = me.navConNode.find('.banner-bg-right');
+        var offsetR = 221;
+        navRight.css('width',(swExtra+offsetR));
+    },
+    initNavSlide: function(){
+        var me = this;
+        me.slideNode.JsliderNew({
             data:[1,2,3],
-            slideWidth: sw,
-            slideHeight: 380
+            slideWidth: 760,
+            slideHeight: 350,
+            arrowHide: false,
+            auto: 1,
+            moveFun: function(index){
+                var colorStr = me.slideNode.find('.slide-items li').eq(index).attr('data-color');
+                var colorL = colorStr.split('|')[0];
+                var colorR = colorStr.split('|')[1];
+                var time = "normal";
+                //left
+                var navLeft = me.navConNode.find('.banner-bg-left');
+                navLeft.animate({
+                    backgroundColor: colorL
+                },time);
+                //right
+                var navRight = me.navConNode.find('.banner-bg-right');
+                navRight.animate({
+                    backgroundColor: colorR
+                },time);
+            }
+        });
+    },
+    bindHanlder: function(){
+        var me = this;
+        $(window).resize(function(e){
+            me.initNavCon();
         });
     }
-    var plistArr = $('.plist .slide-new');
-    for(i=0,len=plistArr.length; i<len; i++){
-        item = $(plistArr[i]);
-        item.JsliderNew({
-            data:[1,2],
-            slideWidth: 384,
-            slideHeight: 189
-        });
-    }
-    var brandsArr = $('.brands .smcbd .slide');
-    for(i=0,len=brandsArr.length; i<len; i++){
-        item = $(brandsArr[i]);
-        item.JsliderNew({
-            data:[1,2],
-            slideWidth: 220,
-            slideHeight: 162
-        });
-    }
-    
+}
+
+$('#J_navCon').click(function(e){
+    return;
+    $('#J_navCon .banner-bg-left').animate({
+        backgroundColor:'#000'
+    },500);
+});
+topBanner.init();
+//slider
+var item, sw;
+var cateArr = $(".catalogue .mc .slide");
+for(var i=0, len=cateArr.length; i<len; i++){
+    item = $(cateArr[i]);
+    sw = item.find('li').width();
+    item.JsliderNew({
+        data:[1,2,3],
+        slideWidth: sw,
+        slideHeight: 380
+    });
+}
+var plistArr = $('.plist .slide-new');
+for(i=0,len=plistArr.length; i<len; i++){
+    item = $(plistArr[i]);
+    item.JsliderNew({
+        data:[1,2],
+        slideWidth: 384,
+        slideHeight: 189
+    });
+}
+var brandsArr = $('.brands .smcbd .slide');
+for(i=0,len=brandsArr.length; i<len; i++){
+    item = $(brandsArr[i]);
+    item.JsliderNew({
+        data:[1,2],
+        slideWidth: 220,
+        slideHeight: 162
+    });
+}
+   
 });

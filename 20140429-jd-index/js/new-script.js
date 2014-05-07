@@ -180,14 +180,80 @@ var topBanner = {
         });
     }
 }
-
-$('#J_navCon').click(function(e){
-    return;
-    $('#J_navCon .banner-bg-left').animate({
-        backgroundColor:'#000'
-    },500);
-});
 topBanner.init();
+//showcase
+var showcase = {
+    scListNode : $('#J_scList'),
+    isPlaying: false,
+    playId: -1,
+    init: function(){
+        var me = this;
+        me.bindHanlder();
+    },
+    bindHanlder: function(){
+        var me = this;
+        me.scListNode.find('li').bind('mouseover', function(e){
+            if($(this).hasClass('cur')){
+                return;
+            }
+            if(me.isPlaying){
+                // return;
+            }
+            var that = $(this);
+            var delayTime = 80;
+            clearTimeout(me.playId);
+            me.playId = setTimeout(function(){
+                var me = showcase;
+                //clean
+                var curCls = that.attr('class').match(/item\d/);
+                me.scListNode.find('li:not(.'+curCls+')').stop(true, true);
+                //
+                me.isPlaying = true;
+                var speed = 240;
+                var easingStr = 'swing';
+                var old = me.scListNode.find('li.cur');
+                var oldSw = old.hasClass('last') ? 131 : 132;
+                var cur = that;
+                var curSw = cur.hasClass('last') ? 280 : 281;
+                //old
+                if(!old.hasClass('last')){
+                    old.css({
+                        'borderRight': '1px solid #FFF',
+                        'width':  280
+                    });
+                }
+                old.animate({
+                    width: oldSw
+                },{
+                    duration: speed,
+                    easing: easingStr,
+                    complete: function(){
+                        old.removeClass('cur');
+                        old.css({
+                            border: '',
+                            width: ''
+                        })    
+                    }   
+                });
+                //cur
+                cur.animate({
+                    width: curSw
+                },{
+                    duration: speed,
+                    easing: easingStr,
+                    complete: function(){
+                        cur.addClass('cur');
+                        cur.css({
+                            'width': ''
+                        });
+                        me.isPlaying = false;
+                    }
+                });
+            },delayTime);
+        });
+    }
+}
+showcase.init();
 //slider
 var item, sw;
 var cateArr = $(".catalogue .mc .slide");

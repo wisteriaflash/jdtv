@@ -1266,18 +1266,18 @@ a.floor-sort:hover span{display:inline}
 #showcase .mt{margin:10px 0;}
 #showcase .mt h2{display:none}
 #showcase .mc{width:1210px; background-color: transparent; border-top: 2px solid #424242;}
-#showcase .sc-list{width: 1210px; height: 360px; overflow: hidden;}
-#showcase .sc-list li{width: 132px; height: 360px; float: left; position: relative; border-right: 1px solid #FFF; }
-#showcase .sc-list li .pic{width: 132px; height: 360px; overflow: hidden;}
-#showcase .sc-list li .info{position: absolute; left: 0; bottom: 0; width: 132px; height: 86px; padding: 20px 0; background-color: #F3B306; background-color: rgba(243,179,0,0.92); color: #FFF; text-align: center; font-family: 'microsoft yahei';}
+#showcase .sc-list{width: 1210px; height: 360px; overflow: hidden; position: relative;}
+#showcase .sc-list li{width: 132px; height: 360px; float: left; position: relative; border-right: 1px solid #FFF; overflow: hidden;}
+#showcase .sc-list li .pic{width: 100%; height: 360px; overflow: hidden;}
+#showcase .sc-list li .info{position: absolute; left: 0; bottom: 0; width: 100%; height: 86px; padding: 20px 0; background-color: #F3B306; background-color: rgba(243,179,0,0.92); color: #FFF; text-align: center; font-family: 'microsoft yahei';}
 #showcase .sc-list li .info span{display: block;}
 #showcase .sc-list li .info .promotion{font-size: 14px; font-weight: bold;}
 #showcase .sc-list li .info .title{margin-top: 15px; font-size: 16px;}
 #showcase .sc-list li .info .gift{display: inline-block; border: 1px solid #FFF; padding: 3px 5px; margin-top: 12px;}
 #showcase .sc-list li.cur, #showcase .sc-list li.cur .pic, #showcase .sc-list li.cur .info{width: 281px;}
 #showcase .sc-list li.cur{border: none; margin-left: -1px; box-shadow: 0 0 20px rgba(0,0,0,0.4); position: relative; z-index: 3;}
-
-#showcase .sc-list .item8{border: none;}
+#showcase .sc-list li.cur.last{width: 280px;}
+#showcase .sc-list .last{border: none;margin-right: -1px; position: absolute; right: 0; top: 0;}
 #showcase .sc-list .item2 .info{background-color: rgba(46,105,0,0.92);}
 #showcase .sc-list .item3 .info{background-color: rgba(50,186,161,0.92);}
 #showcase .sc-list .item4 .info{background-color: rgba(106,186,120,0.92);}

@@ -769,20 +769,23 @@ img.err-price{width:81px;height:22px;background:url(http://misc.360buyimg.com/li
 .catalogue .mc{position:relative;height:380px;border-left:0; overflow: visible; border: none;}
 .catalogue .mc .slide{height: 380px; background-image: none; position: relative;}
 .catalogue .mc .slide .slide-itemswrap{height: 380px; width: 244px; position: relative; left: -24px;}
-.catalogue .mc .slide .slide-items{padding: 0;}
-.catalogue .mc .slide li{width: 244px; height: 380px; float: left; color: #FFF; position: relative;}
+.catalogue .mc .slide .slide-con{width: 244px; height: 380px; position: relative; left: 24px;}
+.catalogue .mc .slide .slide-items{padding: 0; overflow: visible;}
+.catalogue .mc .slide li{width: 220px; height: 380px; float: left; color: #FFF; position: relative; overflow: visible; visibility: hidden;}
+.catalogue .mc .slide li.first{visibility: visible;}
 .catalogue .mc .slide li .bg{width: 220px; height: 380px; position: absolute; display: block; right: 0; top: 0; z-index: -1; overflow: hidden;}
-.catalogue .mc .slide li .hd{padding-left: 39px; margin: 35px 0 25px; font-family:"microsoft yahei";}
+.catalogue .mc .slide li .hd{padding-left: 18px; margin: 35px 0 25px; font-family:"microsoft yahei"; position: relative;}
 .catalogue .mc .slide li .hd .title{font-size: 26px; line-height: 30px;}
 .catalogue .mc .slide li .hd .des{font-size: 14px; margin-top: 8px;}
 .catalogue .mc .slide li .hd .gift{background-color: #000; background-color: rgba(0,0,0,0.5); font-size: 12px; font-family: 'arial'; clear: both; float: left; padding: 0 7px; height: 23px; line-height: 22px; margin-top: 6px;}
 .catalogue .mc .slide li .hd .gift em{margin-right: 5px;}
 .catalogue .mc .slide li .hd-float .des{float: left;}
 .catalogue .mc .slide li .hd-float .gift{clear: none; margin: 10px 0 0 5px;}
+.catalogue .mc .slide li .pic{position: relative; top: 0; left: -24px;}
 .catalogue .mc .slide .slide-controls{position: absolute; bottom: 0; left: 0; width: 220px; height: 22px; text-align: center; z-index: 3;}
 .catalogue .mc .slide .slide-controls span{position: static; width: 8px; height: 8px; background-color: #FFF; opacity: 0.7; filter:alpha(opacity=70); margin: 0 4px; cursor: pointer;}
 .catalogue .mc .slide .slide-controls .curr{opacity: 1; filter:alpha(opacity=100);}
-
+.catalogue .mc .slide .slide-arrow{width: 220px; z-index: 5; top: 155px;}
 
 .catalogue .style1 span{bottom:0;left:0}
 .catalogue .style1 ul{width:198px}
@@ -1012,50 +1015,61 @@ img.err-price{width:81px;height:22px;background:url(http://misc.360buyimg.com/li
 .root61 #clothing .accordion .curr{width:190px}
 
 /*floor-list bgcolor*/
-#electronics .catalogue .mc li .bg{background-color: #08D497;}
+#electronics .catalogue .mc .slide, #electronics .catalogue .mc li .bg{background-color: #08D497;}
+#electronics .mc .slide .slide-itemswrap{width: 244px; left: -24px; }
+#electronics .mc .slide .slide-con{width: 244px; left: 24px;}
+#electronics .mc .slide li .pic{left: -24px;}
 
-#digitals .catalogue .mc{background-color: #2E90FF;}
+#digitals .catalogue .mc .slide, #digitals .catalogue .mc li .bg{background-color: #2E90FF;}
 #digitals .mc .slide .slide-itemswrap{left: -32px; width: 252px;}
-#digitals .mc .slide li{width: 252px;}
-#digitals .mc .slide li .hd{margin-bottom: 50px; padding-left: 47px;}
+#digitals .mc .slide .slide-con{width: 252px; left: 32px;}
+#digitals .mc .slide li .pic{left: -32px;}
 
-#clothing .catalogue .mc{background-color: #EA5A8D;}
-#clothing .mc .slide li{width: 305px;}
-#clothing .mc .slide li .hd{padding-left: 100px; margin-bottom: 60px;}
+#clothing .catalogue .mc .slide, #clothing .catalogue .mc li .bg{background-color: #EA5A8D;}
 #clothing .mc .slide .slide-itemswrap{left: -85px; width: 305px;}
-#clothing .p-img{padding: 0;}
-#clothing .plist .style1 li{padding: 0; width: 191px; height: 188px; padding-bottom: 1px;}
-#clothing .plist .style1 .fore4{width: 192px;}
-#clothing .plist .style1 .fore6{width: 193px;}
+#clothing .mc .slide .slide-con{width: 305px; left: 85px;}
+#clothing .mc .slide li .pic{left: -85px; top: 40px;}
 
-#jewellery .catalogue .mc{background-color: #FFD200;}
-#jewellery .mc .slide li{width: 300px;}
-#jewellery .mc .slide li .hd{padding-left: 95px; margin-bottom: 45px;}
+#jewellery .catalogue .mc .slide, #jewellery .catalogue .mc li .bg{background-color: #FFD200;}
 #jewellery .mc .slide .slide-itemswrap{left: -80px; width: 300px;}
+#jewellery .mc .slide .slide-con{left: 80px; width: 300px;}
+#jewellery .mc .slide li .pic{left: -80px; top: 20px;}
 
-#life .catalogue .mc{background-color: #6CC6DE;}
+#life .catalogue .mc .slide, #life .catalogue .mc li .bg{background-color: #6CC6DE;}
 #life .mc .slide .slide-itemswrap{left: -35px; width: 255px;}
-#life .mc .slide li{width: 255px;}
-#life .mc .slide li .hd{padding-left: 50px; }
+#life .mc .slide .slide-con{left: 35px; width: 255px;}
+#life .mc .slide li .pic{left: -35px; top: 0px;}
 #life .smt .extra-ico{display: none;}
 
-#baby .catalogue .mc{background-color: #D3EBF5;}
-#baby .mc .slide li{width: 297px;}
-#baby .mc .slide li .hd{padding-left: 92px; margin-bottom: 10px; margin-top: 25px;}
+#baby .catalogue .mc .slide, #baby .catalogue .mc li .bg{background-color: #D3EBF5;}
+#baby .mc .slide .slide-itemswrap{left: -77px; width: 297px;}
+#baby .mc .slide .slide-con{left: 77px; width: 297px;}
+#baby .mc .slide li .pic{left: -77px; top: 0px;}
+#baby .mc .slide li .hd{margin-top: 25px; margin-bottom: 10px;}
 #baby .mc .slide li .hd .title{color: #466375;}
 #baby .mc .slide li .hd .des{color: #89A0B0;}
-#baby .mc .slide .slide-itemswrap{left: -77px; width: 297px;}
 
-#food .catalogue .mc{background-color: #30B50C;}
-#food .mc .slide li{width: 270px;}
-#food .mc .slide li .hd{padding-left: 65px; margin-bottom: 5px; margin-top: 25px;}
+
+#food .catalogue .mc .slide, #food .catalogue .mc li .bg{background-color: #30B50C;}
 #food .mc .slide .slide-itemswrap{left: -50px; width: 270px;}
+#food .mc .slide .slide-con{left: 50px; width: 270px;}
+#food .mc .slide li .pic{left: -50px; top: 0px;}
+#food .mc .slide li .hd{margin-bottom: 5px; margin-top: 25px;}
 
-#book .catalogue .mc{background-color: #E53412;}
-#book .mc .slide li{width: 320px;}
-#book .mc .slide li .hd{padding-left: 115px;}
-#book .mc .slide li .hd .gift{background-color: rgba(0,0,0,0.3);}
+#book .catalogue .mc .slide, #book .catalogue .mc li .bg{background-color: #E53412;}
 #book .mc .slide .slide-itemswrap{left: -100px; width: 320px;}
+#book .mc .slide .slide-con{left: 100px; width: 320px;}
+#book .mc .slide li .pic{left: -100px; top: 0px;}
+/*test*/
+/*#book .catalogue .mc .slide{background-color: #E53412;}
+#book .mc .slide .slide-itemswrap{width: 320px; left: -100px; overflow: hidden;}
+#book .mc .slide .slide-con{width: 320px; height: 380px; position: relative; left: 100px;}
+#book .mc .slide .slide-items{overflow: visible;}
+#book .mc .slide li{width: 220px; overflow: visible; visibility: hidden;}
+#book .mc .slide li .hd{padding-left: 30px;}
+#book .mc .slide li{position: relative;}
+#book .mc .slide li .pic{left: -100px;}*/
+
 
 
 #digitals-brands .smc{position:relative}

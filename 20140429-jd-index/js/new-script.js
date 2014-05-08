@@ -200,7 +200,7 @@ var showcase = {
                 // return;
             }
             var that = $(this);
-            var delayTime = 80;
+            var delayTime = 100;
             clearTimeout(me.playId);
             me.playId = setTimeout(function(){
                 var me = showcase;
@@ -254,13 +254,147 @@ var showcase = {
     }
 }
 showcase.init();
+//categorySlide
+//
+$.fn.categorySlide = function(config){
+    //merge conf
+    var node = $(this);
+    var conf = {
+        container: null,
+        defaultWidth: 220,
+        slideWidth: 220,
+        speed: 'normal'
+    };
+    var slideNum = 0;
+    var curIndex = 0;
+    var timeoutID = {
+        title: -1,
+        pic: -1
+    }
+    //fun
+    var initHandler = function(){
+        $.extend(true, conf, config);//merge data
+        conf.slideWidth = 220;
+        initAnimate()
+        bindHanlder();
+    };
+    var initAnimate = function(){
+        var slideList = node.find('.slide-items');
+        //width
+        slideNum = node.find('.slide-items li').length;
+        slideList.css({
+            width: conf.slideWidth*slideNum
+        });
+        var left = slideList.find('li .pic').css('left');
+        node.attr('data-picL',left);
+    };
+    var bindHanlder = function(){
+        //controls
+        node.find('.slide-controls span').mouseover(function(e){
+            if($(this).hasClass('curr')){
+                return;
+            }
+            //move
+            var index = $(this).index();
+            movePosition(index);
+        });
+        //arrow
+        var arrow = node.find('.slide-arrow');
+        node.mouseover(function(e){
+            arrow.show();
+        });
+        node.mouseleave(function(e){
+            arrow.hide();
+        });
+        arrow.find('.arrow-l').click(function(e){
+            var index = curIndex -1;
+            if(index<0){
+                index = slideNum -1;
+            }
+            movePosition(index);
+        });
+        arrow.find('.arrow-r').click(function(e){
+            var index = curIndex +1;
+            if(index == slideNum){
+                index = 0;
+            }
+            movePosition(index);
+        });
+    };
+    var movePosition = function(index){
+        var me = this;
+        var titleDelay = 100, picDelay = 150;
+        var slideCon = node.find('.slide-items');
+        var preItem = slideCon.find('li').eq(curIndex);
+        var curItem = slideCon.find('li').eq(index);
+        var slideTitle = curItem.find('.hd');
+        var slidePic = curItem.find('.pic');
+        var easing = 'swing';
+        //clean
+
+        //init
+        slideTitle.css({
+            opacity: 0,
+            left: conf.slideWidth
+        });
+        slidePic.css({
+            opacity: 0,
+            left: -conf.slideWidth
+        });
+        curItem.css({
+            visibility: 'visible',
+            opacity: 1
+        });
+        //animate
+        slideCon.animate({
+            left: -index*conf.slideWidth
+        },conf.speed, easing, function(){
+            slideCon.find('li').css({
+                backgroundColor: ''
+            })
+        });
+        //pre
+        preItem.animate({
+            opacity: 0
+        },conf.speed, function(){
+            preItem.css('visibility','hidden');
+        });
+        //cur-title
+        timeoutID.title = setTimeout(function(){
+            slideTitle.animate({
+                opacity: 1,
+                left: 0
+            }, conf.speed);
+        },titleDelay)
+        //cur-pic
+        timeoutID.pic = setTimeout(function(){
+            slidePic.animate({
+                opacity: 1,
+                left: node.attr('data-picL')
+            }, conf.speed, function(){
+                movePosComplete(index);
+            });
+        },picDelay);
+    };
+    var movePosClean = function(index){
+
+    };
+    var movePosComplete = function(index){
+        var controls = node.find('.slide-controls span');
+        curIndex = index;
+        controls.removeClass('curr');
+        controls.eq(index).addClass('curr');
+    };
+    //init
+    initHandler();
+}
 //slider
 var item, sw;
 var cateArr = $(".catalogue .mc .slide");
 for(var i=0, len=cateArr.length; i<len; i++){
     item = $(cateArr[i]);
     sw = item.find('li').width();
-    item.JsliderNew({
+    item.categorySlide({
         data:[1,2,3],
         slideWidth: sw,
         slideHeight: 380

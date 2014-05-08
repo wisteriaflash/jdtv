@@ -342,7 +342,7 @@ $.fn.categorySlide = function(config){
         var curItem = slideCon.find('li').eq(index);
         var slideTitle = curItem.find('.hd');
         var slidePic = curItem.find('.pic');
-        var easing = 'swing';
+        var easing = 'easeInOutCubic';
         //clean
         slideCon.find('li').stop(true, true);
         curIndex = index;
@@ -357,7 +357,7 @@ $.fn.categorySlide = function(config){
         });
         slidePic.css({
             opacity: 0,
-            left: -conf.slideWidth
+            left: -slidePic.width()
         });
         curItem.css({
             visibility: 'visible',
@@ -387,14 +387,14 @@ $.fn.categorySlide = function(config){
             slideTitle.animate({
                 opacity: 1,
                 left: 0
-            }, conf.speed);
+            }, conf.speed, easing);
         },titleDelay)
         //cur-pic
         timeoutID.pic = setTimeout(function(){
             slidePic.animate({
                 opacity: 1,
                 left: node.attr('data-picL')
-            }, conf.speed, function(){
+            }, conf.speed, easing, function(){
                 movePosComplete(index);
             });
         },picDelay);

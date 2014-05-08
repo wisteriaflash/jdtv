@@ -270,7 +270,8 @@ $.fn.categorySlide = function(config){
     var timeoutID = {
         title: -1,
         pic: -1
-    }
+    };
+    var hoverID = -1;
     //fun
     var initHandler = function(){
         $.extend(true, conf, config);//merge data
@@ -282,8 +283,16 @@ $.fn.categorySlide = function(config){
         var slideList = node.find('.slide-items');
         //width
         slideNum = node.find('.slide-items li').length;
+        // slideList.css({
+        //     width: conf.slideWidth*slideNum
+        // });
         slideList.css({
-            width: conf.slideWidth*slideNum
+            position: 'relative'
+        });
+        slideList.find('li').css({
+            position: 'absolute',
+            left: 0,
+            top: 0
         });
         var left = slideList.find('li .pic').css('left');
         node.attr('data-picL',left);
@@ -296,7 +305,11 @@ $.fn.categorySlide = function(config){
             }
             //move
             var index = $(this).index();
-            movePosition(index);
+            clearTimeout(hoverID);
+            hoverID = setTimeout(function(){
+                movePosition(index);
+            },50);
+            
         });
         //arrow
         var arrow = node.find('.slide-arrow');
@@ -331,7 +344,12 @@ $.fn.categorySlide = function(config){
         var slidePic = curItem.find('.pic');
         var easing = 'swing';
         //clean
-
+        slideCon.find('li').stop(true, true);
+        curIndex = index;
+        //controls
+        var controls = node.find('.slide-controls span');
+        controls.removeClass('curr');
+        controls.eq(index).addClass('curr');
         //init
         slideTitle.css({
             opacity: 0,
@@ -343,21 +361,26 @@ $.fn.categorySlide = function(config){
         });
         curItem.css({
             visibility: 'visible',
-            opacity: 1
+            opacity: 0,
+            zIndex: 5
         });
         //animate
-        slideCon.animate({
-            left: -index*conf.slideWidth
-        },conf.speed, easing, function(){
-            slideCon.find('li').css({
-                backgroundColor: ''
-            })
-        });
+        // slideCon.animate({
+        //     left: -index*conf.slideWidth
+        // },conf.speed, easing, function(){
+        //     slideCon.find('li').css({
+        //         backgroundColor: ''
+        //     })
+        // });
         //pre
         preItem.animate({
             opacity: 0
         },conf.speed, function(){
             preItem.css('visibility','hidden');
+        });
+        //cur
+        curItem.animate({
+            opacity: 1
         });
         //cur-title
         timeoutID.title = setTimeout(function(){
@@ -380,10 +403,9 @@ $.fn.categorySlide = function(config){
 
     };
     var movePosComplete = function(index){
-        var controls = node.find('.slide-controls span');
-        curIndex = index;
-        controls.removeClass('curr');
-        controls.eq(index).addClass('curr');
+        node.find('.slide-items li').eq(index).css({
+            zIndex: 0
+        })
     };
     //init
     initHandler();

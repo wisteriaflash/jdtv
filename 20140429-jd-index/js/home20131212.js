@@ -374,6 +374,7 @@ function setClothingPlist2(t) {
 }
 
 function setCheckEptArea() {
+    return;
     var t = function(t) {
         if (0 !== t.type) {
             var e = readCookie("__jda"),

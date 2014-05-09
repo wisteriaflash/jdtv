@@ -336,7 +336,7 @@ $.fn.categorySlide = function(config){
     };
     var movePosition = function(index){
         var me = this;
-        var titleDelay = 100, picDelay = 150;
+        var titleDelay = 50, picDelay = 100;
         var slideCon = node.find('.slide-items');
         var preItem = slideCon.find('li').eq(curIndex);
         var curItem = slideCon.find('li').eq(index);

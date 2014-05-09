@@ -811,7 +811,10 @@ img.err-price{width:81px;height:22px;background:url(http://misc.360buyimg.com/li
 .plist .fore5 .smt{left:624px}
 .plist .smc{position:relative;height:379px;border-bottom:1px solid #DDD}
 .plist .smc ul.lh{width:770px;}
-.plist .smc li{padding:5px 10px 0;border-left:1px solid #E8E8E8;border-top:1px solid #E8E8E8;overflow:hidden}
+.plist .smc li{padding:5px 10px 0;border-left:1px solid #E8E8E8;border-top:1px solid #E8E8E8;overflow:hidden; position: relative;}
+.plist .icon-cutdown{background-color: #E51B27; position: absolute; top: 0; right: 5px; text-align: center; color: #FFF;}
+.plist .icon-cutdown span{display: block; padding: 2px 5px; line-height: 16px;}
+.plist .icon-cutdown .title{border-bottom: 1px dashed #fff;}
 .plist .p-name{height:3em;margin-bottom:2px}
 .plist .p-img{text-align:center}
 .plist .p-price{font-size:15px;font-family:Verdana;color:#e4393c}
@@ -1060,17 +1063,6 @@ img.err-price{width:81px;height:22px;background:url(http://misc.360buyimg.com/li
 #book .mc .slide .slide-itemswrap{left: -100px; width: 320px;}
 #book .mc .slide .slide-con{left: 100px; width: 320px;}
 #book .mc .slide li .pic{left: -100px; top: 0px;}
-/*test*/
-/*#book .catalogue .mc .slide{background-color: #E53412;}
-#book .mc .slide .slide-itemswrap{width: 320px; left: -100px; overflow: hidden;}
-#book .mc .slide .slide-con{width: 320px; height: 380px; position: relative; left: 100px;}
-#book .mc .slide .slide-items{overflow: visible;}
-#book .mc .slide li{width: 220px; overflow: visible; visibility: hidden;}
-#book .mc .slide li .hd{padding-left: 30px;}
-#book .mc .slide li{position: relative;}
-#book .mc .slide li .pic{left: -100px;}*/
-
-
 
 #digitals-brands .smc{position:relative}
 #digitals-brands .tab{position:absolute;bottom:10px;left:0;width:209px;height:16px;overflow:hidden;text-align:center;font-size:0}

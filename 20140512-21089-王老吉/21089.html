@@ -7,13 +7,13 @@
 .evt_page_bg div { width: 100%; height: 200px; background-position: center top; background-repeat: no-repeat; }
 
 #evt_header .inner { height:767px; width: 985px; margin: 0 auto; position: relative;}
-#evt_header .inner .evt_link {position:absolute;left:0;top:0;width:160px;height: 95px; background:url({@img_14}) 0 0 no-repeat;}
+#evt_header .inner .evt_link {position:absolute;left:0;top:0;width:160px;height: 95px; background:url() 0 0 no-repeat;}
 #evt_header .inner .evt_link:hover{ background-position:0 -95px;}
 
 /*--- <editor-fold desc="楼层公用"> ---*/
-.page_event .evt_floor { margin-bottom: 25px;}
+.page_event .evt_floor { margin-bottom:0;}
 .page_event .evt_floorB{ background:#FFF; margin-bottom:0;}
-.page_event .evt_mod {width:985px; margin: 0 auto;}
+.page_event .evt_mod {width:985px; margin: 0 auto; padding-bottom: 25px; background-color: #F7F7F7;}
 .page_event .evt_moded{width:1055px; height:16px;margin: 0 auto;}
 .page_event .hd { position: relative;height:100px;}
 .page_event .hd h2 { display: none;}
@@ -24,7 +24,7 @@
 .page_event .hd .pd_items{position:absolute; top:0px;left:9px;}
 .page_event .hd .pd_items2{position:absolute; top:0px;right:9px;}
 .page_event .hd .pd_items2 li{ width:265px; height:140px; margin-bottom:9px; position:relative;}
-.page_event .hd .pd_items2 li a:hover i{ display:block;width:265px; height:140px; background:url({@img_11}) 0 0 no-repeat; position:absolute; top:0; left:0;}
+.page_event .hd .pd_items2 li a:hover i{ display:block;width:265px; height:140px; background:url() 0 0 no-repeat; position:absolute; top:0; left:0;}
 .page_event .bd { padding: 9px 0 8px 9px;}
 
 .evt_tabs { height: 45px; background: #FD9419;}
@@ -56,8 +56,7 @@
 .page_event .pd_pic img { vertical-align: top;}
 .page_event .pd_grade { height: 20px; margin-bottom: 9px; color: #999;}
 .page_event .pd_grade a { color: #999;}
-.page_event .icon_star { width: 120px; height: 20px; font-size: 12px; line-height: 20px; background: url({@img_12}) no-repeat 0 -144px;}
-.page_event .icon_star b { height: 20px; background: url({@img_12}) no-repeat 0 -164px;}
+.page_event .icon_star { width: 120px; height: 20px; font-size: 12px; line-height: 20px; background: url({@img_12}) no-repeat 0 -164px;}
 .page_event .pd_price_wrap { text-align: left;color: #383838; overflow: hidden; *zoom:1; }
 .page_event .pd_price_old { color: #999; font-size: 12px;}
 .page_event .pd_price_old b { font-weight: normal;text-decoration: line-through;}
@@ -74,14 +73,14 @@
 .page_event .pd_cart .btn_buy:hover { background-position: 0 -36px;}
 .page_event .pd_cart .btn_buy_disabled { background-position: 0 -72px;}
 .page_event .pd_cart .btn_masker { background-position: 0 -108px;}
-.page_event .pd_sub { display: none; position:absolute;left:-15px; top:-5px; width:51px;height:57px; padding:14px 10px 0 10px; background:url('http://img3.icson.com/template/2013/12/03/138606581452067900_a_7.png') no-repeat 0 -142px; font-family: "\5FAE\8F6F\96C5\9ED1", sans-serif; font-size:18px; color:white; line-height:20px; text-align:center; -webkit-transform: rotate(-15deg) translate3d( 0, 0, 0);transform: rotate(-15deg);}
+.page_event .pd_sub { display: none; position:absolute;left:-15px; top:-5px; width:51px;height:57px; padding:14px 10px 0 10px; background:url('{@img_7}') no-repeat 0 -142px; font-family: "\5FAE\8F6F\96C5\9ED1", sans-serif; font-size:18px; color:white; line-height:20px; text-align:center; -webkit-transform: rotate(-15deg) translate3d( 0, 0, 0);transform: rotate(-15deg);}
 .page_event .pd_sub_s1 { background-position: 0 0;}
 .page_event .pd_sub_s2 { background-position: 0 -71px;}
 .page_event .pd_sub_s3 { background-position: 0 -142px;}
 .page_event .pd_sub_s4 { font-size: 22px;width:51px;height:47px; padding:24px 10px 0 10px;}
 .page_event .pd_items .ad_list{ width:240px; height:315px; padding:0;transition:none;-webkit-transition:none;}
 .page_event .pd_items .ad_list:hover{box-shadow:none;transform:none;-webkit-transform:none;}
-.page_event .pd_items .ad_list:hover i{ display:block; position:absolute; width:248px; height:323px; left:-4px; top:-4px; background:url({@img_13}) 0 0 no-repeat;}
+.page_event .pd_items .ad_list:hover i{ display:block; position:absolute; width:248px; height:323px; left:-4px; top:-4px; background:url() 0 0 no-repeat;}
 .page_event .pd_items li .pd_info_jg li{ width:66px; height:40px; margin:0; padding:0; overflow:hidden;}
 .page_event .pd_items li .pd_info_jg li em,.page_event .pd_items li .pd_info_jg li b{color:#ff7022; font-size:14px;}
 .page_event .pd_items li .pd_info_jg li b{ font-weight:bold;}
@@ -97,9 +96,9 @@
 .page_event .pd_item_hot .pd_promotion { margin-bottom: 15px;}
 .page_event .pd_item_hot .pd_grade { margin-bottom: 20px;}
 .page_event .pd_item_hot .pd_cart{ width:93px; height:70px; position:absolute; right:0; bottom:0;}
-.page_event .pd_item_hot .pd_cart a { display: block; height:70px;background: url({@img_11}) no-repeat 0 -75px; overflow: hidden;border: none;padding: 0; }
+.page_event .pd_item_hot .pd_cart a { display: block; height:70px;background: url() no-repeat 0 -75px; overflow: hidden;border: none;padding: 0; }
 
-.page_event .pd_item_hot .pd_ms{ width:110px; height:50px; background:url({@img_11}) 0 0 no-repeat; position:absolute; right:93px; bottom:0; padding:10px 20px;color:#FF4D4D}
+.page_event .pd_item_hot .pd_ms{ width:110px; height:50px; background:url() 0 0 no-repeat; position:absolute; right:93px; bottom:0; padding:10px 20px;color:#FF4D4D}
 .page_event .pd_item_hot .pd_ms span{color:#000;}
 /* 一排五个商品 */
 .page_event .pro_min li{width:192px;height:326px;float:left;position:relative;margin:4px 3px 0 0;padding:0;}
@@ -108,7 +107,7 @@
 .page_event .pro_min .price_old b{font-size:30px;font-weight:bold;line-height:30px;}
 .page_event .pro_min .price_now{color:#999;width:160px;margin:0 auto;}
 .page_event .pro_min .title,.pro_min .desc{width:160px;height:20px;margin:0 auto;display:block;overflow:hidden;font-size:14px;}
-.page_event .pro_min .btn_buy,.page_event .pro_min .btn_buy_disabled{width:160px;height:36px;margin:8px auto;display:block;background:url({@img_26});text-indent:-999em;}
+.page_event .pro_min .btn_buy,.page_event .pro_min .btn_buy_disabled{width:160px;height:36px;margin:8px auto;display:block;background:url();text-indent:-999em;}
 .page_event .pro_min .btn_buy_disabled{background-position:0 -36px;}
 .page_event .pro_min .btn_buy:hover{background-position:0 -72px;}
 .page_event .pro_min .pro_box{width:192px;height:326px;background:#fff;position:absolute;overflow:hidden;}
@@ -119,29 +118,33 @@
 .picRight li{float:left;}
 .picRight img{display:block;margin:0 4px 5px 0;}
 
-#evt_floor1 .hd {height:100px; background:url({@img_5}) top center no-repeat;}
-#evt_floor1 .bd{ background:#3DA4FF;}
+#evt_floor1 .hd {height:110px; background:url({@img_5}) top center no-repeat;}
 
-#evt_floor2 .evt_mod{ width:985px; height:495px; background:url({@img_6}) 0 0 no-repeat; margin:0 auto; position:relative;}
+#evt_floor2 .evt_mod{ width:985px; height:495px; background-image:url({@img_6}); background-position: 0 0; background-repeat: no-repeat; margin:0 auto; position:relative;}
 
 #evt_floor3 .hd {height:100px; background:url({@img_7}) top center no-repeat;}
-#evt_floor3 .bd{ background:#3DA4FF;}
 
+#evt_desc .desc_bg, #evt_desc ul li i{background:url({@img_13}) no-repeat;}
 #evt_desc { margin-bottom: 0;}
-#evt_desc .evt_mod { background:#D29620;padding:15px; width:955px;}
-#evt_desc .hd { height: auto;background: none; width:955px; left:0;}
-#evt_desc .hd h2 { display: block; font-size:30px; line-height: 32px; color:#FFF; border-bottom: 1px solid #FFF;padding-bottom: 10px;}
+#evt_desc .evt_mod {padding:15px 25px; width:935px; position: relative;}
+#evt_desc .desc_bg{width: 168px; height: 277px; overflow: hidden; display: block; position: absolute; right: 25px; top: 48px;}
+#evt_desc .hd { height: auto;background: none; width:825px; left:20px;}
+#evt_desc .hd h2 { display: block; font-size:30px; line-height: 32px; color:#C71E1B; border-bottom: 1px solid #C71E1B;padding-bottom: 10px; font-weight: normal;}
 #evt_desc .bd { padding: 10px 20px 20px 0;}
-#evt_desc ul { font-size: 14px; color:#FFF; line-height: 22px;}
+#evt_desc ul { font-size: 14px; color:#424242; line-height: 22px;}
 #evt_desc ul li { padding-left: 24px;margin-bottom: 8px;}
+#evt_desc ul li i{width: 10px; height: 12px; display: block; float: left; background-position: 0 -285px; margin: 5px 8px 0 0;}
 #evt_desc ul { padding-top: 8px;}
+#evt_desc .sublist{margin-left: 25px;}
+#evt_desc .sublist .note{margin-left: 35px;}
+#evt_desc .sublist .dot{font-size: 14px; font-weight: bold; margin: 0 2px;}
 /*--- </editor-fold> ---*/
 
 /*--- <editor-fold desc="悬浮导航"> ---*/
 html, html body { _text-overflow: ellipsis; }
 .evt_nav { visibility: hidden; z-index: 50; position: fixed; _position: absolute; top: 0; left: 50%; padding-top: 10px; zoom: 1; _top: expression(eval(document.documentElement.scrollTop)); }
 .evt_nav_left { width: 120px; height: 400px; margin-left: -660px; }
-.evt_nav_left .inner { width: 120px; height: 400px; }
+.evt_nav_left .inner { width: 125px; height: 550px; }
 .evt_nav_left a { display: block; width: 120px; margin-bottom: 2px; }
 .evt_nav_left a img { vertical-align: top; }
 
@@ -161,10 +164,11 @@ html, html body { _text-overflow: ellipsis; }
 .evt_nav_right .evt_link0 {background-position: 0 -250px; }
 .evt_nav_right .evt_link0:hover {background-position: -120px -250px;}
 /*--- </editor-fold> ---*/
-#evt_floor2 .evt_mod .evt_flashloy{ position:absolute; right:45px;top:45px;}
-.evt_floor_weibo .evt_mod { background-color:#0CAEDD;}
+#evt_floor2 .evt_mod .evt_flashloy{ position:absolute; right:45px;top:100px;}
+.evt_floor_weibo{background-color: #FFF;}
+.evt_floor_weibo .evt_mod { background-color:#EAEAEA; padding-bottom: 0;}
 .evt_weibo { padding: 32px 0 48px 25px;}
-.evt_weibo h2 { font-size: 24px; line-height: 26px; margin-bottom: 5px;color:#fff;}
+.evt_weibo h2 { font-size: 24px; line-height: 26px; margin-bottom: 5px;color:#C71E1B;}
 .evt_weibo_post,.ect_weibo_list { float: left; padding: 0 0 0 8px; width: 442px; height: 260px; background: #fff; margin-right: 2px;}
 .ect_weibo_list { margin-right: 0; }
 .evt_weibo_post { padding-top: 5px; height: 255px; }
@@ -178,19 +182,19 @@ html, html body { _text-overflow: ellipsis; }
 .evt_qq_weibo { background-position: -122px -324px;}
 .evt_qq_weibo:hover { background-position: -122px -356px;}
 .evt_weibo_frame { width: 430px; height: 255px;}
-.wljsjb_jd{ width:118px; height:20px; position:absolute; top:73px;left:450px;}
+.wljsjb_jd{ width:118px; height:20px; position:absolute; top:85px;left:423px;}
 .wljsjb_qq{ width:100px; height:20px; position:absolute; top:52px; right:110px;}
-.djdh_a{ width:205px; height:65px; position:absolute;top:10px; right:16px;}
-.djdh_b{ width:318px; height:165px;position:absolute;top:565px;}
-.djdh_b1{left:0px;}	.djdh_b2{left:335px;}	.djdh_b3{left:666px;}
-.djdh_c{ width:110px; height:30px; position:absolute; bottom:0px; right:0px;}
+.djdh_a{ width:205px; height:75px; position:absolute;top:418px; right:374px;}
+.djdh_b{ width:300px; height:117px;position:absolute;top:565px;}
+.djdh_b1{left:0px;} .djdh_b2{left:342px;} .djdh_b3{left:686px;}
+.djdh_c{ width:110px; height:30px; position:absolute; bottom:8px; right:0px;}
 .djdh_d{ width:450px; height:250px;position:absolute;top:130px;left:250px;}
 .djdh_e{width:90px;height:42px;position:absolute;top:12px;left:12px;}
 /*弹框*/
 .pro_main1{ margin:auto; position:absolute;  z-index:201; width:100%; display:block; left:0px; display:none;}
 .pro_main1 .pro_con{ z-index:203;}
 .pro_main1 .pro_h{background-color:#000; display:block; position:relative;width:100%;opacity:0.6; height:6300px; z-index:200;}
-.pro_main1 .pro_con .tk{ position: absolute; display:block; width:481px; height:266px; left:50%; top:200px; margin-left:-240px;z-index:204; overflow:hidden;background: url({@img_10}) no-repeat 0 0px;}
+.pro_main1 .pro_con .tk{ position: absolute; display:block; width:481px; height:266px; left:50%; top:200px; margin-left:-240px;z-index:204; overflow:hidden;background: url(http://img3.icson.com/template/2014/05/09/139962692044312100_a_10.jpg) no-repeat 0 0px;}
 .pro_main1 .pro_con .tk a{ position:absolute; width:151px; height:38px; top:168px;}
 </style>
 <div class="pro_main1">
@@ -260,6 +264,18 @@ html, html body { _text-overflow: ellipsis; }
               </div>
             </div>
         </div>
+        <div id="evt_desc" class="evt_floor">
+            <div class="evt_mod">
+                <div class="hd">
+                    <h2>活动规则</h2>
+                </div>
+                <div class="bd">
+                    <ul>
+                        {@evt_desc}
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="evt_floor evt_floor_weibo">
             <div class="evt_mod">
                 <div class="bd">
@@ -280,18 +296,6 @@ html, html body { _text-overflow: ellipsis; }
                     </div>
                 </div>
             </div>
-        </div>        
-        <div id="evt_desc" class="evt_floor">
-            <div class="evt_mod">
-                <div class="hd">
-                    <h2>活动规则</h2>
-                </div>
-                <div class="bd">
-                    <ul>
-                        {@evt_desc}
-                    </ul>
-                </div>
-            </div>
         </div>
     </div>
     <div class="evt_page_bg">
@@ -303,7 +307,7 @@ html, html body { _text-overflow: ellipsis; }
 </div>
 <!--左侧导航 S -->
 <div class="evt_nav_left evt_nav">
-    <div class="inner"></div>
+    <div class="inner"><img src="{@img_14}" alt="" /></div>
 </div>
 <!--左侧导航 E -->
 <!--右侧导航 S -->
@@ -426,7 +430,7 @@ function showErrorByAs(errno,message,level,lotter_id,batch_no,select_award,cdkey
 
 $(function(){
     _weibo_init(".evt_floor_weibo","吉情巴西，开罐有奖","上易迅网买王老吉享3重豪礼，买就减，买就抽奖，更有买王老吉参加腾讯世界杯竟猜活动就有机会获得iPhone 5s等大奖。wlj.yixun.com","");
-    _init_lottery(".evt_flashloy",'http://img3.icson.com/template/2014/02/14/139237033579731100_lottery_flash.swf?success_num=4&mod=lotteryge&act=order&oder_lottery=1&sn=21089&event_bg=http://img3.icson.com/template/2014/05/05/139928116599377700_a_8.png&event_bt=http://img3.icson.com/template/2014/05/05/139928117111772500_a_9.png',402,402,'','flash_dial');
+    _init_lottery(".evt_flashloy",'http://img3.icson.com/template/2014/02/14/139237033579731100_lottery_flash.swf?success_num=10&mod=lotteryge&act=order&oder_lottery=1&sn=21251&event_bg=http://img3.icson.com/template/2014/05/12/139988706970885400_a_8.png&event_bt=http://img3.icson.com/template/2014/05/12/139988706971418600_a_9.png',341,341,'','flash_dial');
 });
 $(document).ready(function () {	
     //页面载入后滚动到活动有效内容区

@@ -1,0 +1,4 @@
+_init_lottery(".evt_flashloy",'http://img3.icson.com/template/2014/02/14/139237033579731100_lottery_flash.swf?success_num=10&mod=lotteryge&act=order&oder_lottery=1&sn=21089&event_bg=http://img3.icson.com/template/2014/05/13/139996291803062500_a_8.png&event_bt=http://img3.icson.com/template/2014/05/13/139996291803735200_a_9.png',341,341,'','flash_dial');
+
+
+其中oder_lottery=1为验证订单限制，去掉则可用于测试抽奖。

@@ -123,6 +123,7 @@
 #evt_floor2 .evt_mod{ width:985px; height:495px; background-image:url({@img_6}); background-position: 0 0; background-repeat: no-repeat; margin:0 auto; position:relative;}
 
 #evt_floor3 .hd {height:100px; background:url({@img_7}) top center no-repeat;}
+#evt_floor3 .bd{padding: 9px 0 8px 6px;}
 
 #evt_desc .desc_bg, #evt_desc ul li i{background:url({@img_13}) no-repeat;}
 #evt_desc { margin-bottom: 0;}
@@ -456,7 +457,7 @@ $(document).ready(function () {
     //悬浮导航
     $(window).bind("scroll resize", function () {
         var winWidth = $(window).width();
-        var winHeight = $(window).height()-260;
+        var winHeight = $(window).height()-350;
         if (winWidth > 1250 && $(window).scrollTop() > winHeight) {
             $('.evt_nav').css('visibility', 'visible');
         } else {

@@ -199,21 +199,21 @@ html, html body { _text-overflow: ellipsis; }
 .pro_main1 .pro_con .tk a{ position:absolute; width:151px; height:38px; top:168px;}
 </style>
 <div class="pro_main1">
-	<div class="pro_con">
-		<div class="tk">
+    <div class="pro_con">
+        <div class="tk">
             <i class="icon"></i>
-			<a class="aa_gb" href="javascript:;" title="关闭" style="width:35px; height:35px; left:445px; top:0;"></a>
+            <a class="aa_gb" href="javascript:;" title="关闭" style="width:35px; height:35px; left:445px; top:0;"></a>
             <a href="http://mall.jd.com/index-63189.html" target="_blank" title="去京东购买" style="left:61px;"></a>
             <a class="aa_gb" href="#evt_floor3" title="0元兑换奖品" style="left:272px;"></a>
-		</div>
-	</div>
-	<div class="pro_h"></div>
+        </div>
+    </div>
+    <div class="pro_h"></div>
 </div>
 <div class="page_event">
     <div class="evt_page_body">
         <div id="evt_header">
             <div class="inner">
-            	<a href="#evt_floor3" class="djdh_a"></a>
+                <a href="#evt_floor3" class="djdh_a"></a>
                 <a href="#evt_floor1" class="djdh_b djdh_b1"></a>
                 <a href="#evt_floor2" class="djdh_b djdh_b2"></a>
                 <a href="#evt_floor3" class="djdh_b djdh_b3"></a>
@@ -224,7 +224,7 @@ html, html body { _text-overflow: ellipsis; }
         </div>
         <div id="evt_floor1" class="evt_floor">
             <div class="evt_mod">
-            	<div class="hd"><a href="http://mall.jd.com/index-63189.html" target="_blank" class="wljsjb_jd"></a></div>
+                <div class="hd"><a href="http://mall.jd.com/index-63189.html" target="_blank" class="wljsjb_jd"></a></div>
                 <div class="bd">
                     <ul class="pd_items clearfix"  id="dz_list">
                         {@gdgroup_1}
@@ -250,11 +250,11 @@ html, html body { _text-overflow: ellipsis; }
             </div>
         </div>
         <div id="evt_floor2" class="evt_floor">
-        	<div class="evt_mod"><div class="evt_flashloy"></div></div>
+            <div class="evt_mod"><div class="evt_flashloy"></div></div>
         </div>
         <div id="evt_floor3" class="evt_floor">
-        	<div class="evt_mod">
-            	<div class="hd"><a href="http://wljsjb.qq.com/" target="_blank" class="wljsjb_qq"></a></div>
+            <div class="evt_mod">
+                <div class="hd"><a href="http://wljsjb.qq.com/" target="_blank" class="wljsjb_qq"></a></div>
                 <div class="bd">
                     <ul class="pd_items clearfix"  id="dz_list">
                         <li class="banner_li">{@adgroup_1}<img src="{ad_pic_url}" alt="{ad_des}"/>{/@adgroup_1}</li>
@@ -331,16 +331,16 @@ html, html body { _text-overflow: ellipsis; }
 <script type="text/javascript">
 //判断分站显示弹窗
 $(function(){
-	$(".aa_gb").click(function(){
-		$(".pro_main1").css("display","none");//点击隐藏
-	});
-	var siteId=G.logic.constants.getSiteId();
-	if(1001==siteId || 2001==siteId || 5001==siteId){
-		$(".pro_main1").css("display","block");
-		}
-	else{
-	$(".pro_main1").css("display","none");
-	}
+    $(".aa_gb").click(function(){
+        $(".pro_main1").css("display","none");//点击隐藏
+    });
+    var siteId=G.logic.constants.getSiteId();
+    if(1001==siteId || 2001==siteId || 5001==siteId){
+        $(".pro_main1").css("display","block");
+        }
+    else{
+    $(".pro_main1").css("display","none");
+    }
 });
 //微博转发
 function _weibo_init(obj,huati,evn,pic){
@@ -436,9 +436,9 @@ function showErrorByAs(errno,message,level,lotter_id,batch_no,select_award,cdkey
 
 $(function(){
     _weibo_init(".evt_floor_weibo","吉情巴西，开罐有奖","上易迅网买王老吉享3重豪礼，买就减，买就抽奖，更有买王老吉参加腾讯世界杯竟猜活动就有机会获得iPhone 5s等大奖。wlj.yixun.com","");
-    _init_lottery(".evt_flashloy",'http://img3.icson.com/template/2014/02/14/139237033579731100_lottery_flash.swf?success_num=10&mod=lotteryge&act=order&oder_lottery=0&sn=21251&event_bg=http://img3.icson.com/template/2014/05/13/139996267074986100_a_8.png&event_bt=http://img3.icson.com/template/2014/05/12/139988706971418600_a_9.png',341,341,'','flash_dial');
+    _init_lottery(".evt_flashloy",'http://img3.icson.com/template/2014/02/14/139237033579731100_lottery_flash.swf?success_num=10&mod=lotteryge&act=order&oder_lottery=1&sn=21089&event_bg=http://img3.icson.com/template/2014/05/13/139996291803062500_a_8.png&event_bt=http://img3.icson.com/template/2014/05/13/139996291803735200_a_9.png',341,341,'','flash_dial');
 });
-$(document).ready(function () {	
+$(document).ready(function () { 
     //页面载入后滚动到活动有效内容区
     $('html, body').animate({scrollTop: $(".page_event").offset().top}, 200);
     $(".pd_items li").each(function(){

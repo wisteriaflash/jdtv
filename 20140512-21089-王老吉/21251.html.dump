@@ -10,7 +10,7 @@
 #evt_header .inner .evt_link {position:absolute;left:0;top:0;width:160px;height: 95px; background:url() 0 0 no-repeat;}
 #evt_header .inner .evt_link:hover{ background-position:0 -95px;}
 
-/*--- <editor-fold desc="Â¥²ã¹«ÓÃ"> ---*/
+/*--- <editor-fold desc="æ¥¼å±‚å…¬ç”¨"> ---*/
 .page_event .evt_floor { margin-bottom:0;}
 .page_event .evt_floorB{ background:#FFF; margin-bottom:0;}
 .page_event .evt_mod {width:985px; margin: 0 auto; padding-bottom: 25px; background-color: #F7F7F7;}
@@ -43,7 +43,7 @@
 .evt_banner_190 li { width: 190px; margin-right: 4px;}
 /*--- </editor-fold> ---*/
 
-/*--- <editor-fold desc="ÉÌÆ·×é¹«ÓÃ"> ---*/
+/*--- <editor-fold desc="å•†å“ç»„å…¬ç”¨"> ---*/
 .page_event .pd_items { *margin-bottom: 3px; }
 .page_event .pd_items li { float: left;width: 200px; height: 371px; position: relative; padding: 9px 20px 0; background: #fff; margin: 0 3px 3px 0;transition: all 0.3s linear;-webkit-transition: all 0.3s linear;}
 .page_event .pd_items li:hover {box-shadow:none;transform:none;-webkit-transform:none;}
@@ -84,9 +84,9 @@
 .page_event .pd_items li .pd_info_jg li{ width:66px; height:40px; margin:0; padding:0; overflow:hidden;}
 .page_event .pd_items li .pd_info_jg li em,.page_event .pd_items li .pd_info_jg li b{color:#ff7022; font-size:14px;}
 .page_event .pd_items li .pd_info_jg li b{ font-weight:bold;}
-/* µ¹¼ÆÊ±ÉÌÆ· */
+/* å€’è®¡æ—¶å•†å“ */
 .page_event .pd_items .pd_item_timer { height: 403px;}
-/* ±¬¿îÈÈÃÅÉÌÆ· */
+/* çˆ†æ¬¾çƒ­é—¨å•†å“ */
 .page_event .pd_items .pd_item_hot { width: 443px; height: 220px;overflow: hidden; *zoom: 1;}
 .page_event .pd_item_hot .pd_pic { float: left; width: 200px; padding-right: 20px;}
 .page_event .pd_item_hot .pd_info { overflow: hidden; *zoom: 1; padding-top: 10px;}
@@ -100,7 +100,7 @@
 
 .page_event .pd_item_hot .pd_ms{ width:110px; height:50px; background:url() 0 0 no-repeat; position:absolute; right:93px; bottom:0; padding:10px 20px;color:#FF4D4D}
 .page_event .pd_item_hot .pd_ms span{color:#000;}
-/* Ò»ÅÅÎå¸öÉÌÆ· */
+/* ä¸€æ’äº”ä¸ªå•†å“ */
 .page_event .pro_min li{width:192px;height:326px;float:left;position:relative;margin:4px 3px 0 0;padding:0;}
 .page_event .pro_min .img_wrap{width:160px;height:160px;display:block;margin:17px auto 0;}
 .page_event .pro_min .price_old{color:#f75d57;font-size:22px;width:160px;margin:4px auto 0;}
@@ -113,7 +113,7 @@
 .page_event .pro_min .pro_box{width:192px;height:326px;background:#fff;position:absolute;overflow:hidden;}
 .page_event .pro_min .pd_sub{ top:5px; left:5px;}
 /*--- </editor-fold> ---*/
-/* Â¥²ãÓÒ±êÌâ¹ã¸æ */
+/* æ¥¼å±‚å³æ ‡é¢˜å¹¿å‘Š */
 .picRight{position:absolute;top:105px;left:593px;width:396px; z-index:4;}
 .picRight li{float:left;}
 .picRight img{display:block;margin:0 4px 5px 0;}
@@ -140,7 +140,7 @@
 #evt_desc .sublist .dot{font-size: 14px; font-weight: bold; margin: 0 2px;}
 /*--- </editor-fold> ---*/
 
-/*--- <editor-fold desc="Ğü¸¡µ¼º½"> ---*/
+/*--- <editor-fold desc="æ‚¬æµ®å¯¼èˆª"> ---*/
 html, html body { _text-overflow: ellipsis; }
 .evt_nav { visibility: hidden; z-index: 50; position: fixed; _position: absolute; top: 0; left: 50%; padding-top: 10px; zoom: 1; _top: expression(eval(document.documentElement.scrollTop)); }
 .evt_nav_left { width: 120px; height: 400px; margin-left: -660px; }
@@ -190,7 +190,7 @@ html, html body { _text-overflow: ellipsis; }
 .djdh_c{ width:110px; height:30px; position:absolute; bottom:8px; right:0px;}
 .djdh_d{ width:450px; height:250px;position:absolute;top:130px;left:250px;}
 .djdh_e{width:90px;height:42px;position:absolute;top:12px;left:12px;}
-/*µ¯¿ò*/
+/*å¼¹æ¡†*/
 .pro_main1{ margin:auto; position:absolute;  z-index:201; width:100%; display:block; left:0px; display:none;}
 .pro_main1 .pro_con{ z-index:203;}
 .pro_main1 .pro_h{background-color:#000; display:block; position:relative;width:100%;opacity:0.6; filter:alpha(opacity=60); height:6300px; z-index:200;}
@@ -202,9 +202,9 @@ html, html body { _text-overflow: ellipsis; }
 	<div class="pro_con">
 		<div class="tk">
             <i class="icon"></i>
-			<a class="aa_gb" href="javascript:;" title="¹Ø±Õ" style="width:35px; height:35px; left:445px; top:0;"></a>
-            <a href="http://mall.jd.com/index-63189.html" target="_blank" title="È¥¾©¶«¹ºÂò" style="left:61px;"></a>
-            <a class="aa_gb" href="#evt_floor3" title="0Ôª¶Ò»»½±Æ·" style="left:272px;"></a>
+			<a class="aa_gb" href="javascript:;" title="å…³é—­" style="width:35px; height:35px; left:445px; top:0;"></a>
+            <a href="http://mall.jd.com/index-63189.html" target="_blank" title="å»äº¬ä¸œè´­ä¹°" style="left:61px;"></a>
+            <a class="aa_gb" href="#evt_floor3" title="0å…ƒå…‘æ¢å¥–å“" style="left:272px;"></a>
 		</div>
 	</div>
 	<div class="pro_h"></div>
@@ -269,7 +269,7 @@ html, html body { _text-overflow: ellipsis; }
         <div id="evt_desc" class="evt_floor">
             <div class="evt_mod">
                 <div class="hd">
-                    <h2>»î¶¯¹æÔò</h2>
+                    <h2>æ´»åŠ¨è§„åˆ™</h2>
                 </div>
                 <div class="bd">
                     <ul>
@@ -282,13 +282,13 @@ html, html body { _text-overflow: ellipsis; }
             <div class="evt_mod">
                 <div class="bd">
                     <div class="evt_weibo clearfix">
-                        <h2>Î¢²©×ª·¢</h2>
+                        <h2>å¾®åšè½¬å‘</h2>
                         <div class="evt_weibo_post">
                             <h3><i></i></h3>
                             <div class="evt_weibo_box"></div>
                             <div class="evt_weibo_btn">
-                                <a href="javascript:void(0);" class="evt_sina_weibo" title="×ª·¢ĞÂÀËÎ¢²©"></a>
-                                <a href="javascript:void(0);" class="evt_qq_weibo" title="×ª·¢ÌÚÑ¶Î¢²©"></a>
+                                <a href="javascript:void(0);" class="evt_sina_weibo" title="è½¬å‘æ–°æµªå¾®åš"></a>
+                                <a href="javascript:void(0);" class="evt_qq_weibo" title="è½¬å‘è…¾è®¯å¾®åš"></a>
                                 <span class="evt_weibo_count">0/140</span>
                             </div>
                         </div>
@@ -307,12 +307,12 @@ html, html body { _text-overflow: ellipsis; }
         <div data-oxlazy="{@img_4}" style="height:167px;"></div>
     </div>
 </div>
-<!--×ó²àµ¼º½ S -->
+<!--å·¦ä¾§å¯¼èˆª S -->
 <div class="evt_nav_left evt_nav">
     <div class="inner"><img src="{@img_14}" alt="" /></div>
 </div>
-<!--×ó²àµ¼º½ E -->
-<!--ÓÒ²àµ¼º½ S -->
+<!--å·¦ä¾§å¯¼èˆª E -->
+<!--å³ä¾§å¯¼èˆª S -->
 <div class="evt_nav_right evt_nav">
     <div class="inner">
         {@adgroup_6}<a class="evt_link" href="{ad_url}" target="_blank"><img src="{ad_pic_url}" alt="{ad_des}"/></a>{/@adgroup_6}
@@ -320,7 +320,7 @@ html, html body { _text-overflow: ellipsis; }
         {@adgroup_8}<a class="evt_link" href="{ad_url}" target="_blank"><img src="{ad_pic_url}" alt="{ad_des}"/></a>{/@adgroup_8}
     </div>
 </div>
-<!--ÓÒ²àµ¼º½ E -->
+<!--å³ä¾§å¯¼èˆª E -->
 <!--[if IE 6]>
 <script src="http://cdn.staticfile.org/dd_belatedpng/0.0.8/dd_belatedpng.min.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -329,10 +329,10 @@ html, html body { _text-overflow: ellipsis; }
 <![endif]-->
 <script type="text/javascript" src="http://qzs.qq.com/snsapp/app/bee/widget/js/qqreminder.js" charset="UTF-8"></script>
 <script type="text/javascript">
-//ÅĞ¶Ï·ÖÕ¾ÏÔÊ¾µ¯´°
+//åˆ¤æ–­åˆ†ç«™æ˜¾ç¤ºå¼¹çª—
 $(function(){
 	$(".aa_gb").click(function(){
-		$(".pro_main1").css("display","none");//µã»÷Òş²Ø
+		$(".pro_main1").css("display","none");//ç‚¹å‡»éšè—
 	});
 	var siteId=G.logic.constants.getSiteId();
 	if(1001==siteId || 2001==siteId || 5001==siteId){
@@ -342,7 +342,7 @@ $(function(){
 	$(".pro_main1").css("display","none");
 	}
 });
-//Î¢²©×ª·¢
+//å¾®åšè½¬å‘
 function _weibo_init(obj,huati,evn,pic){
     var $evt_weibo_box = $(obj).find(".evt_weibo_box"),
     $count = $(obj).find(".evt_weibo_count"),
@@ -351,17 +351,17 @@ function _weibo_init(obj,huati,evn,pic){
     var $input_text = $(obj).find(".evt_weibo_text");
     var max = 140;
     var used = 0;
-    var _t_huati = huati;//¹ã²¥Ç½»°Ìâ
-    var _t_evn = evn; //»î¶¯¹ã¸æÓï
+    var _t_huati = huati;//å¹¿æ’­å¢™è¯é¢˜
+    var _t_evn = evn; //æ´»åŠ¨å¹¿å‘Šè¯­
     var _t = "#"+_t_huati+"# "+_t_evn;
-    var _url = encodeURIComponent("http://wlj.yixun.com/");//»î¶¯Ò³ÃæµØÖ·
+    var _url = encodeURIComponent("http://wlj.yixun.com/");//æ´»åŠ¨é¡µé¢åœ°å€
     var _pic=encodeURI(pic);
     var gbcount = function(){
         if (used > max) {
             $input_text.val($input_text.val().substring(0,max));
             used = max;
             $count.html(max+"/"+max);
-            alert("×ª·¢ÄÚÈİ²»ÄÜ³¬¹ı"+ max +"×Ö!");
+            alert("è½¬å‘å†…å®¹ä¸èƒ½è¶…è¿‡"+ max +"å­—!");
         } else {
             used = $input_text.val().length;
             $count.html((max - used)+"/"+max);
@@ -388,7 +388,7 @@ function _weibo_init(obj,huati,evn,pic){
         window.open(_u,'','width=600,height=300,top=0,left=0,toolbar=no,menubar=no,scrollbars=no,location=yes,resizable=no,status=no');
     });
 }
-//flash³é½±×ªÅÌ
+//flashæŠ½å¥–è½¬ç›˜
 function _init_lottery(obj,src,w,h,wmod,swfid){
     $(obj).removeClass("hd_loy_img").html(_createSwf(src,w,h,wmod,swfid));
 }
@@ -405,29 +405,29 @@ function _createSwf(src,w,h,wmod,swfid){
     swf_html += '</object>';
     return swf_html;
 }
-//ÖĞ½±ÌáĞÑ
+//ä¸­å¥–æé†’
 function showErrorByAs(errno,message,level,lotter_id,batch_no,select_award,cdkey) {
-    if (errno == 0) {//Õı³£³é½±
+    if (errno == 0) {//æ­£å¸¸æŠ½å¥–
         if(level=='2'){
             dialog = G.ui.popup.showMsg(message, 1);
         }else{
             dialog = G.ui.popup.showMsg(message, 3);
         }
-    } else if (errno == 1) {//Î´µÇÂ¼
-        dialog = G.ui.popup.showMsg('ÄúºÃ£¬³é½±»î¶¯ĞèÒªµÇÂ¼ºó²ÅÄÜ²ÎÓë¡£', 1, function(){location.href = 'https://base.yixun.com/login.html?url='+encodeURIComponent(location.href);},null,null,'ÂíÉÏµÇÂ¼','È¡Ïû');
-    }  else if (message == '') {//´íÎó
-        dialog = G.ui.popup.showMsg('±§Ç¸£¬ÏµÍ³·±Ã¦£¬Çë5ÃëÖÓºóÔÙÊÔ');
+    } else if (errno == 1) {//æœªç™»å½•
+        dialog = G.ui.popup.showMsg('æ‚¨å¥½ï¼ŒæŠ½å¥–æ´»åŠ¨éœ€è¦ç™»å½•åæ‰èƒ½å‚ä¸ã€‚', 1, function(){location.href = 'https://base.yixun.com/login.html?url='+encodeURIComponent(location.href);},null,null,'é©¬ä¸Šç™»å½•','å–æ¶ˆ');
+    }  else if (message == '') {//é”™è¯¯
+        dialog = G.ui.popup.showMsg('æŠ±æ­‰ï¼Œç³»ç»Ÿç¹å¿™ï¼Œè¯·5ç§’é’Ÿåå†è¯•');
     } else {
         if (errno == 46) {
-            dialog = G.ui.popup.showMsg('ÄúºÃ£¬´Ë³é½±»î¶¯ĞèÊÖ»úÑéÖ¤ºó²ÅÄÜ²ÎÓë¡£', 1, function(){window.open("http://base.yixun.com/myprofile.html");},null,null,'Á¢¼´ÑéÖ¤');
+            dialog = G.ui.popup.showMsg('æ‚¨å¥½ï¼Œæ­¤æŠ½å¥–æ´»åŠ¨éœ€æ‰‹æœºéªŒè¯åæ‰èƒ½å‚ä¸ã€‚', 1, function(){window.open("http://base.yixun.com/myprofile.html");},null,null,'ç«‹å³éªŒè¯');
         } else if(errno == 47) {
-            dialog = G.ui.popup.showMsg('ÄúºÃ£¬´Ë³é½±»î¶¯ĞèÓÊÏäÑéÖ¤ºó²ÅÄÜ²ÎÓë¡£', 1, function(){window.open("http://base.yixun.com/myprofile.html");},null,null,'Á¢¼´ÑéÖ¤');
+            dialog = G.ui.popup.showMsg('æ‚¨å¥½ï¼Œæ­¤æŠ½å¥–æ´»åŠ¨éœ€é‚®ç®±éªŒè¯åæ‰èƒ½å‚ä¸ã€‚', 1, function(){window.open("http://base.yixun.com/myprofile.html");},null,null,'ç«‹å³éªŒè¯');
         } else if(errno == 51) {
-            dialog = G.ui.popup.showMsg('ºÜ±§Ç¸£¬Äú½ñÌìµÄ³é½±´ÎÊıÒÑÓÃÍê¡£ÇëÃ÷ÌìÔÙÀ´!', 1, null,null,null,'È·¶¨');
+            dialog = G.ui.popup.showMsg('å¾ˆæŠ±æ­‰ï¼Œæ‚¨ä»Šå¤©çš„æŠ½å¥–æ¬¡æ•°å·²ç”¨å®Œã€‚è¯·æ˜å¤©å†æ¥!', 1, null,null,null,'ç¡®å®š');
         } else if(errno == 50) {
-            dialog = G.ui.popup.showMsg('ºÜ±§Ç¸£¬ÄúµÄ³é½±´ÎÊıÒÑÓÃÍê¡£', 1, null,null,null,'È·¶¨');
+            dialog = G.ui.popup.showMsg('å¾ˆæŠ±æ­‰ï¼Œæ‚¨çš„æŠ½å¥–æ¬¡æ•°å·²ç”¨å®Œã€‚', 1, null,null,null,'ç¡®å®š');
         } else if(errno == 161 || errno == 162) {
-            dialog = G.ui.popup.showMsg("±§Ç¸£¬ÏÈ²ÎÓë»î¶¯²ÅÄÜ³é½±Å¶!", 1);
+            dialog = G.ui.popup.showMsg("æŠ±æ­‰ï¼Œå…ˆå‚ä¸æ´»åŠ¨æ‰èƒ½æŠ½å¥–å“¦!", 1);
         }else {
             dialog = G.ui.popup.showMsg(message);
         }
@@ -435,25 +435,25 @@ function showErrorByAs(errno,message,level,lotter_id,batch_no,select_award,cdkey
 }
 
 $(function(){
-    _weibo_init(".evt_floor_weibo","¼ªÇé°ÍÎ÷£¬¿ª¹ŞÓĞ½±","ÉÏÒ×Ñ¸ÍøÂòÍõÀÏ¼ªÏí3ÖØºÀÀñ£¬Âò¾Í¼õ£¬Âò¾Í³é½±£¬¸üÓĞÂòÍõÀÏ¼ª²Î¼ÓÌÚÑ¶ÊÀ½ç±­¾¹²Â»î¶¯¾ÍÓĞ»ú»á»ñµÃiPhone 5sµÈ´ó½±¡£wlj.yixun.com","");
+    _weibo_init(".evt_floor_weibo","å‰æƒ…å·´è¥¿ï¼Œå¼€ç½æœ‰å¥–","ä¸Šæ˜“è¿…ç½‘ä¹°ç‹è€å‰äº«3é‡è±ªç¤¼ï¼Œä¹°å°±å‡ï¼Œä¹°å°±æŠ½å¥–ï¼Œæ›´æœ‰ä¹°ç‹è€å‰å‚åŠ è…¾è®¯ä¸–ç•Œæ¯ç«ŸçŒœæ´»åŠ¨å°±æœ‰æœºä¼šè·å¾—iPhone 5sç­‰å¤§å¥–ã€‚wlj.yixun.com","");
     _init_lottery(".evt_flashloy",'http://img3.icson.com/template/2014/02/14/139237033579731100_lottery_flash.swf?success_num=10&mod=lotteryge&act=order&oder_lottery=0&sn=21251&event_bg=http://img3.icson.com/template/2014/05/13/139996267074986100_a_8.png&event_bt=http://img3.icson.com/template/2014/05/12/139988706971418600_a_9.png',341,341,'','flash_dial');
 });
 $(document).ready(function () {	
-    //Ò³ÃæÔØÈëºó¹ö¶¯µ½»î¶¯ÓĞĞ§ÄÚÈİÇø
+    //é¡µé¢è½½å…¥åæ»šåŠ¨åˆ°æ´»åŠ¨æœ‰æ•ˆå†…å®¹åŒº
     $('html, body').animate({scrollTop: $(".page_event").offset().top}, 200);
     $(".pd_items li").each(function(){
-        //¼ÓÈë¹ºÎï³µ
+        //åŠ å…¥è´­ç‰©è½¦
         var btn_common = $(this).find(".btn_common");
         if(btn_common){
             var t = btn_common.html();
-            if (t == '¼ÓÈë¹ºÎï³µ') {
-                btn_common.attr({'class': 'btn_buy', 'title': 'Á¢¼´ÇÀ¹º'}).html('');
+            if (t == 'åŠ å…¥è´­ç‰©è½¦') {
+                btn_common.attr({'class': 'btn_buy', 'title': 'ç«‹å³æŠ¢è´­'}).html('');
             } else {
-                btn_common.attr({'class': 'btn_buy_disabled', 'title': 'ÒÑÇÀÍê', 'href': 'javascript:;'}).removeAttr('target').html('');
+                btn_common.attr({'class': 'btn_buy_disabled', 'title': 'å·²æŠ¢å®Œ', 'href': 'javascript:;'}).removeAttr('target').html('');
             }
         }
     });
-    //Ğü¸¡µ¼º½
+    //æ‚¬æµ®å¯¼èˆª
     $(window).bind("scroll resize", function () {
         var winWidth = $(window).width();
         var winHeight = $(window).height()-260;
@@ -463,7 +463,7 @@ $(document).ready(function () {
             $('.evt_nav').css('visibility', 'hidden');
         }
     });
-    //ÃªµãÌø×ª»¬¶¯Ğ§¹û
+    //é”šç‚¹è·³è½¬æ»‘åŠ¨æ•ˆæœ
     $('a[href*=#],area[href*=#]').click(function() {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var $target = $(this.hash);
@@ -478,11 +478,11 @@ $(document).ready(function () {
         }
     });
 });
-//µ±½Ç±êÓĞÄÚÈİÊ±ÏÔÊ¾
+//å½“è§’æ ‡æœ‰å†…å®¹æ—¶æ˜¾ç¤º
 $(function(){
     var arr = {
-        "pd_sub_s1": ["ÏŞÊ±","ÊÛóÀ","ÈËÆø","ÏŞÁ¿","Âú¼õ","ºÃÆÀ","ËÍÈ¯","ÈÈÏú","±¬¿î","¿ªÇÀ"],
-        "pd_sub_s2": ["µ×¼Û","ÕÛ","ÌØ¼Û","off","Á¢¼õ","Ö±½µ"]
+        "pd_sub_s1": ["é™æ—¶","å”®ç½„","äººæ°”","é™é‡","æ»¡å‡","å¥½è¯„","é€åˆ¸","çƒ­é”€","çˆ†æ¬¾","å¼€æŠ¢"],
+        "pd_sub_s2": ["åº•ä»·","æŠ˜","ç‰¹ä»·","off","ç«‹å‡","ç›´é™"]
     };
     $(".pd_items li").each(function(){
         var pd_sub = $(this).find(".pd_sub");
@@ -503,7 +503,7 @@ $(function(){
         }
     });
 });
-//»Øµ½¶¥²¿
+//å›åˆ°é¡¶éƒ¨
 function _evt_go2Top(){
 $('html, body').animate({scrollTop: 0}, 200);
 }

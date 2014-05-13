@@ -128,10 +128,10 @@
 #evt_desc .desc_bg, #evt_desc ul li i{background:url({@img_13}) no-repeat;}
 #evt_desc { margin-bottom: 0;}
 #evt_desc .evt_mod {padding:15px 25px; width:935px; position: relative;}
-#evt_desc .desc_bg{width: 168px; height: 277px; overflow: hidden; display: block; position: absolute; right: 25px; top: 48px;}
+#evt_desc .desc_bg{width: 168px; height: 277px; overflow: hidden; display: block; position: absolute; right: 25px; top: 48px; z-index: 0;}
 #evt_desc .hd { height: auto;background: none; width:825px; left:20px;}
 #evt_desc .hd h2 { display: block; font-size:30px; line-height: 32px; color:#C71E1B; border-bottom: 1px solid #C71E1B;padding-bottom: 10px; font-weight: normal;}
-#evt_desc .bd { padding: 10px 20px 20px 0;}
+#evt_desc .bd { padding: 10px 20px 20px 0; position: relative; z-index: 3;}
 #evt_desc ul { font-size: 14px; color:#424242; line-height: 22px;}
 #evt_desc ul li { padding-left: 24px;margin-bottom: 8px;}
 #evt_desc ul li i{width: 10px; height: 12px; display: block; float: left; background-position: 0 -285px; margin: 5px 8px 0 0;}
@@ -269,6 +269,7 @@ html, html body { _text-overflow: ellipsis; }
         </div>
         <div id="evt_desc" class="evt_floor">
             <div class="evt_mod">
+                <span class="desc_bg"></span>
                 <div class="hd">
                     <h2>活动规则</h2>
                 </div>
@@ -437,7 +438,7 @@ function showErrorByAs(errno,message,level,lotter_id,batch_no,select_award,cdkey
 
 $(function(){
     _weibo_init(".evt_floor_weibo","吉情巴西，开罐有奖","上易迅网买王老吉享3重豪礼，买就减，买就抽奖，更有买王老吉参加腾讯世界杯竟猜活动就有机会获得iPhone 5s等大奖。wlj.yixun.com","");
-    _init_lottery(".evt_flashloy",'http://img3.icson.com/template/2014/02/14/139237033579731100_lottery_flash.swf?success_num=10&mod=lotteryge&act=order&oder_lottery=1&sn=21089&event_bg=http://img3.icson.com/template/2014/05/13/139996291803062500_a_8.png&event_bt=http://img3.icson.com/template/2014/05/13/139996291803735200_a_9.png',341,341,'','flash_dial');
+    _init_lottery(".evt_flashloy",'http://img3.icson.com/template/2014/02/14/139237033579731100_lottery_flash.swf?success_num=10&mod=lotteryge&act=order&oder_lottery=1&sn=21089&event_bg=http://img3.icson.com/template/2014/05/13/139996291803062500_a_8.png&event_bt=http://img3.icson.com/template/2014/05/13/139996291803735200_a_9.png',345,345,'','flash_dial');
 });
 $(document).ready(function () { 
     //页面载入后滚动到活动有效内容区

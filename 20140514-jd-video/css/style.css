@@ -1,1 +1,33 @@
-﻿
+﻿/*reset*/
+html{-webkit-text-size-adjust:100%;}/*chrome font-size<12px */
+body {font:12px "Microsoft YaHei","SimSun",arial,helvetica,clean,sans-serif;color:#333;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,img{margin:0;}
+ul,li {padding:0; list-style:none;}
+table{border-collapse:collapse;border-spacing:0;}
+select,input,button,textarea {font-family:"Microsoft YaHei","SimSun",arial,helvetica,clean,sans-serif; font-size:12px;}
+a{color:#ea5520; text-decoration: none;}
+a:hover{text-decoration: underline;}
+a,a:visited,a:hover,a:active,a:focus{-moz-outline:none;outline:none;}
+img{border:0px; vertical-align: top;}
+button {border:0 none; margin:0;}
+em{font-style:normal;}
+input{outline:none;}
+input[type=button]::-moz-focus-inner{border:none;}
+* {outline: none;}
+:focus {outline: 0;}
+
+img{vertical-align: top;}
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0;}
+.clearfix { display: inline-block; }
+
+/*main*/
+body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
+.1200w, .1210w{margin: 0 auto;}
+.1200w{width: 1200px;}
+.1210w{width: 1210px;}
+/*sprites*/
+
+
+/*header*/
+.video-header{background-color: #FFF; height: 48px; border-bottom: 1px solid #DCDCDC;}
+.video-header .logo{}

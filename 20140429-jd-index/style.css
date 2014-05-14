@@ -800,7 +800,10 @@ img.err-price{width:81px;height:22px;background:url(http://misc.360buyimg.com/li
 .plist .slide-items div{float:left}
 .plist .smc .slide-items li{padding: 0; border: none; width: 384px; float: left;}
 .plist .slide-controls{position:absolute;bottom:0;left:0;z-index:3;width:384px;height:22px;overflow:hidden;text-align:center;font-size:0}
-.plist .slide-controls span{width:8px;height: 8px;margin:5px; cursor: pointer;}
+.plist .slide-controls span{padding:5px; cursor: pointer; background: transparent;}
+.plist .slide-controls b{display:inline-block;margin:0 1px;background:#999;text-align:center;cursor:default;color:#fff;border-radius:12px;-moz-border-radius:12px;-webkit-border-radius:12px}
+.plist .slide-controls b{width:8px;height: 8px;}
+.plist .slide-controls .curr b{background-color: #C81825;}
 .root61 .plist .slide{width:473px}
 .plist .sm{margin-bottom:0}
 .plist .smt{width:156px}
@@ -956,7 +959,10 @@ img.err-price{width:81px;height:22px;background:url(http://misc.360buyimg.com/li
 .brands .smcbd .slide .slide-items .list{float: left; width: 108px; height: 142px; margin-top: 20px; overflow: hidden;}
 .brands .smcbd .slide .slide-items .list-fr{border-left: 1px dashed #E8E8E8;}
 .brands .smcbd .slide .slide-controls{bottom: 0px; left: 0; width: 219px; text-align: center; position: absolute; height: 22px;}
-.brands .smcbd .slide .slide-controls span{width: 8px; height: 8px; margin: 0 5px; cursor: pointer;}
+.brands .smcbd .slide .slide-controls span{padding:5px; cursor: pointer; background: transparent;}
+.brands .smcbd .slide .slide-controls b{display:inline-block;margin:0 1px;background:#999;text-align:center;cursor:default;color:#fff;border-radius:12px;-moz-border-radius:12px;-webkit-border-radius:12px}
+.brands .smcbd .slide .slide-controls b{width:8px;height: 8px;}
+.brands .smcbd .slide .slide-controls .curr b{background-color: #C81825;}
 .brands .smcbd .slide .slide-arrow{width: 218px;}
 
 #clothing .brands .smt{display:none}

@@ -1280,7 +1280,8 @@ a.floor-sort:hover span{display:inline}
 #showcase .sc-list li .info .promotion{font-size: 14px; font-weight: bold;}
 #showcase .sc-list li .info .title{margin-top: 15px; font-size: 16px;}
 #showcase .sc-list li .info .gift{display: inline-block; border: 1px solid #FFF; padding: 3px 5px; margin-top: 12px;}
-#showcase .sc-list li.cur, #showcase .sc-list li.cur .pic, #showcase .sc-list li.cur .info{width: 281px;}
+#showcase .sc-list li.cur{width: 281px;}
+/*#showcase .sc-list li.cur .pic, #showcase .sc-list li.cur .info{width: 281px;}*/
 #showcase .sc-list li.cur{border: none; margin-left: -1px; box-shadow: 0 0 20px rgba(0,0,0,0.4); position: relative; z-index: 3;}
 #showcase .sc-list li.cur.last{width: 280px;}
 #showcase .sc-list .last{border: none;margin-right: -1px; position: absolute; right: 0; top: 0;}

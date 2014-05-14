@@ -156,6 +156,7 @@ var topBanner = {
             arrowHide: false,
             auto: 1,
             moveFun: function(index){
+                console.log(index);
                 var colorStr = me.slideNode.find('.slide-items li').eq(index).attr('data-color');
                 var colorL = colorStr.split('|')[0];
                 var colorR = colorStr.split('|')[1];

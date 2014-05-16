@@ -118,6 +118,9 @@ var initTopBanner = function(){
     var controls = node.find('.slide-controls');
     var picNum = picList.length;
     var curIndex = 0;
+    var auto = true;
+    var autoPlayID = -1;
+    var autoTime = 3000;
     //bind
     controls.find('li:not(.arrow)').bind('mouseover', function(e){
         var curNode = $(this);
@@ -127,21 +130,26 @@ var initTopBanner = function(){
         //controls
         controls.find('li').removeClass('cur');
         curNode.addClass('cur');
+        //clean
+        picList.stop(true,true);
         //animate
-        var speed = 'normal';
+        var speed = 800;
         var oldPic = picList.eq(curIndex);
         var index = controls.find('li').index(curNode)-1;
         var curPic = picList.eq(index);
         picList.removeClass('cur');
         curPic.addClass('cur');
+        oldPic.css('opacity',1);
         curPic.css('opacity',0);
-
         oldPic.animate({
             opacity: 0
         },speed);
         curPic.animate({
             opacity: 1
-        },speed);
+        },speed, function(){
+            oldPic.css('opacity',0);
+            curPic.css('opacity',1);
+        });
         //index
         curIndex = index;
     });
@@ -161,6 +169,23 @@ var initTopBanner = function(){
         }
         controls.find('li').eq(tempIndex+1).trigger('mouseover');
     });
+    node.bind('mouseover', function(e){
+        clearInterval(autoPlayID);
+    });
+    node.bind('mouseleave', function(e){
+        startAuto();
+    });
+    var startAuto = function(){
+        if(!auto){
+            return;
+        }
+        clearInterval(autoPlayID);
+        autoPlayID = setInterval(function(){
+            controls.find('.arrow-r').trigger('click');
+        },autoTime);
+    }
+    //auto
+    startAuto();
 };
 var initHotSlider = function(){
     //init

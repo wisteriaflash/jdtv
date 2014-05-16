@@ -90,7 +90,7 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 .video-main{margin-top: 10px;}
 .banner-slide{width: 1200px; height: 400px; overflow: hidden; position: relative;}
 .banner-slide .slide-pic{position: relative; z-index: 0}
-.banner-slide .slide-pic li{position: absolute; left: 0; top: 0; opacity: 0;}
+.banner-slide .slide-pic li{position: absolute; left: 0; top: 0; opacity: 0; filter: (opacity=0); z-index: 0;}
 .banner-slide .slide-pic .cur{z-index: 99; opacity: 1; filter: (opacity=100);}
 .banner-slide .slide-controls{position: absolute; bottom: 15px; left: 236px; text-align: center; width: 727px; height: 60px; overflow: hidden; z-index: 5;}
 .banner-slide .slide-controls ul{display: inline-block; margin: 0 auto; *display: inline; *zoom: 1; background-color: #000; background: rgba(0,0,0,0.4); padding: 5px 10px;}

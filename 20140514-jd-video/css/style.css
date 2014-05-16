@@ -26,6 +26,7 @@ img{vertical-align: top;}
 .video-header .search-con .search-form .search-btn i,
 .video-header .user-nav li i,
 .video-nav .category .title i,
+.video-list li .thumb .icon-play,
 .banner-slide .slide-controls .arrow i,
 .recommend .hot .top .info .playbtn i,
 .datashow i,
@@ -38,14 +39,17 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 .w1200{width: 1200px;}
 .w1210{width: 1210px;}
 .video-title{font-size: 18px; font-weight: bold; margin: 15px 0 10px 0; border-left: 4px solid #C81622; padding-left: 10px; line-height: 20px; position: relative;}
-.video-title .more{position: absolute; right: 10px; top: 5px; color: #039BFF; font-size: 12px;}
+.video-title .more{position: absolute; right: 10px; top: 5px; font-size: 12px; color: #CA1622;}
 .datashow i{width: 10px; height: 10px; background-position: 0 -80px; display: inline-block; margin-right: 5px; *position: relative; *top: -3px;}
 .datashow .playnum{padding-left: 30px;}
 .datashow .playnum i{width: 9px; background-position: 0 -95px;}
 .video-list li{float: left; width: 200px; margin-right: 17px; margin-bottom: 20px;}
 .video-list li a{color: #333;}
 .video-list li a:hover{color: #CA1622;}
-.video-list li .thumb{width: 200px; height: 110px; overflow: hidden; display: block;}
+.video-list li .thumb{width: 200px; height: 110px; overflow: hidden; display: block; position: relative;}
+.video-list li .thumb .icon-play{width: 48px; height: 47px; position: absolute; left: 76px; top: 31px; background-position: -80px 0; z-index: 3; display: none;}
+.video-list li .thumb .alphabg{width: 200px; height: 110px; background-color: #000; opacity: 0.4; filter: alpha(opacity=40); position: absolute; top: 0; left: 0; display: none; z-index: 2;}
+.video-list li .thumb:hover .icon-play, .video-list li .thumb:hover .alphabg{display: block;}
 .video-list li .title{display: block; width: 200px; height: 20px; line-height: 20px; overflow: hidden; margin-top: 5px;}
 .video-list li .datashow{color: #999;}
 .video-list li .datashow i{background-position: -12px -80px;}
@@ -62,7 +66,7 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 .video-header .search-con{border-right: 1px solid #F5F5F5;}
 .video-header .search-con .user-name{line-height: 48px;}
 .video-header .search-con .search-form{width: 317px; height: 32px; border: 1px solid #D2D2D2; margin: 7px 10px 0 15px; position: relative;}
-.video-header .search-con .search-form input{width: 280px; height: 32px; color: #666; outline: none; padding: 0 5px; border: none; line-height: 28px\0; *height: 28px; *line-height: 28px; *margin-left: -12px;}
+.video-header .search-con .search-form input{width: 280px; height: 32px; color: #666; outline: none; padding: 0 5px; border: 0 none; line-height: 28px\0; *height: 28px; *line-height: 28px; *margin-left: -12px;}
 .video-header .search-con .search-form .search-btn{width: 33px; height: 32px; position: absolute; right: 0; top: 0;}
 .video-header .search-con .search-form .search-btn i{width: 16px; height: 16px; display: block; margin: 7px auto 0;}
 .video-header .search-con .search-form .search-btn:hover i{background-position: -60px -35px;}
@@ -83,6 +87,7 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 .video-nav .category .title i{width: 14px; height: 12px; background-position: -60px 0; display: block; float: left; margin: 14px 5px 0 13px;}
 .video-nav .category .list{display: none; position: absolute; left: 0; top: 32px; background-color: #FFF; border: 1px solid #D2D2D2; width: 100px; padding: 15px 20px 0; font-size: 12px; font-weight: normal;}
 .video-nav .category .list li{line-height: 20px; margin-bottom: 15px;}
+.video-nav .category .list li a{text-decoration: none;}
 .video-nav .category.hover{color: #C91623;}
 .video-nav .category.hover .title{height: 32px; border: 1px solid #D2D2D2; border-bottom: 1px solid #FFF; padding: 0; margin-top: -1px; padding-top: 1px; background-color: #FFF;}
 .video-nav .category.hover .title i{background-position: -60px -18px;}
@@ -100,12 +105,13 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 .banner-slide .slide-pic li{position: absolute; left: 0; top: 0; opacity: 0; filter: alpha(opacity=0); z-index: 0;}
 .banner-slide .slide-pic .cur{z-index: 99; opacity: 1; filter: alpha(opacity=100);}
 .banner-slide .slide-controls{position: absolute; bottom: 15px; left: 236px; text-align: center; width: 727px; height: 60px; overflow: hidden; z-index: 5;}
-.banner-slide .slide-controls ul{display: inline-block; margin: 0 auto; *display: inline; *zoom: 1; background-color: #000; background: rgba(0,0,0,0.4); padding: 5px 10px;}
+.banner-slide .slide-controls ul{display: inline-block; margin: 0 auto; *display: inline; *zoom: 1; background: rgba(0,0,0,0.4); padding: 5px 10px; filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#88000000',endColorstr='#88000000')}
 .banner-slide .slide-controls ul li{float: left; margin-right: 8px; cursor: pointer; position: relative; width: 85px; height: 50px; overflow: hidden;}
 .banner-slide .slide-controls ul li .border{width: 81px; height: 46px; border: 2px solid #E31E25; position: absolute; display: none;}
 .banner-slide .slide-controls ul li.cur .border{display: block;}
 .banner-slide .slide-controls .arrow{width: 24px; height: 50px; text-align: center; position: relative;}
-.banner-slide .slide-controls .arrow .bg{position: absolute; left: 0; top: 0; width: 24px; height: 50px; background-color: #fff; opacity: 0.4; filter:alpha(opacity=40);}
+.banner-slide .slide-controls .arrow .bg{position: absolute; left: 0; top: 0; width: 24px; height: 50px; background-color: #fff; opacity: 0.2; filter:alpha(opacity=20);}
+.banner-slide .slide-controls .arrow:hover .bg{opacity: 0.4; filter:alpha(opacity=40);}
 .banner-slide .slide-controls .arrow i{width: 9px; height: 16px; display: block; background-position: 0 -130px; position: relative; z-index: 2; margin: 16px auto 0;}
 .banner-slide .slide-controls .arrow-r{margin-right: 0;}
 .banner-slide .slide-controls .arrow-r i{background-position: -10px -130px;}
@@ -117,7 +123,7 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 .recommend .hot .bd{padding-left: 15px; margin-top: 25px;}
 .recommend .hot .top{width: 400px; height: 320px; float: left; position: relative;}
 .recommend .hot .top img{width: 400px; height: 320px;}
-.recommend .hot .top .info{position: absolute; bottom: 0; left: 0; width: 332px; height: 95px; background-color:#666; color: #FFF; padding-left: 68px;}
+.recommend .hot .top .info{position: absolute; bottom: 0; left: 0; width: 332px; height: 95px; background-color:#333; color: #FFF; padding-left: 68px;}
 .recommend .hot .top .info a{color: #FFF;}
 .recommend .hot .top .info .playbtn{position: absolute; left: 0; top: 0; width: 48px; height: 95px; background-color: #E51E21; text-align: center; display: block;}
 .recommend .hot .top .info .playbtn:hover{background-color: #C91623;}
@@ -138,7 +144,6 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 .recommend .comment li .user .user-avatar .mask{background: url(../img/user-mask.png) no-repeat; width: 60px; height: 90px; position: absolute; top: 0; left: 8px;}
 .recommend .comment li .detail{margin-top: 5px;}
 .recommend .comment li .detail em{color: #999;}
-.recommend .comment li .detail .title a{color: #039BFF;}
 .recommend .comment li .detail .info{margin-top: 5px; line-height: 20px; height: 40px; overflow: hidden;}
 .recommend .comment li.last{border: none;}
 
@@ -178,11 +183,13 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 .newest .hot .tab-hd li{width: auto; padding: 0 12px;}
 .newest .hot .tab-hd li span{padding: 0 3px;}
 .newest .hot .tab-hd li a{text-decoration: none;}
+.newest .hot .tab-hd li.cur a{color: #CA1622;}
 .newest .hot .tab-hd li.cur span{height: 19px;}
 .newest .hot .bd{height: 345px;}
 .newest .rank .tab-list{}
 .newest .rank .tab-list .txt{*margin-top: -15px;}
-.newest .rank .tab-list .user{color: #5195f2; padding: 0 5px;}
+.newest .rank .tab-list .title{color: #666}
+.newest .rank .tab-list .user{padding: 0 5px;}
 .newest .rank .tab-list .playnum{color: #999;}
 .newest .rank .tab-list .playnum i{width: 11px; height: 10px; background-position: 0 -150px; display: inline-block; position: relative; margin-right: 3px;}
 

@@ -49,7 +49,7 @@ TabSwitch.prototype = {
     _setSettings: function(item,options){
         var tabItem = this.tabElement;
         tabItem.data('tabOpt', options);
-    },
+    }
 }
 //public fun
 var methods = {

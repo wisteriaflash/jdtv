@@ -44,6 +44,7 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 .datashow .playnum i{width: 9px; background-position: 0 -95px;}
 .video-list li{float: left; width: 200px; margin-right: 17px; margin-bottom: 20px;}
 .video-list li a{color: #333;}
+.video-list li a:hover{color: #CA1622;}
 .video-list li .thumb{width: 200px; height: 110px; overflow: hidden; display: block;}
 .video-list li .title{display: block; width: 200px; height: 20px; line-height: 20px; overflow: hidden; margin-top: 5px;}
 .video-list li .datashow{color: #999;}
@@ -54,7 +55,7 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 .video-header .w1200{position: relative;}
 .video-header .logo{padding-top: 3px;}
 .video-header .header-r{position: absolute; right: 0; top: 0;}
-.video-header .header-r a{color: #666;}
+.video-header .header-r em{color: #666;}
 .video-header .header-r a:hover{text-decoration: none; color:#CA1622;}
 .video-header .search-con, .video-header .user-nav{float: left;}
 .video-header .search-con .user-name, .video-header .search-con .search-form{float: left;}
@@ -64,10 +65,16 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 .video-header .search-con .search-form input{width: 280px; height: 32px; color: #666; outline: none; padding: 0 5px; border: none; line-height: 28px\0; *height: 28px; *line-height: 28px; *margin-left: -12px;}
 .video-header .search-con .search-form .search-btn{width: 33px; height: 32px; position: absolute; right: 0; top: 0;}
 .video-header .search-con .search-form .search-btn i{width: 16px; height: 16px; display: block; margin: 7px auto 0;}
-.video-header .user-nav li{float: left; line-height: 48px; border-right: 1px solid #F5F5F5; padding: 0 20px;}
+.video-header .search-con .search-form .search-btn:hover i{background-position: -60px -35px;}
+.video-header .user-nav li{float: left; line-height: 48px; border-right: 1px solid #F5F5F5;}
+.video-header .user-nav li a{display: block; padding: 0 20px;}
+.video-header .user-nav li a:hover{background-color: #C91623; color: #FFF;}
 .video-header .user-nav li i{width: 16px; height: 16px; display: block; background-position: 0 -20px; float: left; margin: 15px 5px 0 0;}
 .video-header .user-nav .upload-video i{background-position: 0 -40px; height: 15px;}
 .video-header .user-nav .logout i{background-position: 0 -60px;}
+.video-header .user-nav .myspace a:hover i{background-position: -60px -55px;}
+.video-header .user-nav .upload-video a:hover i{background-position: -60px -75px;}
+.video-header .user-nav .logout a:hover i{background-position: -60px -95px;}
 
 /*video-nav*/
 .video-nav{height: 40px; border-bottom: 1px solid #D2D2D2; font-size: 14px; font-weight: bold;}
@@ -76,7 +83,7 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 .video-nav .category .title i{width: 14px; height: 12px; background-position: -60px 0; display: block; float: left; margin: 14px 5px 0 13px;}
 .video-nav .category .list{display: none; position: absolute; left: 0; top: 32px; background-color: #FFF; border: 1px solid #D2D2D2; width: 100px; padding: 15px 20px 0; font-size: 12px; font-weight: normal;}
 .video-nav .category .list li{line-height: 20px; margin-bottom: 15px;}
-.video-nav .category.hover{color: #C81622;}
+.video-nav .category.hover{color: #C91623;}
 .video-nav .category.hover .title{height: 32px; border: 1px solid #D2D2D2; border-bottom: 1px solid #FFF; padding: 0; margin-top: -1px; padding-top: 1px; background-color: #FFF;}
 .video-nav .category.hover .title i{background-position: -60px -18px;}
 .video-nav .category.hover .list{display: block;}
@@ -113,9 +120,10 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 .recommend .hot .top .info{position: absolute; bottom: 0; left: 0; width: 332px; height: 95px; background-color:#666; color: #FFF; padding-left: 68px;}
 .recommend .hot .top .info a{color: #FFF;}
 .recommend .hot .top .info .playbtn{position: absolute; left: 0; top: 0; width: 48px; height: 95px; background-color: #E51E21; text-align: center; display: block;}
+.recommend .hot .top .info .playbtn:hover{background-color: #C91623;}
 .recommend .hot .top .info .playbtn i{width: 14px; height: 16px; background-position: 0 -110px; display: block; margin: 39px auto;}
-.recommend .hot .top .info .title{margin: 20px 0 10px; display: block; font-size: 14px; width: 312px; height: 20px; line-height: 20px; overflow: hidden;}
-
+.recommend .hot .top .info .title{margin: 20px 0 10px; display: block; font-size: 14px; width: 312px; height: 20px; line-height: 20px; overflow: hidden; *float: left;}
+.recommend .hot .top .info .datashow{clear: both;}
 .recommend .slider{margin-left: 15px; width: 434px; float: left;}
 .recommend .slider .slider-list-con{width: 417px; height: 344px; overflow: hidden; position: relative; *height: 328px;}
 .recommend .slider .slider-list-wrap{position: absolute; left: 0; top: 0;}
@@ -140,7 +148,7 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 .openclass .hot .bd{margin: 15px 0 0 0;}
 .openclass .hot .video-list{margin-right: -15px;}
 .openclass .hot .video-list li{margin-right: 15px;}
-.openclass .rank .video-title{border: none; text-align: left; padding: 0;}
+.openclass .rank .video-title{border: none; text-align: left; padding: 0; font-weight: normal;}
 .openclass .rank .bd{padding-left: 10px;}
 .tab-hd{border-bottom: 1px solid #D7D7D7; height: 25px; margin: 15px 0 10px; color: #666;}
 .tab-hd li{float: left; border-right: 1px solid #D7D7D7;  width: 80px; height: 18px; line-height: 18px; text-align: center; cursor: pointer; font-weight: bold; margin-top: 2px;}
@@ -174,7 +182,7 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 .newest .hot .bd{height: 345px;}
 .newest .rank .tab-list{}
 .newest .rank .tab-list .txt{*margin-top: -15px;}
-.newest .rank .tab-list .user{color: #009DFE; padding: 0 5px; font-weight: bold;}
+.newest .rank .tab-list .user{color: #5195f2; padding: 0 5px;}
 .newest .rank .tab-list .playnum{color: #999;}
 .newest .rank .tab-list .playnum i{width: 11px; height: 10px; background-position: 0 -150px; display: inline-block; position: relative; margin-right: 3px;}
 

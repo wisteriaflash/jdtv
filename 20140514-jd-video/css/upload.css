@@ -1,0 +1,45 @@
+﻿/*sprites*/
+.filter-type li .sortarrow
+{background: url(../img/icons.png) no-repeat;}
+
+/*video-main*/
+.video-main{margin-top: 10px;}
+.nav-sub{border-bottom: 1px solid #D2D2D2; padding: 5px 0 15px;}
+.nav-sub .list li{float: left; margin-right: 30px;}
+.nav-sub .list li.cur a{color: #C81622; font-weight: bold;}
+
+.filter-type{padding: 15px 0;}
+.filter-type ul{float: left; border-right: 1px solid #DDD; margin-right: 30px;}
+.filter-type li{float: left; margin-right: 30px; line-height: 18px;}
+.filter-type li input{float: left; margin: 2px 3px 0 0; *margin-top: -2px; padding: 0;}
+.filter-type li .sortarrow{width: 12px; height: 7px; background-position:  -80px -50px; display: inline-block; position: relative; top: -2px; left: 5px;}
+.filter-type li .sortarrow-down{background-position: -80px -60px;}
+.filter-type .filter-name{color: #999; margin-right: 10px;}
+.filter-type .filter-sort{border: none;}
+.filter-type .filter-sort a{text-decoration: none;}
+.filter-type .filter-sort a:hover .sortarrow,
+.filter-type .filter-sort .cur a .sortarrow{background-position: -95px -50px;}
+.filter-type .filter-sort a:hover .sortarrow-down,
+.filter-type .filter-sort .cur a .sortarrow-down{background-position: -95px -60px;}
+.filter-type .filter-sort .cur a{color: #CA1622;}
+
+.video-list-result{clear: both;}
+.video-list-result .video-item{border-bottom: 1px solid #DDD;}
+.video-item{padding: 20px 0 10px;}
+.video-item .pic{float: left; margin-bottom: 10px;}
+.video-item .info{float: left; margin-left: 30px; width: 910px; margin-top: -3px;}
+.video-item .info .title{line-height: 20px;}
+.video-item .info .title, .video-item .info .title .user{color: #999;}
+.video-item .info .title .txt{font-size: 16px;}
+.video-item .info .title .user{margin: 0 15px 0 8px;}
+.video-item .info .title .date .time{padding-left: 5px;}
+.video-item .info .datashow{margin: 5px 0 15px;}
+.video-item .info .des{color: #666; line-height: 18px; height: 36px; overflow: hidden; margin-bottom: 8px;}
+.video-item .info .album-list{}
+.video-item .info .album-list li{float: left; margin: 0 3px 3px 0;}
+.video-item .info .album-list li a{display: block; background-color: #FFF; border: 1px solid #DDD; height: 23px; text-decoration: none; text-align: center; line-height: 23px; padding: 0 12px;}
+.video-item .info .album-list li a:hover{height: 25px; background-color: #C81622; border: none; display: block; color: #FFF; padding: 0 13px;}
+.video-item .info .album-page{clear: both; margin-top: 10px;}
+.video-item .info .album-page a{line-height: 12px; border-right: 1px solid #DDD; display: inline-block; padding: 0 15px; text-decoration: none;}
+.video-item .info .album-page .cur{color: #CA1622;}
+.video-item .info .album-page .last{border: none;}

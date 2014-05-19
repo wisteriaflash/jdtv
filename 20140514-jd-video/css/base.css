@@ -78,7 +78,7 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 .video-nav .nav-info li.cur a{color: #C81622;}
 
 /*footer*/
-.footer{text-align: center; padding: 10px 0; border-top: 1px solid #D2D2D2;}
+.footer{text-align: center; padding: 10px 0; border-top: 1px solid #D2D2D2; clear: both;}
 
 /*datashow*/
 .datashow i{width: 10px; height: 10px; background-position: 0 -80px; display: inline-block; margin-right: 5px; *position: relative; *top: -3px;}

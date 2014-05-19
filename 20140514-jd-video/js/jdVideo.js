@@ -137,8 +137,6 @@ var initTopBanner = function(){
         var oldPic = picList.eq(curIndex);
         var index = controls.find('li').index(curNode)-1;
         var curPic = picList.eq(index);
-        picList.removeClass('cur');
-        curPic.addClass('cur');
         oldPic.css('opacity',1);
         curPic.css('opacity',0);
         oldPic.animate({
@@ -149,6 +147,8 @@ var initTopBanner = function(){
         },speed, function(){
             oldPic.css('opacity',0);
             curPic.css('opacity',1);
+            picList.removeClass('cur');
+            curPic.addClass('cur');
         });
         //index
         curIndex = index;

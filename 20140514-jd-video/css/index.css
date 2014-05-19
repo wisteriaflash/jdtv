@@ -3,16 +3,12 @@
 .banner-slide .slide-controls .arrow i,
 .recommend .hot .top .info .playbtn i,
 .recommend .slider .slider-controls li,
-.datashow i,
 .rank .tab-list li i,
 .newest .rank .tab-list .playnum i
 {background: url(../img/icons.png) no-repeat;}
 /*main*/
 .video-title{font-size: 18px; font-weight: bold; margin: 15px 0 10px 0; border-left: 4px solid #C81622; padding-left: 10px; line-height: 20px; position: relative;}
 .video-title .more{position: absolute; right: 10px; top: 5px; font-size: 12px; color: #CA1622;}
-.datashow i{width: 10px; height: 10px; background-position: 0 -80px; display: inline-block; margin-right: 5px; *position: relative; *top: -3px;}
-.datashow .playnum{padding-left: 30px;}
-.datashow .playnum i{width: 9px; background-position: 0 -95px;}
 .video-list li{float: left; width: 200px; margin-right: 17px; margin-bottom: 20px;}
 .video-list li a{color: #333;}
 .video-list li a:hover{color: #CA1622;}

@@ -25,7 +25,8 @@ img{vertical-align: top;}
 /*sprites*/
 .video-header .search-con .search-form .search-btn i,
 .video-header .user-nav li i,
-.video-nav .category .title i
+.video-nav .category .title i,
+.datashow i
 {background: url(../img/icons.png) no-repeat;}
 /*main*/
 body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
@@ -78,3 +79,17 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 
 /*footer*/
 .footer{text-align: center; padding: 10px 0; border-top: 1px solid #D2D2D2;}
+
+/*datashow*/
+.datashow i{width: 10px; height: 10px; background-position: 0 -80px; display: inline-block; margin-right: 5px; *position: relative; *top: -3px;}
+.datashow .playnum{padding-left: 30px;}
+.datashow .playnum i{width: 9px; background-position: 0 -95px;}
+.datashow-gray i{background-position: -12px -80px;}
+.datashow-gray .playnum i{background-position: -12px -95px;}
+/*page-list*/
+.page-list{height: 35px; text-align: center; padding: 10px 0;}
+.page-list ul{display: inline-block; margin: 0 auto; *display: inline; *zoom: 1;}
+.page-list li{float: left; line-height: 20px;}
+.page-list li a{display: block; background-color: #FFF; border: 1px solid #DDD; padding: 3px 8px; text-decoration: none;}
+.page-list li .cur, .page-list li a{margin: 0 3px;}
+.page-list li .cur, .page-list li a:hover{padding: 4px 9px; background-color: #C81622; border: none; display: block; color: #FFF;}

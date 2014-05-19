@@ -106,6 +106,7 @@
 .subject .subject-list li{float: left; margin-right: 2px;}
 .subject .subject-list li a{display: block; width: 238px; height: 120px; overflow: hidden;}
 
+.newest{border: none;}
 .newest .hot .tab-hd{font-size: 12px; margin-top: 0; border: none; position: absolute; left: 100px; top: 0;}
 .newest .hot .tab-hd li{width: auto; padding: 0 12px;}
 .newest .hot .tab-hd li span{padding: 0 3px;}
@@ -119,5 +120,3 @@
 .newest .rank .tab-list .user{padding: 0 5px;}
 .newest .rank .tab-list .playnum{color: #999;}
 .newest .rank .tab-list .playnum i{width: 11px; height: 10px; background-position: 0 -150px; display: inline-block; position: relative; margin-right: 3px;}
-
-.footer{text-align: center; padding: 10px 0;}

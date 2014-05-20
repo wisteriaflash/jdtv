@@ -9,7 +9,8 @@
 .myspace .sidebar ul{*margin-bottom: -5px;}
 .myspace .sidebar li{height: 54px; border-bottom: 1px solid #EDEDED; line-height: 54px; font-size: 14px;}
 .myspace .sidebar li a{display: block; padding-left: 23px; text-decoration: none;}
-.myspace .sidebar li.cur a, .myspace .sidebar li a:hover{border-left: 6px solid #C81622; padding-left: 17px; color: #CA1622;}
+.myspace .sidebar li.cur a{border-left: 6px solid #C81622; padding-left: 17px; color: #CA1622;}
+.myspace .sidebar li a:hover{color: #CA1622;}
 
 .myspace .grid-m{width: 945px;}
 

@@ -1,5 +1,4 @@
 ﻿/*sprites*/
-.video-list li .thumb .icon-play,
 .banner-slide .slide-controls .arrow i,
 .recommend .hot .top .info .playbtn i,
 .recommend .slider .slider-controls li,
@@ -9,17 +8,6 @@
 /*main*/
 .video-title{font-size: 18px; font-weight: bold; margin: 15px 0 10px 0; border-left: 4px solid #C81622; padding-left: 10px; line-height: 20px; position: relative;}
 .video-title .more{position: absolute; right: 10px; top: 5px; font-size: 12px; color: #CA1622;}
-.video-list li{float: left; width: 200px; margin-right: 17px; margin-bottom: 20px;}
-.video-list li a{color: #333;}
-.video-list li a:hover{color: #CA1622;}
-.video-list li .thumb{width: 200px; height: 110px; overflow: hidden; display: block; position: relative;}
-.video-list li .thumb .icon-play{width: 48px; height: 47px; position: absolute; left: 76px; top: 31px; background-position: -80px 0; z-index: 3; display: none;}
-.video-list li .thumb .alphabg{width: 200px; height: 110px; background-color: #000; opacity: 0.4; filter: alpha(opacity=40); position: absolute; top: 0; left: 0; display: none; z-index: 2;}
-.video-list li .thumb:hover .icon-play, .video-list li .thumb:hover .alphabg{display: block;}
-.video-list li .title{display: block; width: 200px; height: 20px; line-height: 20px; overflow: hidden; margin-top: 5px;}
-.video-list li .datashow{color: #999;}
-.video-list li .datashow i{background-position: -12px -80px;}
-.video-list li .datashow .playnum i{background-position: -12px -95px;}
 
 /*video-main*/
 .video-main{margin-top: 10px;}

@@ -26,7 +26,8 @@ img{vertical-align: top;}
 .video-header .search-con .search-form .search-btn i,
 .video-header .user-nav li i,
 .video-nav .category .title i,
-.datashow i
+.datashow i,
+.video-list li .thumb .icon-play
 {background: url(../img/icons.png) no-repeat;}
 /*main*/
 body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
@@ -80,16 +81,33 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 /*footer*/
 .footer{text-align: center; padding: 10px 0; border-top: 1px solid #D2D2D2; clear: both;}
 
+/*video-list*/
+.video-list li{float: left; width: 200px; margin-right: 17px; margin-bottom: 20px;}
+.video-list li a{color: #333;}
+.video-list li a:hover{color: #CA1622;}
+.video-list li .thumb{width: 200px; height: 110px; overflow: hidden; display: block; position: relative;}
+.video-list li .thumb .icon-play{width: 48px; height: 47px; position: absolute; left: 76px; top: 31px; background-position: -80px 0; z-index: 3; display: none;}
+.video-list li .thumb .alphabg{width: 200px; height: 110px; background-color: #000; opacity: 0.4; filter: alpha(opacity=40); position: absolute; top: 0; left: 0; display: none; z-index: 2;}
+.video-list li .thumb:hover .icon-play, .video-list li .thumb:hover .alphabg{display: block;}
+.video-list li .title{display: block; width: 200px; height: 20px; line-height: 20px; overflow: hidden; margin-top: 5px;}
+.video-list li .datashow{color: #999;}
+.video-list li .datashow i{background-position: -12px -80px;}
+.video-list li .datashow .playnum i{background-position: -12px -95px;}
 /*datashow*/
 .datashow i{width: 10px; height: 10px; background-position: 0 -80px; display: inline-block; margin-right: 5px; *position: relative; *top: -3px;}
 .datashow .playnum{padding-left: 30px;}
 .datashow .playnum i{width: 9px; background-position: 0 -95px;}
 .datashow-gray i{background-position: -12px -80px;}
 .datashow-gray .playnum i{background-position: -12px -95px;}
+/*album-list*/
+.album-list li{float: left; margin: 0 3px 3px 0;}
+.album-list li a{display: block; background-color: #FFF; border: 1px solid #DDD; height: 23px; text-decoration: none; text-align: center; line-height: 23px; padding: 0 12px;}
+.album-list li a:hover{height: 25px; background-color: #C81622; border: none; display: block; color: #FFF; padding: 0 13px;}
 /*page-list*/
 .page-list{height: 35px; text-align: center; padding: 10px 0;}
 .page-list ul{display: inline-block; margin: 0 auto; *display: inline; *zoom: 1;}
 .page-list li{float: left; line-height: 20px;}
 .page-list li a{display: block; background-color: #FFF; border: 1px solid #DDD; padding: 3px 8px; text-decoration: none;}
+.page-list li .disabled, .page-list li .disabled:hover{color: #999; border: 1px solid #D2D2D2; background-color: #EBEBEB; cursor: default; padding: 3px 8px;}
 .page-list li .cur, .page-list li a{margin: 0 3px;}
 .page-list li .cur, .page-list li a:hover{padding: 4px 9px; background-color: #C81622; border: none; display: block; color: #FFF;}

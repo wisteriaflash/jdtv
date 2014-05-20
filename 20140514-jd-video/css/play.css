@@ -1,0 +1,34 @@
+﻿/*sprites*/
+.video-info .video-opt span i
+{background: url(../img/icons.png) no-repeat;}
+
+/*video-main*/
+.video-main{margin-top: 20px;}
+.play .grid-m{width: 860px;}
+.play .grid-s{width: 330px; margin-left: 10px;}
+
+/*video-info*/
+.video-info .bread{font-size: 14px; color: #666; font-size: 14px; margin-bottom: 20px;}
+.video-info .video-title{font-size: 24px; line-height: 28px; margin-bottom: 18px;}
+.video-info .video-player{margin-bottom: 15px;}
+.video-info .video-opt{border-bottom: 1px solid #D2D2D2; margin-bottom: 10px;}
+.video-info .video-opt span{cursor: pointer; display: inline-block; text-align: center;}
+.video-info .video-opt span i{width: 23px; height: 22px; background-position: -80px -90px; display: block; margin: 0 auto;}
+.video-info .video-opt .share i{width: 26px; height: 18px; background-position: -80px -115px; margin-bottom: 2px;}
+.video-info .video-opt .praise-num{height: 35px; line-height: 35px; position: relative; top: -15px; cursor: default; padding: 0 8px; border-left: 1px solid #F1F1F1; margin: 0 15px 0 5px; font-size: 14px; font-weight: bold;}
+
+.video-info .page-list{text-align: left; float: right;}
+/*sidebar*/
+.sidebar{margin-top: 86px;}
+.sidebar h4{font-size: 18px; margin-bottom: 15px; color: #333; font-weight: bold;}
+.sidebar .video-intro{background-color: #FFF; border: 1px solid #D2D2D2;}
+.sidebar .video-intro .user{padding: 10px; border-bottom: 1px solid #F1F1F1; height: 45px; color: #999;}
+.sidebar .video-intro .user .user-avatar{display: block; float: left; margin: 0 10px 0 5px;}
+.sidebar .video-intro .user .user-name{display: block; margin-bottom: 3px; margin-top: 6px;}
+.sidebar .video-intro .details{clear: both; padding: 15px; line-height: 20px; color: #666;}
+
+.sidebar .recommend-list{margin-top: 25px;}
+.sidebar .video-list li{margin: 0; width: 330px; margin-bottom: 10px;}
+.sidebar .video-list .thumb{float: left; margin-right: 10px;}
+.sidebar .video-list .title{float: left; width: 120px; margin-top: 8px; height: auto; line-height: 18px;}
+.sidebar .video-list .datashow{float: left; margin-top: 5px;}

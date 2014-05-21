@@ -51,8 +51,8 @@
 .recommend .slider .slider-controls .cur{background-position: -60px -120px;}
 .recommend .comment li {border-bottom: 1px solid #F1F1F1; padding: 15px 10px; height: 64px;}
 .recommend .comment li .user{width: 60px; height: 75px; float: left; text-align: center; margin-right: 6px;}
-.recommend .comment li .user .user-avatar{display: block; margin-bottom: 5px; position: relative;}
-.recommend .comment li .user .user-avatar .mask{background: url(../img/user-mask.png) no-repeat; width: 44px; height: 44px; position: absolute; top: 0; left: 8px;}
+.recommend .comment li .user .user-avatar{ margin-bottom: 5px;}
+.recommend .comment li .user .user-avatar .mask{left: 8px;}
 .recommend .comment li .detail{margin-top: 5px;}
 .recommend .comment li .detail em{color: #999;}
 .recommend .comment li .detail .info{margin-top: 5px; line-height: 20px; height: 40px; overflow: hidden;}

@@ -81,6 +81,22 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 /*footer*/
 .footer{text-align: center; padding: 10px 0; border-top: 1px solid #D2D2D2; clear: both;}
 
+
+/*btn*/
+.btn-red, .btn-gray{text-align: center; display: block; color: #FFF;}
+.btn-red:hover, .btn-gray:hover{color: #FFF; text-decoration: none;}
+.btn-red{width: 140px; height: 36px; line-height: 36px; background-color: #E51E21; font-size: 16px;}
+.btn-red:hover{background-color: #c91623;}
+.btn-gray{width: 140px; height: 36px; line-height: 36px; font-size: 16px; background-color: #555;}
+.btn-gray:hover{background-color: #666;}
+/*avatar*/
+.user-avatar{display: block; position: relative;}
+.user-avatar .mask{background: url(../img/user-mask.png) no-repeat; width: 44px; height: 44px; position: absolute; top: 0; left: 0;}
+.user-avatar.gray .mask{background: url(../img/user-mask-gray.png) no-repeat;}
+.avatar-small img{width: 26px; height: 26px;}
+.avatar-small .mask{background: url(../img/user-mask-small.png) no-repeat; width: 26px; height: 26px;}
+.avatar-small.gray .mask{background: url(../img/user-mask-small-gray.png) no-repeat;}
+.user-name{color: #666;}
 /*video-list*/
 .video-list li{float: left; width: 200px; margin-right: 17px; margin-bottom: 20px;}
 .video-list li a{color: #333;}

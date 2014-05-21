@@ -1,5 +1,6 @@
 ﻿/*sprites*/
-.video-info .video-opt span i
+.video-info .video-opt span i,
+.video-comment .comment-list li .comment-post i
 {background: url(../img/icons.png) no-repeat;}
 
 /*video-main*/
@@ -8,14 +9,42 @@
 .play .grid-s{width: 330px; margin-left: 10px;}
 
 /*video-info*/
+.video-info{margin-bottom: 40px;}
 .video-info .bread{font-size: 14px; color: #666; font-size: 14px; margin-bottom: 20px;}
 .video-info .video-title{font-size: 24px; line-height: 28px; margin-bottom: 18px;}
 .video-info .video-player{margin-bottom: 15px;}
 .video-info .video-opt{border-bottom: 1px solid #D2D2D2; margin-bottom: 10px;}
 .video-info .video-opt span{cursor: pointer; display: inline-block; text-align: center;}
-.video-info .video-opt span i{width: 23px; height: 22px; background-position: -80px -90px; display: block; margin: 0 auto;}
+.video-info .video-opt span i{width: 23px; height: 22px; background-position: -80px -90px; display: block; margin: 0 auto; *margin: 0;}
 .video-info .video-opt .share i{width: 26px; height: 18px; background-position: -80px -115px; margin-bottom: 2px;}
 .video-info .video-opt .praise-num{height: 35px; line-height: 35px; position: relative; top: -15px; cursor: default; padding: 0 8px; border-left: 1px solid #F1F1F1; margin: 0 15px 0 5px; font-size: 14px; font-weight: bold;}
+
+.video-comment{}
+.video-comment .hd{color: #666; font-size: 18px; margin: 10px 0;}
+.video-comment .comment-reply{background-color: #FFF; border: 1px solid #D2D2D2;}
+.video-comment .comment-reply .reply-textarea{padding-left: 20px; overflow: hidden;}
+.video-comment .comment-reply textarea{width: 100%; height: 95px; border: 0; padding: 10px; outline: none; resize: none; float: left; display: inline-block; margin-left: -20px; overflow: auto;}
+.video-comment .comment-opt{border-top: 1px solid #F1F1F1; position: relative; height: 46px;}
+.video-comment .comment-opt .user{margin-left: 10px; margin-top: 12px;}
+.video-comment .comment-opt .user-avatar{position: relative; float: left;}
+.video-comment .comment-opt .user-name{margin-left: 5px; line-height: 26px;}
+.video-comment .comment-opt .btn-publish{position: absolute; right: 6px; top: 5px; display: block; width: 90px; height: 36px;}
+
+.video-comment .comment-all{}
+.video-comment .comment-list{}
+.video-comment .comment-list li{position: relative; padding: 15px 45px 15px 60px; border-bottom: 1px solid #D2D2D2; *padding-top: 0;}
+.video-comment .comment-list li .user-avatar{position: absolute; left: 0; top: 18px;}
+.video-comment .comment-list li .user .time{color: #999; margin-left: 6px;}
+.video-comment .comment-list li .txt{margin-top: 5px; line-height: 21px;}
+.video-comment .comment-list li .comment-post{position: absolute; right: 0; top: 39px;}
+.video-comment .comment-list li .comment-post i{width: 11px; height: 11px; background-position: -80px -140px; display: block; float: left; margin: 4px 3px 0 0;}
+.video-comment .comment-list .children{margin: 15px -45px 5px 0;}
+.video-comment .comment-list .children .comment-opt .user-avatar{position: relative; top: 0;}
+.video-comment .comment-list .children li{padding: 15px 0 15px 33px; border-top: 1px solid #E8E8E8; border-bottom: 0;}
+.video-comment .comment-list .children li .info{*margin-top: -14px;}
+.video-comment .comment-list .children li .user{float: left; margin-right: 8px; margin-top: 2px; *margin-top: 8px;}
+
+
 
 .video-info .page-list{text-align: left; float: right;}
 /*sidebar*/
@@ -23,7 +52,7 @@
 .sidebar h4{font-size: 18px; margin-bottom: 15px; color: #333; font-weight: bold;}
 .sidebar .video-intro{background-color: #FFF; border: 1px solid #D2D2D2;}
 .sidebar .video-intro .user{padding: 10px; border-bottom: 1px solid #F1F1F1; height: 45px; color: #999;}
-.sidebar .video-intro .user .user-avatar{display: block; float: left; margin: 0 10px 0 5px;}
+.sidebar .video-intro .user .user-avatar{float: left; margin: 0 10px 0 5px;}
 .sidebar .video-intro .user .user-name{display: block; margin-bottom: 3px; margin-top: 6px;}
 .sidebar .video-intro .details{clear: both; padding: 15px; line-height: 20px; color: #666;}
 

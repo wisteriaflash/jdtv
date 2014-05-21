@@ -107,14 +107,13 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 .video-list li .thumb:hover .icon-play, .video-list li .thumb:hover .alphabg{display: block;}
 .video-list li .title{display: block; width: 200px; height: 20px; line-height: 20px; overflow: hidden; margin-top: 5px;}
 .video-list li .datashow{color: #999;}
-.video-list li .datashow i{background-position: -12px -80px;}
-.video-list li .datashow .playnum i{background-position: -12px -95px;}
 /*datashow*/
 .datashow i{width: 10px; height: 10px; background-position: 0 -80px; display: inline-block; margin-right: 5px; *position: relative; *top: -3px;}
-.datashow .playnum{padding-left: 30px;}
+.datashow .praise{padding-right: 30px;}
 .datashow .playnum i{width: 9px; background-position: 0 -95px;}
 .datashow-gray i{background-position: -12px -80px;}
 .datashow-gray .playnum i{background-position: -12px -95px;}
+.datashow-gray .downnum i{width: 11px; height: 10px; background-position: -108px -75px;}
 /*album-list*/
 .album-list li{float: left; margin: 0 3px 3px 0;}
 .album-list li a{display: block; background-color: #FFF; border: 1px solid #DDD; height: 23px; text-decoration: none; text-align: center; line-height: 23px; padding: 0 12px;}

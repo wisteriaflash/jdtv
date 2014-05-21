@@ -81,6 +81,7 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 /*footer*/
 .footer{text-align: center; padding: 10px 0; border-top: 1px solid #D2D2D2; clear: both;}
 
+/*==================component===================*/
 
 /*btn*/
 .btn-red, .btn-gray{text-align: center; display: block; color: #FFF;}
@@ -89,6 +90,8 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 .btn-red:hover{background-color: #c91623;}
 .btn-gray{width: 140px; height: 36px; line-height: 36px; font-size: 16px; background-color: #555;}
 .btn-gray:hover{background-color: #666;}
+/*alphabg*/
+.alphabg{width: 85px; height: 50px; background-color: #000; opacity: 0.4; filter: alpha(opacity=40); position: absolute; top: 0; left: 0; z-index: 2;}
 /*avatar*/
 .user-avatar{display: block; position: relative;}
 .user-avatar .mask{background: url(../img/user-mask.png) no-repeat; width: 44px; height: 44px; position: absolute; top: 0; left: 0;}
@@ -103,7 +106,7 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 .video-list li a:hover{color: #CA1622;}
 .video-list li .thumb{width: 200px; height: 110px; overflow: hidden; display: block; position: relative;}
 .video-list li .thumb .icon-play{width: 48px; height: 47px; position: absolute; left: 76px; top: 31px; background-position: -80px 0; z-index: 3; display: none;}
-.video-list li .thumb .alphabg{width: 200px; height: 110px; background-color: #000; opacity: 0.4; filter: alpha(opacity=40); position: absolute; top: 0; left: 0; display: none; z-index: 2;}
+.video-list li .thumb .alphabg{width: 200px; height: 110px; display: none;}
 .video-list li .thumb:hover .icon-play, .video-list li .thumb:hover .alphabg{display: block;}
 .video-list li .title{display: block; width: 200px; height: 20px; line-height: 20px; overflow: hidden; margin-top: 5px;}
 .video-list li .datashow{color: #999;}

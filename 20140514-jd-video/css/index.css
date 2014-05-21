@@ -20,6 +20,7 @@
 .banner-slide .slide-controls ul li{float: left; margin-right: 8px; cursor: pointer; position: relative; width: 85px; height: 50px; overflow: hidden;}
 .banner-slide .slide-controls ul li .border{width: 81px; height: 46px; border: 2px solid #E31E25; position: absolute; display: none;}
 .banner-slide .slide-controls ul li.cur .border{display: block;}
+.banner-slide .slide-controls ul li.cur .alphabg{display: none;}
 .banner-slide .slide-controls .arrow{width: 24px; height: 50px; text-align: center; position: relative;}
 .banner-slide .slide-controls .arrow .bg{position: absolute; left: 0; top: 0; width: 24px; height: 50px; background-color: #fff; opacity: 0.2; filter:alpha(opacity=20);}
 .banner-slide .slide-controls .arrow:hover .bg{opacity: 0.4; filter:alpha(opacity=40);}

@@ -92,10 +92,10 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 /*avatar*/
 .user-avatar{display: block; position: relative;}
 .user-avatar .mask{background: url(../img/user-mask.png) no-repeat; width: 44px; height: 44px; position: absolute; top: 0; left: 0;}
-.user-avatar.gray .mask{background: url(../img/user-mask-gray.png) no-repeat;}
+.user-avatar.gray .mask{background-position: -50px 0;}
 .avatar-small img{width: 26px; height: 26px;}
-.avatar-small .mask{background: url(../img/user-mask-small.png) no-repeat; width: 26px; height: 26px;}
-.avatar-small.gray .mask{background: url(../img/user-mask-small-gray.png) no-repeat;}
+.avatar-small .mask{background-position: 0 -50px; width: 26px; height: 26px;}
+.avatar-small.gray .mask{background-position: -50px -50px;}
 .user-name{color: #666;}
 /*video-list*/
 .video-list li{float: left; width: 200px; margin-right: 17px; margin-bottom: 20px;}

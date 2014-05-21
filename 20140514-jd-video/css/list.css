@@ -8,6 +8,7 @@
 .nav-sub .list li{float: left; margin-right: 30px;}
 .nav-sub .list li.cur a{color: #C81622; font-weight: bold;}
 .nav-sub .list-sub{display: none; border-color: #D2D2D2;}
+.nav-sub .list-sub li{margin-bottom: 8px;}
 .nav-sub .list-sub.cur{display: block;}
 .filter-type{padding: 15px 0;}
 .filter-type ul{float: left; border-right: 1px solid #DDD; margin-right: 30px;}

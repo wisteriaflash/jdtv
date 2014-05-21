@@ -46,7 +46,7 @@
 .upload-video .upload-details .tag-tip{margin-top: -20px; margin-bottom: 30px;}
 .upload-video .upload-details .des{height: 220px; overflow: hidden; *height: 222px; *margin-bottom: -6px;}
 .upload-video .upload-details .des .title{display: block; font-size: 14px; margin-bottom: 3px;}
-.upload-video .upload-details .des textarea{width: 398px; height: 138px; border: 1px solid #D2D2D2; vertical-align: top; padding: 0; overflow-y: auto;}
+.upload-video .upload-details .des textarea{width: 378px; height: 118px; border: 1px solid #D2D2D2; vertical-align: top; padding: 10px; overflow-y: auto; resize: none;}
 .upload-video .upload-details .secrecy{margin-top: 20px;}
 .upload-video .upload-details .secrecy label{float: left; font-size: 14px; line-height: 34px; display: block; margin-right: 30px;}
 .upload-video .upload-details .secrecy input{padding: 0; float: left; margin: 12px 3px 0 0; *margin-top: 8px;}

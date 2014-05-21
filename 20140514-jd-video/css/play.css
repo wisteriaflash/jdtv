@@ -1,5 +1,5 @@
 ﻿/*sprites*/
-.video-info .video-opt span i,
+.video-info .video-opt a i,
 .video-comment .comment-list li .comment-post i
 {background: url(../img/icons.png) no-repeat;}
 
@@ -14,10 +14,13 @@
 .video-info .video-title{font-size: 24px; line-height: 28px; margin-bottom: 18px;}
 .video-info .video-player{margin-bottom: 15px;}
 .video-info .video-opt{border-bottom: 1px solid #D2D2D2; margin-bottom: 10px;}
-.video-info .video-opt span{cursor: pointer; display: inline-block; text-align: center; line-height: 24px;}
-.video-info .video-opt span i{width: 23px; height: 22px; background-position: -80px -90px; display: block; margin: 0 auto; *margin: 0;}
+.video-info .video-opt a{display: inline-block; text-align: center; line-height: 24px; text-decoration: none;}
+.video-info .video-opt a i{width: 23px; height: 22px; background-position: -80px -90px; display: block; margin: 0 auto; *margin: 0;}
+.video-info .video-opt a:hover{color: #666;}
+.video-info .video-opt a:hover i{background-position: -108px -90px;}
 .video-info .video-opt .share i{width: 26px; height: 18px; background-position: -80px -115px; margin-bottom: 2px;}
-.video-info .video-opt .praise-num{height: 35px; line-height: 35px; position: relative; top: -15px; cursor: default; padding: 0 8px; border-left: 1px solid #F1F1F1; margin: 0 40px 0 3px; font-size: 14px; font-weight: bold;}
+.video-info .video-opt .share:hover i{background-position: -108px -115px;}
+.video-info .video-opt .praise-num{height: 35px; line-height: 35px; position: relative; top: -15px; padding: 0 8px; border-left: 1px solid #F1F1F1; margin: 0 40px 0 3px; font-size: 14px; font-weight: bold;}
 
 .video-comment{}
 .video-comment .hd{color: #666; font-size: 18px; margin: 10px 0; font-weight: bold;}
@@ -37,7 +40,10 @@
 .video-comment .comment-list li .user .time{color: #999; margin-left: 6px;}
 .video-comment .comment-list li .txt{margin-top: 5px; line-height: 21px;}
 .video-comment .comment-list li .comment-post{position: absolute; right: 0; top: 39px;}
+.video-comment .comment-list li .comment-post a{text-decoration: none;}
 .video-comment .comment-list li .comment-post i{width: 11px; height: 11px; background-position: -80px -140px; display: block; float: left; margin: 4px 3px 0 0;}
+.video-comment .comment-list li .comment-post a:hover{color: #666;}
+.video-comment .comment-list li .comment-post a:hover i{background-position: -95px -140px;}
 .video-comment .comment-list .children{margin: 15px -45px 5px 0;}
 .video-comment .comment-list .children .comment-opt .user-avatar{position: relative; top: 0;}
 .video-comment .comment-list .children li{padding: 15px 0 15px 33px; border-top: 1px solid #E8E8E8; border-bottom: 0;}

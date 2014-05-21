@@ -24,7 +24,7 @@
 .upload-video .upload-details .line{display: block; width: 1px; height: 910px; background-color: #D2D2D2; position: absolute; left: 64px; top: 0;}
 .upload-video .upload-details li{padding-left: 94px; position: relative; min-height: 64px; _height: 64px; margin-bottom: 40px; clear: both;}
 .upload-video .upload-details li .num{width: 64px; height: 64px; display: block; position: absolute; left: 0; top: 0; background-color: #EEE; color: #FFF; text-align: center; line-height: 64px; font-size: 48px;}
-.upload-video .upload-details .upload-btn{width: 215px; height: 55px; background-color: #E51E21; display: block; color: #FFF; text-align: center; line-height: 55px; font-size: 22px; text-decoration: none;}
+.upload-video .upload-details .upload-btn{width: 215px; height: 55px; background-color: #E51E21; line-height: 55px; font-size: 22px;}
 .upload-video .upload-details .upload-btn:hover{background-color: #c91623;}
 .upload-video .upload-details .upload-btn i{width: 21px; height: 17px; background-position: -80px -70px; display: inline-block; margin-left: 8px;}
 .upload-video .upload-details .upload-cover{width: 398px; height: 218px; border: 1px dashed #D2D2D2; background-color: #FFF;}

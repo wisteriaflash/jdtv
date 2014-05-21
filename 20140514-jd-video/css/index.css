@@ -104,3 +104,11 @@
 .newest .rank .tab-list .user{padding: 0 5px;}
 .newest .rank .tab-list .playnum{color: #999;}
 .newest .rank .tab-list .playnum i{width: 11px; height: 10px; background-position: 0 -150px; display: inline-block; position: relative; margin-right: 3px;}
+
+.newdoc .bd{margin-top:15px;}
+.newdoc .video-list{margin-right: -20px; *padding-bottom: 20px;}
+.newdoc .video-list li{margin-right: 17px;}
+.newdoc .video-list li, .newdoc .video-list li .title{width: 135px;}
+.newdoc .video-list li .title{height: 40px;}
+.newdoc .video-list li .thumb{width: 108px;}
+.newdoc .video-list li .thumb{height: 141px; margin: 0 auto;}

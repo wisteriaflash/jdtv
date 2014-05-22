@@ -18,6 +18,13 @@
   .commponent .avatar-con.white{background-color: #FFF;}
   .commponent .datashow-con .datashow{display: inline-block; background-color: #333; padding: 10px;}
   .commponent .datashow-con .datashow-gray{background-color: transparent;}
+  .commponent table{border: 1px solid #ddd; border-width: 1px 1px 0 0; background-color: #FFF;}
+  .commponent table .color-box{width: 70px; height: 70px; background-color: #fff; margin: 0 auto;}
+  .commponent table th{text-align: left; height: 25px; line-height: 25px; font-size: 16px;}
+  .commponent table th, .commponent table td{border: 1px solid #ddd; border-width: 0 0 1px 1px; padding: 10px;}
+  .commponent table .des{color: #999;}
+  .commponent table .title{font-size: 22px; font-weight: bold; width: 120px; text-align: center;}
+  .commponent table .color{text-align: center; width: 150px;}
   /*com*/
   .upload-btn{width: 215px; height: 55px; line-height: 55px; font-size: 22px;}
   .page-list{text-align: left;}
@@ -28,6 +35,81 @@
 <body>
   <div class="w1200 commponent">
     <h1>京东tv组件</h1>
+    <div class="grid-c">
+      <h3>标准色：</h3>
+      <table width="100%">
+        <tr>
+          <th colspan="2"></th>
+          <th>色号</th>
+          <th>使用场景</th>
+        </tr>
+        <tr>
+          <td class="title" rowspan="3">重要</td>
+          <td class="color"><div class="color-box" style="background-color: #e41e21;"></div></td>
+          <td>#e41e21</td>
+          <td>
+            <p>小面积使用，用于特别强调和突出的按钮</p>
+            <p class="des">如：发布按钮、导航栏当前状态等</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="color"><div class="color-box" style="background-color: #c91623;"></div></td>
+          <td>#c91623</td>
+          <td>
+            <p>小面积使用，用于特别强调和突出的按钮</p>
+            <p class="des">如：发布按钮、导航栏当前状态等</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="color"><div class="color-box" style="background-color: #333;"></div></td>
+          <td>#333333</td>
+          <td>
+            <p>用于一些非常重要的文字信息</p>
+            <p class="des">如：导航名称、大板块标题、类目名称等。</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="title" rowspan="3">一般</td>
+          <td class="color"><div class="color-box" style="background-color: #444;"></div></td>
+          <td>#444444</td>
+          <td>
+            <p>用于一般操作的按钮</p>
+            <p class="des">如：视频简介等绝大多数的文字信息。</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="color"><div class="color-box" style="background-color: #666;"></div></td>
+          <td>#666666</td>
+          <td>
+            <p>用于大部分文字</p>
+            <p class="des">如：视频简介等绝大多数的文字信息。</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="color"><div class="color-box" style="background-color: #999;"></div></td>
+          <td>#999999</td>
+          <td>
+            <p>用辅助、次要的文字信息</p>
+            <p class="des">如：点赞数、播放数等。</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="title" rowspan="2">较弱</td>
+          <td class="color"><div class="color-box" style="background-color: #d2d2d2;"></div></td>
+          <td>#d2d2d2</td>
+          <td>
+            <p>用于层级较高的分割线</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="color"><div class="color-box" style="background-color: #f1f1f1;"></div></td>
+          <td>#f1f1f1</td>
+          <td>
+            <p>用于层级较低的分割线</p>
+          </td>
+        </tr>
+      </table>
+    </div>
     <div class="grid-c">
       <h3>按钮</h3>
       <div class="item-con clearfix">

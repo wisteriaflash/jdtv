@@ -53,7 +53,7 @@
 
 .video-info .page-list{text-align: left; float: right;}
 /*sidebar*/
-.sidebar{margin-top: 86px;}
+.sidebar{margin-top: 86px; color: #444;}
 .sidebar h4{font-size: 18px; margin-bottom: 15px; color: #333; font-weight: normal;}
 .sidebar .video-intro{background-color: #FFF; border: 1px solid #D2D2D2;}
 .sidebar .video-intro .user{padding: 10px; border-bottom: 1px solid #F1F1F1; height: 45px; color: #999;}

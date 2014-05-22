@@ -4,14 +4,18 @@
 
 /*main*/
 .sign-require{color: #c91623;}
-.myspace{}
+.inputbox{width: 378px; height: 34px; line-height: 34px; border: 1px solid #D2D2D2; background-color: #FFF; padding: 0 10px; margin-bottom: 30px;}
+.inputbox label{font-size: 14px;}
+.inputbox input{width: 322px; border: none 0;}
+.inputbox .sign-require{margin-right: 3px;}
+
+/*myspace*/
 .myspace .sidebar{width: 175px; background-color: #FFF; margin-right: 80px; box-shadow: 0 0 4px rgba(0,0,0,0.2);}
 .myspace .sidebar ul{*margin-bottom: -5px;}
 .myspace .sidebar li{height: 54px; border-bottom: 1px solid #EDEDED; line-height: 54px; font-size: 14px;}
 .myspace .sidebar li a{display: block; padding-left: 23px; text-decoration: none;}
 .myspace .sidebar li.cur a{border-left: 6px solid #C81622; padding-left: 17px; color: #CA1622;}
 .myspace .sidebar li a:hover{color: #CA1622;}
-
 .myspace .grid-m{width: 945px;}
 
 /*video-main*/
@@ -24,8 +28,7 @@
 .upload-video .upload-details .line{display: block; width: 1px; height: 910px; background-color: #D2D2D2; position: absolute; left: 64px; top: 0;}
 .upload-video .upload-details li{padding-left: 94px; position: relative; min-height: 64px; _height: 64px; margin-bottom: 40px; clear: both;}
 .upload-video .upload-details li .num{width: 64px; height: 64px; display: block; position: absolute; left: 0; top: 0; background-color: #EEE; color: #FFF; text-align: center; line-height: 64px; font-size: 48px;}
-.upload-video .upload-details .upload-btn{width: 215px; height: 55px; background-color: #E51E21; line-height: 55px; font-size: 22px;}
-.upload-video .upload-details .upload-btn:hover{background-color: #c91623;}
+.upload-video .upload-details .upload-btn{width: 215px; height: 55px; line-height: 55px; font-size: 22px;}
 .upload-video .upload-details .upload-btn i{width: 21px; height: 17px; background-position: -80px -70px; display: inline-block; margin-left: 8px;}
 .upload-video .upload-details .upload-cover{width: 398px; height: 218px; border: 1px dashed #D2D2D2; background-color: #FFF;}
 .upload-video .upload-details .upload-cover .title{margin: 10px 0 10px 10px; font-size: 14px; line-height: 16px;}
@@ -36,10 +39,7 @@
 .upload-video .upload-details .upload-cover .tip{color: #999;}
 .upload-video .upload-details .upload-cover .tip span{padding-right: 5px;}
 .upload-video .upload-details .upload-cover .tip em{padding: 0 5px;}
-.upload-video .upload-details .inputbox{width: 378px; height: 34px; line-height: 34px; border: 1px solid #D2D2D2; background-color: #FFF; padding: 0 10px; margin-bottom: 30px;}
-.upload-video .upload-details .inputbox label{font-size: 14px;}
-.upload-video .upload-details .inputbox input{width: 322px; border: none 0;}
-.upload-video .upload-details .inputbox .sign-require{margin-right: 3px;}
+
 .upload-video .upload-details .category{margin-bottom: 30px; position: relative;}
 .upload-video .upload-details .category .sign-require{position: absolute; top: 10px; left: 6px;}
 .upload-video .upload-details .category select{width: 400px; height: 34px; padding-left: 10px; border: 1px solid #D2D2D2; color: #666; padding-left: 15px \0;}
@@ -58,5 +58,6 @@
 .upload-video .upload-details .secrecy .password-confirm input{width: 95px;}
 .upload-video .upload-details .step4 button{width: 90px; height: 36px; background-color: #E51E21; color: #FFF; cursor: pointer; font-size: 16px; margin-right: 10px;}
 .upload-video .upload-details .step4 button:hover{background-color: #c91623;}
+.upload-video .upload-details .step4 a{float: left; margin-right: 10px;}
 .upload-video .upload-details .step4 .btn-reset{background-color: #666;}
 .upload-video .upload-details .step4 .btn-reset:hover{background-color: #555;}

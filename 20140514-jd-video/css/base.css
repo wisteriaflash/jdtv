@@ -86,10 +86,12 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 /*btn*/
 .btn-red, .btn-gray{text-align: center; display: block; color: #FFF;}
 .btn-red:hover, .btn-gray:hover{color: #FFF; text-decoration: none;}
-.btn-red{width: 140px; height: 36px; line-height: 36px; background-color: #E51E21; font-size: 16px;}
+.btn-red{width: 90px; height: 36px; line-height: 36px; background-color: #E51E21; font-size: 16px;}
 .btn-red:hover{background-color: #c91623;}
-.btn-gray{width: 140px; height: 36px; line-height: 36px; font-size: 16px; background-color: #555;}
+.btn-gray{width: 90px; height: 36px; line-height: 36px; font-size: 16px; background-color: #555;}
 .btn-gray:hover{background-color: #666;}
+.btn-red.disabled, .btn-red.disabled:hover,
+.btn-gray.disabled, .btn-gray.disabled:hover{color: #666; background-color: #ebebeb;}
 /*alphabg*/
 .alphabg{width: 85px; height: 50px; background-color: #000; opacity: 0.4; filter: alpha(opacity=40); position: absolute; top: 0; left: 0; z-index: 2;}
 /*avatar*/
@@ -111,9 +113,11 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 .video-list li .title{display: block; width: 200px; height: 20px; line-height: 20px; overflow: hidden; margin-top: 5px;}
 .video-list li .datashow{color: #999;}
 /*datashow*/
+.datashow{color: #FFF;}
 .datashow i{width: 10px; height: 10px; background-position: 0 -80px; display: inline-block; margin-right: 5px; *position: relative; *top: -3px;}
 .datashow .praise{padding-right: 30px;}
 .datashow .playnum i{width: 9px; background-position: 0 -95px;}
+.datashow-gray{color: #999;}
 .datashow-gray i{background-position: -12px -80px;}
 .datashow-gray .playnum i{background-position: -12px -95px;}
 .datashow-gray .downnum i{width: 11px; height: 10px; background-position: -108px -75px;}

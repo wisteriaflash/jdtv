@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>京东视频-组件页</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/upload.css">
+  <style>
+  .commponent{padding-bottom: 40px;}
+  .commponent h1{font-size: 30px; line-height: 30px; font-weight: normal; text-align: center; padding-top: 15px;}
+  .commponent h3{font-size: 18px; margin-bottom: 10px;}
+  .commponent .grid-c{padding-bottom: 12px;}
+  .commponent .item{float: left; margin-right: 20px;}
+  .commponent .itema{margin-top: -8px;}
+  .commponent .itema a{margin-top: 20px;}
+  .commponent .item a{margin-bottom: 8px;}
+  .commponent .avatar-con{display: inline-block; margin-right: 20px; padding: 10px; border: 1px solid #ddd;}
+  .commponent .avatar-con.white{background-color: #FFF;}
+  .commponent .datashow-con .datashow{display: inline-block; background-color: #333; padding: 10px;}
+  .commponent .datashow-con .datashow-gray{background-color: transparent;}
+  /*com*/
+  .upload-btn{width: 215px; height: 55px; line-height: 55px; font-size: 22px;}
+  .page-list{text-align: left;}
+  .user-avatar{display: inline-block; margin-right: 5px;}
+  .avatar-small{top: 18px; position: relative;}
+  </style>
+</head>
+<body>
+  <div class="w1200 commponent">
+    <h1>京东tv组件</h1>
+    <div class="grid-c">
+      <h3>按钮</h3>
+      <div class="item-con clearfix">
+        <div class="item">
+          <a href="#" class="btn-red upload-btn">上传视频</a>
+          <a href="#" class="btn-red upload-btn disabled">上传视频</a>
+        </div>
+        <div class="item itema">
+          <a href="#" class="btn-red">发布</a>
+          <a href="#" class="btn-red disabled">发布</a>
+        </div>
+        <div class="item itema">
+          <a href="#" class="btn-gray">重置</a>
+          <a href="#" class="btn-red disabled">重置</a>
+        </div>
+      </div>
+    </div>
+    <div class="grid-c">
+      <h3>图标</h3>
+      <div class="datashow-con">
+        <div class="datashow">
+          <span class="praise"><i></i>24</span>
+          <span class="playnum"><i></i>247</span>
+        </div>
+        <div class="datashow datashow-gray">
+          <span class="praise"><i></i>24</span>
+          <span class="playnum"><i></i>247</span>
+        </div>  
+      </div>
+    </div>
+    <div class="grid-c">
+      <h3>头像</h3>
+      <div class="avatar-con white">
+        <a class="user-avatar avatar" href="#"><span class="mask"></span><img src="img/test/user2.jpg" alt=""></a>
+        <a class="user-avatar avatar-small" href="#"><span class="mask"></span><img src="img/test/user2.jpg" alt=""></a>
+      </div>
+      <div class="avatar-con">
+        <a class="user-avatar gray" href="#"><span class="mask"></span><img src="img/test/user2.jpg" alt=""></a>
+        <a class="user-avatar avatar-small gray" href="#"><span class="mask"></span><img src="img/test/user2.jpg" alt=""></a>
+      </div>
+    </div>
+    <div class="grid-c" style="border:none;">
+      <h3>组件</h3>
+      <div class="inputbox"><label><em class="sign-require">*</em>标题：</label><input type="text"></div>
+      <!-- inputbox END-->
+      <div class="album-list clearfix">
+        <ul>
+          <li class="cur"><a href="#">第1集</a></li>
+          <li><a href="#">第2集</a></li>
+          <li><a href="#">第3集</a></li>
+          <li><a href="#">第4集</a></li>
+          <li><a href="#">第5集</a></li>
+          <li><a href="#">第6集</a></li>
+          <li><a href="#">第7集</a></li>
+          <li><a href="#">第8集</a></li>
+          <li><a href="#">第9集</a></li>
+          <li><a href="#">第10集</a></li>
+          <li><a href="#">第11集</a></li>
+          <li><a href="#">第12集</a></li>
+        </ul>
+      </div>
+      <!-- album-list END-->
+      <div class="page-list">
+        <ul>
+          <li><a href="#" class="disabled">上一页</a></li>
+          <li><span class="cur">1</span></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">下一页</a></li>
+        </ul>
+      </div>
+      <!-- page-list END-->
+      <ul class="video-list clearfix">
+        <li>
+          <a class="thumb" href="#">
+            <span class="alphabg" style="display:block;"></span>
+            <i class="icon-play" style="display:block;"></i>
+          </a>
+          <a href="#" class="title">杨帆起航配送500强储备站长集训营</a>
+          <div class="datashow datashow-gray">
+            <span class="praise"><i></i>24</span>
+            <span class="playnum"><i></i>247</span>
+          </div>
+        </li>
+        <li>
+          <a class="thumb" href="#">
+            <span class="alphabg"></span>
+            <i class="icon-play"></i>
+            <img src="img/test/v2.jpg">
+          </a>
+          <a href="#" class="title">杨帆起航配送500强储备站长集训营</a>
+          <div class="datashow datashow-gray">
+            <span class="praise"><i></i>24</span>
+            <span class="playnum"><i></i>247</span>
+          </div>
+        </li>
+        <li>
+          <a class="thumb" href="#">
+            <span class="alphabg"></span>
+            <i class="icon-play"></i>
+            <img src="img/test/v3.jpg">
+          </a>
+          <a href="#" class="title">杨帆起航配送500强储备站长集训营</a>
+          <div class="datashow datashow-gray">
+            <span class="praise"><i></i>24</span>
+            <span class="playnum"><i></i>247</span>
+          </div>
+        </li>
+        <li>
+          <a class="thumb" href="#">
+            <span class="alphabg"></span>
+            <i class="icon-play"></i>
+            <img src="img/test/v4.jpg">
+          </a>
+          <a href="#" class="title">杨帆起航配送500强储备站长集训营</a>
+          <div class="datashow datashow-gray">
+            <span class="praise"><i></i>24</span>
+            <span class="playnum"><i></i>247</span>
+          </div>
+        </li>
+        <li>
+          <a class="thumb" href="#">
+            <span class="alphabg"></span>
+            <i class="icon-play"></i>
+            <img src="img/test/v1.jpg">
+          </a>
+          <a href="#" class="title">杨帆起航配送500强储备站长集训营</a>
+          <div class="datashow datashow-gray">
+            <span class="praise"><i></i>24</span>
+            <span class="playnum"><i></i>247</span>
+          </div>
+        </li>
+      </ul>
+      <!-- video-list END-->
+    </div>
+  </div>  
+  <!-- video-main END-->
+  <div class="footer w1200">京东运维部&nbsp;&nbsp;wwww.jd.com&nbsp;&nbsp;CopyRight&nbsp;&nbsp;©&nbsp;&nbsp;2013-2014</div>
+</body>
+</html>

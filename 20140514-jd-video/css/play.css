@@ -31,10 +31,9 @@
 .video-comment .comment-opt .user{margin-left: 10px; margin-top: 12px;}
 .video-comment .comment-opt .user-avatar{position: relative; float: left;}
 .video-comment .comment-opt .user-name{margin-left: 5px; line-height: 26px;}
-.video-comment .comment-opt .btn-publish{position: absolute; right: 6px; top: 5px; display: block; width: 90px; height: 36px;}
+.video-comment .comment-opt .btn-publish{position: absolute; right: 6px; top: 5px; display: block;}
 
 .video-comment .comment-all{}
-.video-comment .comment-list{}
 .video-comment .comment-list li{position: relative; padding: 15px 45px 15px 60px; border-bottom: 1px solid #D2D2D2; *padding-top: 0;}
 .video-comment .comment-list li .user-avatar{position: absolute; left: 0; top: 18px;}
 .video-comment .comment-list li .user .time{color: #999; margin-left: 6px;}

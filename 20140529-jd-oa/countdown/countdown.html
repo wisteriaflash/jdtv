@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>618倒计时</title>
+    <style type="text/css">
+    * { margin: 0;padding: 0;}
+    html,body { height: 100%;}
+    /* ---------------- 分割线，以上不是必需 ---------------- */
+    /* 样式开始 */
+    .cd-countdown { display: none;position: absolute;left: 50%;top: 50%;width: 660px;height: 368px;margin: -184px 0 0 -330px;background: url(countdown.png) no-repeat;}
+    .cd-countdown .cd-close { position: absolute;right: 9px;top: 6px;width: 22px;height: 22px;}
+    .cd-countdown span { position: absolute;left:528px;top:55px;font-family: "Microsoft YaHei",tahoma,arial; color: #fff;font-size: 58px;line-height: 60px;}
+    .cd-countdown .cd-date { left:216px;top:104px; width: 160px; height: 160px; line-height: 160px; text-align: center; color: #ed3d2d;font-size: 142px; background-color: #fff4dd; -webkit-transform: rotate(-15deg) translate3d( 0, 0, 0); -moz-transform: rotate(-15deg); -ms-transform: rotate(-15deg); -o-transform: rotate(-15deg); transform: rotate(-15deg); }
+    .cd-countdown .cd-min { top: 130px;}
+    .cd-countdown .cd-sec { top: 202px;}
+    .cd-countdown .cd-line { left:209px;top:158px;width: 176px;height: 50px;background: url(countdown_line.png) no-repeat;}
+    .cd-countdown .cd-text { left:82px;top:307px; width: 500px; height: 35px; line-height: 35px; text-align: center; font-size: 28px;}
+    </style>
+    <!--[if lte IE 8]>
+    <style type="text/css">
+    .cd-countdown .cd-date {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9659258262890684, M12=0.25881904510252024, M21=-0.25881904510252024, M22=0.9659258262890684, SizingMethod='auto expand')";
+        filter: progid:DXImageTransform.Microsoft.Matrix(
+            M11=0.9659258262890684,
+            M12=0.25881904510252024,
+            M21=-0.25881904510252024,
+            M22=0.9659258262890684,
+            SizingMethod='auto expand');
+        margin-left: -18px; margin-top: -20px;
+        zoom: 1;
+    }
+    </style>
+    <![endif]-->
+</head>
+<body>
+    <div id="J-countdown" class="cd-countdown">
+        <a href="#" class="cd-close" onclick="document.getElementById('J-countdown').style.display = 'none';return false;"></a>
+        <span id="J-cd-date" class="cd-date">00</span>
+        <span id="J-cd-hour" class="cd-hour">00</span>
+        <span id="J-cd-min" class="cd-min">00</span>
+        <span id="J-cd-sec" class="cd-sec">00</span>
+        <span class="cd-line"></span>
+        <span class="cd-text">借仓储履约力量，助京东扬帆远航</span>
+    </div>
+<script type="text/javascript">
+//6.18倒计时
+(function(){
+    var diff_time = 0, _countdownObj = null;
+    var eventDate = 0;
+    var _start = new Date("2014/05/21 00:00:00").getTime(); //开始时间
+    var _end = new Date("2014/06/18 00:00:00").getTime(); //结束时间
+    var _isDEBUG = !(location.host);
+    var $date = document.getElementById("J-cd-date");
+    var $hour = document.getElementById("J-cd-hour");
+    var $min = document.getElementById("J-cd-min");
+    var $sec = document.getElementById("J-cd-sec");
+
+    var _countdown = function(){
+        var today = new Date();
+        var LeftTime = (eventDate - (today.getTime()-diff_time));
+        var LeftDays=Math.floor(LeftTime/(1000*60*60*24));
+        var LeftHours=Math.floor(LeftTime/(1000*60*60)%24);
+        var LeftMinutes=Math.floor(LeftTime/(1000*60)%60);
+        var LeftSeconds=Math.floor(LeftTime/1000%60);
+        $date.innerHTML = (LeftDays<10)?"0"+LeftDays:LeftDays;
+        $hour.innerHTML = (LeftHours<10)?"0"+LeftHours:LeftHours;
+        $min.innerHTML = (LeftMinutes<10)?"0"+LeftMinutes:LeftMinutes;
+        $sec.innerHTML = (LeftSeconds<10)?"0"+LeftSeconds:LeftSeconds;
+        if(LeftTime <= 1000){
+            clearInterval(_countdownObj);
+        }
+    };
+    var st;
+    if(_isDEBUG){
+        st = new Date().getTime();
+    }else{
+        var http_request = "";
+        if(window.XMLHttpRequest){
+            try{http_request = new XMLHttpRequest();} catch (e){;}
+        }else if(window.ActiveXObject){
+            try{ http_request = new ActiveXObject("Msxml2.XMLHTTP");} catch (e){ ; }
+            if( http_request == null){
+                try { http_request = new ActiveXObject("Microsoft.XMLHTTP");} catch (e){;}
+            }
+        }
+        http_request.open('HEAD', window.location.href.toString(), false);
+        http_request.setRequestHeader("Content-Type", "text/html");
+        http_request.send(null);
+        st = new Date(http_request.getResponseHeader('Date')).getTime();
+    }
+    if(st >= _start && st <= _end){
+        eventDate = _end;
+        diff_time = new Date().getTime()-st;//校正本地时间
+        _countdownObj = window.setInterval(_countdown, 1000);
+        document.getElementById("J-countdown").style.display = "block";
+    }
+})();
+</script>
+</body>
+</html>

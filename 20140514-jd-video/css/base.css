@@ -124,7 +124,7 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 /*album-list*/
 .album-list li{float: left; margin: 0 3px 3px 0;}
 .album-list li a{display: block; background-color: #FFF; border: 1px solid #DDD; height: 23px; text-decoration: none; text-align: center; line-height: 23px; padding: 0 12px;}
-.album-list li a:hover, .album-list li.cur a{height: 25px; background-color: #C81622; border: none; display: block; color: #FFF; padding: 0 13px;}
+.album-list li a:hover, .album-list li.cur a{background-color: #C81622; border-color: #C81622; display: block; color: #FFF;}
 /*page-list*/
 .page-list{height: 35px; text-align: center; padding: 10px 0;}
 .page-list ul{display: inline-block; margin: 0 auto; *display: inline; *zoom: 1;}

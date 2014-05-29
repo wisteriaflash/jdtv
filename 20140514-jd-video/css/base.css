@@ -81,11 +81,22 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 
 /*footer*/
 .footer{text-align: center; padding: 10px 0; border-top: 1px solid #D2D2D2; clear: both;}
-
+/*login*/
+.login{min-height: 550px; padding-top: 150px; color: #666;}
+.login .login-con{width: 360px; height: 355px; padding: 65px 0 0 80px; background-color: #FFF; box-shadow: 0 0 6px rgba(50,50,50,0.2); margin: 0 auto;}
+.login .logo{margin-bottom: 20px;}
+.login .inputbox{width: 278px; margin-bottom: 20px;}
+.login .inputbox input{width: 230px;}
+.login .user input{width: 205px;}
+.login .verify-code{width: 218px; float: left;}
+.login .verify-code input{width: 160px;}
+.login .verify-img{float: left; margin: 8px 0 0 10px;}
+.login .verify-img img{border: 1px solid #666;}
+.login .btn-login{clear: both; width: 280px; height: 55px; line-height: 55px; font-size: 20px;}
 /*==================component===================*/
 
 /*btn*/
-.btn-red, .btn-gray{text-align: center; display: block; color: #FFF;}
+.btn-red, .btn-gray{text-align: center; display: block; color: #FFF; cursor: pointer;}
 .btn-red:hover, .btn-gray:hover{color: #FFF; text-decoration: none;}
 .btn-red{width: 90px; height: 36px; line-height: 36px; background-color: #E51E21; font-size: 16px;}
 .btn-red:hover{background-color: #c91623;}
@@ -134,6 +145,12 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 .page-list li .disabled, .page-list li .disabled:hover{color: #999; border: 1px solid #D2D2D2; background-color: #EBEBEB; cursor: default; padding: 3px 8px;}
 .page-list li .cur, .page-list li a{margin: 0 3px;}
 .page-list li .cur, .page-list li a:hover{padding: 4px 9px; background-color: #C81622; border: none; display: block; color: #FFF;}
+/*inputbox*/
+.sign-require{color: #c91623;}
+.inputbox{width: 378px; height: 34px; line-height: 34px; border: 1px solid #D2D2D2; background-color: #FFF; padding: 0 10px; margin-bottom: 30px;}
+.inputbox label{font-size: 14px;}
+.inputbox input{width: 322px; border: none 0;}
+.inputbox .sign-require{margin-right: 3px;}
 /*icon*/
 .icon_success{width: 64px; height: 64px; background-position: -135px 0; display: inline-block;}
 /*tip*/

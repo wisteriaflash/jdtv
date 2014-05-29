@@ -2,13 +2,6 @@
 .upload-video .upload-details .upload-btn i
 {background: url(../img/icons.png) no-repeat;}
 
-/*main*/
-.sign-require{color: #c91623;}
-.inputbox{width: 378px; height: 34px; line-height: 34px; border: 1px solid #D2D2D2; background-color: #FFF; padding: 0 10px; margin-bottom: 30px;}
-.inputbox label{font-size: 14px;}
-.inputbox input{width: 322px; border: none 0;}
-.inputbox .sign-require{margin-right: 3px;}
-
 /*myspace*/
 .myspace .sidebar{width: 175px; background-color: #FFF; margin-right: 80px; box-shadow: 0 0 4px rgba(0,0,0,0.2);}
 .myspace .sidebar ul{*margin-bottom: -5px;}

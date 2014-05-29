@@ -148,8 +148,8 @@ body{background-color: #FBFBFB; font-family: 'Microsoft YaHei';}
 /*inputbox*/
 .sign-require{color: #c91623;}
 .inputbox{width: 378px; height: 34px; line-height: 34px; border: 1px solid #D2D2D2; background-color: #FFF; padding: 0 10px; margin-bottom: 30px;}
-.inputbox label{font-size: 14px;}
-.inputbox input{width: 322px; border: none 0;}
+.inputbox label{font-size: 14px; display: inline-block; float: left;}
+.inputbox input{width: 322px; border: none 0; padding: 0; margin: 0; height: 32px; line-height: 32px;}
 .inputbox .sign-require{margin-right: 3px;}
 /*icon*/
 .icon_success{width: 64px; height: 64px; background-position: -135px 0; display: inline-block;}

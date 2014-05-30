@@ -44,6 +44,8 @@ $(function(){
         showText: 'Show more',
         hideText: 'Show less'
     });
+    //popup
+    
 });
 
 /*

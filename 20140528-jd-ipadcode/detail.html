@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JDiPad版</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		.detail_page{position: relative; z-index: 102; margin-left: -20px; box-shadow: -5px 0 20px 5px rgba(0,0,0,.3);}
+		.right_list{position: fixed; right: 0; top:0; width:156px; height: 747px;}
+		.add_to_cart1, .easy_buy1, .add_to_cart2, .easy_buy2{
+			position: absolute; width: 90px; height: 45px; text-indent: -99em;
+		}
+		.add_to_cart1{width: 140px;top: 630px; left: 473px;}
+		.easy_buy1{top:630px; left: 623px;}
+		.add_to_cart2{width: 140px;top: 775px; left: 527px;}
+		.easy_buy2{top:775px; left: 675px;}
+		.overlay{position: fixed; z-index: 199; left: 0; top: 0; display: none;  width: 100%; height: 100%; background-color: #000; opacity: .6}
+		.detail_info{position: relative; z-index: 200; width: 1024px; height: 0; overflow: hidden; background: url(img/pay_confirm.png)}
+		.detail_info_mark{background: url(img/remark.png)}
+		.detail_info a{position: absolute; text-indent: -99em;}
+		.back_btn{left: 0; top: 0; width: 50px; height: 50px;}
+		.back_btn2{position: absolute; text-indent: -99em; z-index:1;}
+		.send_address{left: 300px; top: 15px; width: 340px; height: 145px;}
+		.pay_type{left: 650px; top:15px; width: 80px; height: 145px;}
+		.send_type{left: 740px; top:15px; width: 260px; height: 145px;}
+		.invoice_info{left: 300px; top: 165px; width: 340px; height: 90px;}
+		.remark{position: absolute; left: 650px; top: 165px; width: 350px; height: 90px; opacity: .1}
+		.order_submit{left: 860px; top: 282px; width: 150px; height: 45px;}
+
+		.detail_edit_info{position: absolute; right: -1024px; top: 0; z-index: 200; width: 1024px; height: 341px; overflow: hidden;}
+	</style>
+</head>
+<body>
+<div id="detailInfo" class="detail_info">
+	<a href="javascript:" id="J_backBtn" class="back_btn">返回</a>
+	<a href="javascript:" class="send_address detailEdit" data-id="J_sendAdd">送货地址</a>
+	<a href="javascript:" class="pay_type detailEdit" data-id="J_pay_type">支付方式</a>
+	<a href="javascript:" class="send_type detailEdit" data-id="J_sendType">配送方式</a>
+	<a href="javascript:" class="invoice_info detailEdit" data-id="J_invoiceInfo">发票信息</a>
+	<a href="javascript:;" class="order_submit detailEdit" data-id="J_orderSubmit">提交订单</a>
+	<input id="J_remark" class="remark" />
+</div>
+<div style="position: absolute; width: 1024px; height: 341px; left: 0; top: 0; overflow: hidden;">
+	<a href="javascript:;" id="J_detailBack" class="back_btn back_btn2">返回</a>
+	<div id="J_sendAdd" class="detail_edit_info J_detailEditInfo "><img src="img/address.png" alt=""></div>
+	<div id="J_pay_type" class="detail_edit_info J_detailEditInfo"><img src="img/paytype.png" alt=""></div>
+	<div id="J_sendType" class="detail_edit_info J_detailEditInfo"><img src="img/calendar.png" alt=""></div>
+	<div id="J_invoiceInfo" class="detail_edit_info J_detailEditInfo"><img src="img/invoice.png" alt=""></div>
+	<div id="J_orderSubmit" class="detail_edit_info J_detailEditInfo"><a href="javascript:" id="J_paySure"><img src="img/pay_confirm2.png" alt=""></a></div>
+</div>
+<div class="overlay"></div>
+<div class="wrap">
+	<div class="side_bar">
+		<i id="J_navHover" class="nav_hover"></i>
+		<a href="javascript:;" id="J_navToList" class="to_list">列表</a>
+		<a href="javascript:;" id="J_navToCart" class="to_cart">购物车</a>
+	</div>
+	<div id="J_listMenu" class="list_meun" data-url="list.html"><a href="javascript:;"></a></div>
+	<div id="J_contentWraper" class="container">
+		<div id="J_scroller" class="detail_page">
+			<a href="javascript:" class="add_to_cart1 J_addCart">加入购物车</a>
+			<a href="javascript:" class="easy_buy1 J_easyBuy">轻松购</a>
+			<a href="javascript:" class="add_to_cart2 J_addCart">加入购物车</a>
+			<a href="javascript:" class="easy_buy2 J_easyBuy">轻松购</a>
+			<div><img src="img/details.png" alt=""><img src="img/details_more.png" alt=""></div>
+		</div>
+		<div class="right_list"><img src="img/details_list.png" alt=""></div>
+	</div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/iScroll.js"></script>
+<script>
+$(function() {
+	// 滚动
+	var myscroll= new iScroll("J_contentWraper",
+		{
+			hScrollbar:false, 
+			vScrollbar:false, 
+			bounce: false
+		});
+	// 点击划出菜单
+	$("#J_navToList").on("tap", function() {
+		var newTop = $(this).css("top");
+		if(!$(this).data("isHover") || $(this).data("isHover") !== true){			
+			$("#J_navHover").animate({
+				top: newTop
+			}, "fast");
+			$("#J_listMenu").animate({
+				  left: '60px',
+				}, "fast", 'ease-out')
+			$(this).data("isHover", true)
+		} else {
+			$("#J_navHover").animate({
+				top: 0
+			}, "fast");
+			$("#J_listMenu").animate({
+				  left: '-203px',
+				}, "fast", 'ease-in')
+			$(this).data("isHover", false)
+		}
+	});
+	// 收起菜单
+	$("#J_contentWraper").on("tap", function() {
+		$("#J_navHover").animate({
+			top: 0
+		}, "fast");
+		$("#J_listMenu").animate({
+			  left: '-203px',
+			}, "fast", 'ease-in')
+		$("#J_navToList").data("isHover", false)
+	});
+	// 点击菜单
+	$("#J_listMenu").on("tap", function() {
+		$("#J_listMenu").animate({
+			left: '-203px',
+		}, "fast", 'ease-in')
+		$("#J_navToList").data("isHover", false);
+		$("#J_listPage").animate({
+			right: '0',
+		}, "fast", 'ease-in');
+		
+	});
+	// 点击轻松购
+	$(".J_easyBuy").on("tap", function() {
+		$("#detailInfo").animate({
+			height: 341
+		}, "fast");
+		$(".overlay").css("display", "block")
+	});
+
+	// 加入购物车
+	$(".J_addCart").on("tap", function() {alert("成功加入购物车")});
+
+	//点击取消
+	$(".overlay").on("tap", function() {
+		$(".J_detailEditInfo").animate({
+			right: -1024
+		}, "fast");
+		$("#detailInfo").animate({
+			height: 0
+		}, "fast");
+		$(".overlay").hide();
+		$("#J_detailBack").css("z-index", 1)	
+	})
+	$("#J_backBtn").on("tap", function() {
+		$("#detailInfo").animate({
+			height: 0
+		}, "fast");
+		$(".overlay").hide();
+		$("#J_detailBack").css("z-index", 1)
+	});
+
+	// 备注状态
+	$("#J_remark").on("focus", function() {
+		$("#detailInfo").addClass("detail_info_mark")
+	});
+	$("#J_remark").on("blur", function() {
+		$("#detailInfo").removeClass("detail_info_mark")
+	});
+
+	// 一堆点击事件
+	$(".detailEdit").on("tap", function() {
+		$("#J_detailBack").css("z-index", 202)	
+		var id = "#" + $(this).attr("data-id");	
+		$(id).animate({
+			right: 0
+		}, "fast");
+	});
+	// 点击返回
+	$("#J_detailBack").on("tap", function() {
+		$("#J_detailBack").css("z-index", 1)
+		$(".J_detailEditInfo").animate({
+			right: -1024
+		}, "fast");
+	})
+
+	// 确认付款
+	$("#J_paySure").on("tap", function() {
+		if(confirm("确定付款吗？")) {
+			$(".overlay").trigger("tap");
+			alert("付款成功");
+		}
+	})
+})
+</script>
+</body>
+</html>

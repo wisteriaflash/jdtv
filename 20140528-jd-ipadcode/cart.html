@@ -17,11 +17,14 @@
     .order_con{position: relative;}
     .order_con a{position: absolute; top: 0; left: 0; text-indent: -99em; display: block; width: 596px; height: 104px;}
     .order_con .express_date{height: 150px; top: 104px;}
+    .order_con .invoice{height: 120px; top: 520px;}
     .order_con .pic_l, .order_con .pic_r{float: left;}
     .order_con .pic_r{width: 368px; height: 668px; overflow: hidden; position: relative;}
     .order_con .pic_r img{display: block; position: absolute; left: 0; top: 0; z-index: 0;}
     .order_con .pic_r img:first-child{z-index: 10;}
     .order_con .pic_r .close{position: absolute; top: 0; left: 314px; width: 50px; height: 50px; z-index: 20;}
+    .order_con .pic_r .consignee_new{position: absolute; top: 54px; left: 22px; width: 323px; height: 108px; z-index: 20;}
+    .order_con .pic_r .consignee_save{position: absolute; top: 514px; left: 74px; width: 231px; height: 45px; z-index: 20;}
   </style>
 </head>
 <body>
@@ -39,6 +42,7 @@
     <div class="cart_con">
       <div class="cart_item cart_list">
         <img src="img/car_list.png" alt="">
+        <img src="img/car_list.png" alt="">
       </div>
     </div>
   </div>
@@ -54,12 +58,17 @@
           <img src="img/info_init.png" alt="">
           <a href="javascript:;" id="J_consignee" class="consignee" data-img="info_consignee">收件人</a>
           <a href="javascript:;" id="J_expressDate" class="express_date" data-img="info_express">配送方式</a>
+          <a href="javascript:;" id="J_invoice" class="invoice" data-img="info_invoice">发票信息</a>
         </div>
         <div class="pic_r">
           <div id="J_orderPicCon" class="pic_con">
             <img src="img/package.png" alt="">
             <img src="img/consignee.png" alt="">
             <img src="img/express_date.png" alt="">  
+            <img src="img/invoice.png" alt="">
+            <img class="pic_consignee_new" src="img/consignee_new.png" alt="">
+            <a href="javascript:;" id="J_consigneeNew" class="consignee_new">新建收货人</a>
+            <a href="javascript:;" id="J_consigneeSave" class="consignee_save">保存收货人信息</a>
             <a href="javascript:;" id="J_close" class="close">关闭</a>
           </div>
         </div>
@@ -96,6 +105,9 @@ $(function() {
       });
     })
   });
+  $('#J_btnConfirm').on(_touchEvent, function(e){
+    alert('确认订单成功');
+  });
   $('#J_orderPicL a').on(_touchEvent,function(e){
     if($(this).hasClass('cur')){
       return;
@@ -117,12 +129,46 @@ $(function() {
     imgCur.animate({
       left:0
     },'fast');
+    $('#J_orderPicCon img').removeClass('cur');
+    imgCur.addClass('cur');
+    //
+    $('#J_consigneeNew').hide();
+    if($('#J_consignee').hasClass('cur')){
+      $('#J_consigneeNew').show();
+    }
   });
   $('#J_close').on(_touchEvent,function(e){
     $('#J_orderPicL a').removeClass('cur');
-    $('#J_orderPicCon img').css('z-index', 0);
-    $('#J_orderPicCon img').eq(0).css('z-index', 10);
     $('#J_orderPicL img').attr('src','img/info_init.png');
+    $('#J_orderPicCon img').css('z-index', 0);
+    var firstImg = $('#J_orderPicCon img').eq(0);
+    $('#J_orderPicCon img').not(firstImg).animate({
+      left: picW
+    },'first',function(){
+      $('#J_orderPicCon img').eq(0).css('z-index', 10);
+    });
+  });
+  $('#J_consigneeNew').on(_touchEvent, function(e){
+    var newNode = $('#J_orderPicCon .pic_consignee_new');
+    if(newNode.hasClass('cur')){
+      return;
+    }
+    newNode.addClass('cur');
+    newNode.css({
+      'z-index': 10,
+      left: picW
+    });
+    newNode.animate({
+      left:0
+    },'fast');
+  });
+  $('#J_consigneeSave').on(_touchEvent, function(e){
+    var newNode = $('#J_orderPicCon .pic_consignee_new');
+    newNode.animate({
+      left: picW
+    },'fast');
+    newNode.removeClass('cur');
+    $('#J_consigneeNew').show();
   });
 });
 </script>

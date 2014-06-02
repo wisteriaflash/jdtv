@@ -6,6 +6,33 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<style>
 		.list{position: absolute; right: -1024px; top: 0; width: 964px; height: 747px;}
+		.list_meun{left: 60px;}
+		.list_meun a{-webkit-backface-visibility: hidden;}
+		.list_sub{position: fixed; top: 0; left: -700px; z-index: 5;}
+		.index_page{position: relative;}
+		.index_p1{
+			position: absolute; left: 0; top: 0;
+			-webkit-perspective: 800px;/*3d场景*/
+    	-moz-perspective: 800px;}
+		.index_p1 img{
+			position: absolute; 
+			-webkit-transition: 1s ease-in-out;
+	    -moz-transition: 1s ease-in-out;
+	    -ms-transition: 1s ease-in-out;
+	    -o-transition: 1s ease-in-out;
+	    transition: 1s ease-in-out;
+	    -moz-transform-style: preserve-3d;
+	    -webkit-transform-style: preserve-3d;
+	    -moz-transform: rotateX(180deg);
+	    -webkit-transform: rotateX(180deg);
+  }
+    .index_p1 .animate{
+    	-moz-transform: rotateX(0deg);
+    	-webkit-transform: rotateX(0deg); 
+    }
+		.index_p1 :nth-child(1){left: 382px; top: 171px;}
+		.index_p1 :nth-child(2){left: 573px; top: 0px;}
+		.index_p1 :nth-child(3){left: 191px; top: 363px;}
 	</style>
 </head>
 <body>
@@ -16,10 +43,25 @@
 		<a href="javascript:;" id="J_navToList" class="to_list">列表</a>
 		<a href="cart.html" id="J_navToCart" class="to_cart">购物车</a>
 	</div>
-	<div id="J_listMenu" class="list_meun" data-url="list.html"><a href="javascript:;"></a></div>
+	<!-- 类目 -->
+	<div class="list_con">
+		<div id="J_listMenu" class="list_meun" data-url="list.html">
+			<a href="javascript:;"></a>
+		</div>
+		<div id="J_listSub" class="list_sub">
+			<img src="img/category-sub.png" alt="">
+		</div>
+	</div>
 	<div id="J_contentWraper" class="container">
 		<div id="J_scroller" class="index_page">
-			<img src="img/index1.jpg" alt=""><a href="channel.html"><img src="img/index2.jpg" alt=""></a><img src="img/index3.jpg" alt="">
+			<div id="J_indexP1" class="index_p1">
+				<img src="img/index_1.jpg" alt="">
+				<img src="img/index_2.jpg" alt="">
+				<img src="img/index_3.jpg" alt="">
+			</div>
+			<img src="img/index1.jpg" alt="">
+			<a href="channel.html"><img src="img/index2.jpg" alt=""></a>
+			<img src="img/index3.jpg" alt="">
 		</div>
 	</div>
 	<a id="J_listPage" class="list" href="detail.html"><img src="img/list.png" alt=""><img src="img/list.png" alt=""><img src="img/list.png" alt=""></a>
@@ -35,8 +77,18 @@ $(function() {
 			vScrollbar:false, 
 			bounce: false
 		});
-
 	// 首页
+	(function initImg(){
+		var imgArr = $('#J_indexP1 img');
+		for(var i=0, len=imgArr.length; i<len; i++){
+				function foo(i){
+					return (function(){
+						$('#J_indexP1 img').eq(i).addClass('animate');
+					});
+				};
+				setTimeout(foo(i),150*i);
+		}
+	})();
 	$("#J_navToHome").on("tap", function() {
 		$("#J_navHover").animate({
 				top: 0
@@ -81,24 +133,38 @@ $(function() {
 		$("#J_navToList").data("isHover", false)
 	});
 	// 点击菜单
-	$("#J_listMenu").on("tap", function() {	
-		// $("#J_listPage").load($(this).attr("data-url"), function() {
-			$("#J_listMenu").animate({
-				left: '-203px',
+	$("#J_listMenu").on("tap", function() {
+		if($("#J_listMenu").hasClass('cur')){
+			return;
+		}
+		$("#J_listMenu").addClass('cur');
+		$("#J_listMenu a").css({
+			background: '#E43A3D url(img/category-selected.png) no-repeat'
+			// opacity: 0.2
+		});
+		// $("#J_listMenu a").animate({
+		// 	opacity: 1
+		// }, 1000);
+		$("#J_listSub").animate({
+				left: 262,
 			}, "fast", 'ease-in')
+	});
+	$("#J_listSub").on("tap", function() {
+			//
+			
 			$("#J_navToList").data("isHover", false);
+			$("#J_listSub").animate({
+				left: -700,
+			}, 'fast', function(){
+				$("#J_listMenu").animate({
+					left: '-203px',
+				}, "fast", 'ease-in');
+			});
 			$("#J_listPage").animate({
 				right: '0',
 			}, "fast", 'ease-in');
-		// })
-		
-	})
-
-	//  转场
-	// $("a").on("click", function() {
-
-	// })
-})
+	});
+});
 </script>
 </body>
 </html>

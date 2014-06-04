@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JDiPad版</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		.list{position: absolute; right: -1024px; top: 0; width: 964px; height: 747px;}
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<div class="side_bar">
+		<i id="J_navHover" class="nav_hover"></i>
+		<a href="javascript:;" id="J_navToHome" class="to_home">首页</a>
+		<a href="javascript:;" id="J_navToList" class="to_list">列表</a>
+		<a href="cart.html" id="J_navToCart" class="to_cart">购物车</a>
+	</div>
+	<div id="J_listMenu" class="list_meun" data-url="list.html"><a href="javascript:;"></a></div>
+	<div id="J_contentWraper" class="container">
+		<div id="J_scroller" class="index_page">
+			<img src="img/index.jpg" alt="">
+		</div>
+	</div>
+	<a id="J_listPage" class="list" href="detail.html"><img src="img/list.png" alt=""><img src="img/list.png" alt=""><img src="img/list.png" alt=""></a>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/iScroll.js"></script>
+<script>
+$(function() {
+	// 滚动
+	var myscroll=new iScroll("J_contentWraper",
+		{
+			hScrollbar:false, 
+			vScrollbar:false, 
+			bounce: false
+		});
+
+	// 首页
+	$("#J_navToHome").on("tap", function() {
+		$("#J_navHover").animate({
+				top: 0
+			}, "fast");
+		$("#J_listMenu").animate({
+		  left: '-203px',
+		}, "fast", 'ease-in');
+		$("#J_navToList").data("isHover", false);
+		$("#J_listPage").animate({
+			right: "-1024px"
+		}, "fast");
+	})
+	// 点击划出菜单
+	$("#J_navToList").on("tap", function() {
+		var newTop = $(this).css("top");
+		if(!$(this).data("isHover") || $(this).data("isHover") !== true){			
+			$("#J_navHover").animate({
+				top: newTop
+			}, "fast");
+			$("#J_listMenu").animate({
+				  left: '60px',
+				}, "fast", 'ease-out')
+			$(this).data("isHover", true)
+		} else {
+			$("#J_navHover").animate({
+				top: 0
+			}, "fast");
+			$("#J_listMenu").animate({
+				  left: '-203px',
+				}, "fast", 'ease-in')
+			$(this).data("isHover", false)
+		}
+	});
+	// 收起菜单
+	$("#J_contentWraper").on("tap", function() {
+		$("#J_navHover").animate({
+			top: 0
+		}, "fast");
+		$("#J_listMenu").animate({
+			  left: '-203px',
+			}, "fast", 'ease-in')
+		$("#J_navToList").data("isHover", false)
+	});
+	// 点击菜单
+	$("#J_listMenu").on("tap", function() {
+		$("#J_listPage").load($(this).attr("data-url"));
+		// $("#J_listPage").load($(this).attr("data-url"), function() {
+			// $("#J_listMenu").animate({
+			// 	left: '-203px',
+			// }, "fast", 'ease-in')
+			// $("#J_navToList").data("isHover", false);
+			// $("#J_listPage").animate({
+			// 	right: '0',
+			// }, "fast", 'ease-in');
+		// })
+		
+	})
+
+	//  转场
+	// $("a").on("click", function() {
+
+	// })
+})
+</script>
+</body>
+</html>

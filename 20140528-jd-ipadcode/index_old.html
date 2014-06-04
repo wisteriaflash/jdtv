@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JDiPad版</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		.list_page{position: absolute; right: -1024px; top: 0; width: 964px; height: 747px;}
+		.list_meun{left: 60px;}
+		.list_meun a{-webkit-backface-visibility: hidden;}
+		.list_sub{position: fixed; top: 0; left: -700px; z-index: 5;}
+		.index_page{position: relative;}
+		.index_p1{
+			position: absolute; left: 0; top: 0;}
+		.index_p1 .pic{
+			backface-visibility: hidden;
+			-webkit-transition: 1s ease-in-out;
+	    -moz-transition: 1s ease-in-out;
+	    -ms-transition: 1s ease-in-out;
+	    -o-transition: 1s ease-in-out;
+	    transition: 1s ease-in-out;
+	    -moz-transform-style: preserve-3d;
+	    -webkit-transform-style: preserve-3d;
+	    position: relative;
+  }
+  .index_p1 .front, .index_p1 .back{position: absolute; left: 0; top: 0; 
+  	-webkit-backface-visibility: hidden;}
+  .index_p1 .front{z-index: 2;}
+  .index_p1 .back{
+  	-moz-transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg); 
+  }
+    .index_p1 .animate{
+    	-moz-transform: rotateX(-180deg);
+    	-webkit-transform: rotateX(-180deg); 
+    }
+		.index_p1 .pic1{left: 767px; top: 171px; -webkit-transform-origin: 100% 191.5px; /* 高的一半 */}
+		.index_p1 .pic2{left: 573px; top: 0px; -webkit-transform-origin: 100% 85px; /* 高的一半 */}
+		.index_p1 .pic3{left: 191px; top: 363px; -webkit-transform-origin: 100% 77px; /* 高的一半 */}
+		.list_add{position: absolute; left: 0; top: 290px; z-index: 5;}
+		.list_add a{display: block; width: 25px; height: 25px; margin-left: 217px; float: left; text-indent: -99em;}
+		.list_add :nth-child(1){margin-left: 184px;}
+		.btn_add{position: absolute; left: 186px; top: 291px; width: 24px;}
+		.btn_add.active{
+			-webkit-transition: 0.5s ease-in-out;
+	    -moz-transition: 0.5s ease-in-out;
+	    -ms-transition: 0.5s ease-in-out;
+	    -o-transition: 0.5s ease-in-out;
+	    transition: 0.5s ease-in-out;-moz-transform: rotate(360deg);
+	    -webkit-transform: rotate(360deg);}
+	  /*nav*/
+	  .nav_hover{opacity: 1; background-color: #E43A3D; top: 65px;}
+	  .side_bar span{visibility: hidden;}
+	  .side_bar a i{background: url(img/nav_hover.png) 0 -1px no-repeat; background-size: 60px 250px; width: 60px; height: 65px; display: block; opacity: 0;}
+	  .side_bar .to_list i{background-position: -1px -65px; opacity: 1;}
+	  .side_bar .to_cart i{background-position: 0px -195px;}
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<div class="side_bar">
+		<i id="J_navHover" class="nav_hover"></i>
+		<a href="javascript:;" id="J_navToHome" class="to_home"><i></i><span>首页</span></a>
+		<a href="javascript:;" id="J_navToList" class="to_list"><i></i><span>列表</span></a>
+		<a href="cart.html" id="J_navToCart" class="to_cart"><i></i><span>购物车</span></a>
+	</div>
+	<!-- 类目 -->
+	<div class="list_con">
+		<div id="J_listMenu" class="list_meun" data-url="list.html">
+			<a href="javascript:;"></a>
+		</div>
+		<div id="J_listSub" class="list_sub">
+			<img src="img/category-sub.png" alt="">
+		</div>
+	</div>
+	<div id="J_contentWraper" class="container">
+		<div id="J_scroller" class="index_page">
+			<div id="J_indexP1" class="index_p1">
+				<div class="pic pic1">
+					<div class="front"><img width="198" src="img/index_1.jpg" alt=""></div>
+					<div class="back"><img width="198" src="img/index_1.jpg" alt=""></div>
+				</div>
+				<div class="pic pic2">
+					<div class="front"><img width="286" src="img/index_2.jpg" alt=""></div>
+					<div class="back"><img width="286" src="img/index_2.jpg" alt=""></div>
+				</div>
+				<div class="pic pic3">
+					<div class="front"><img width="189" src="img/index_3.jpg" alt=""></div>
+					<div class="back"><img width="189" src="img/index_3.jpg" alt=""></div>
+				</div>
+			</div>
+			<img src="img/index1.jpg" alt="">
+			<a id="J_toChannle" href="javascript:;"><img src="img/index2.jpg" alt=""></a>
+			<img src="img/index3.jpg" alt="">
+		</div>
+	</div>
+	<div id="J_listPage" class="list_page">
+		<a class="list" href="detail.html">
+			<img src="img/list.png" alt="">
+			<img src="img/list.png" alt="">
+			<img src="img/list.png" alt="">
+		</a>
+		<div id="J_listAdd" class="list_add">
+			<a href="#">+</a>
+		</div>
+		<img class="btn_add" src="img/btn_add.jpg" alt="">
+	</div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/iScroll.js"></script>
+<script>
+$(function() {
+	var _touchEvent = 'tap';
+	// 滚动
+	var myscroll=new iScroll("J_contentWraper",
+		{
+			hScrollbar:false, 
+			vScrollbar:false, 
+			bounce: false
+		});
+	// 首页
+	(function initImg(){
+		var imgArr = $('#J_indexP1 img');
+		for(var i=0, len=imgArr.length; i<len; i++){
+				function foo(i){
+					return (function(){
+						$('#J_indexP1 .pic').eq(i).addClass('animate');
+					});
+				};
+				setTimeout(foo(i),1000*i);
+		}
+	})();
+	$("#J_navToHome").on("tap", function() {
+		$("#J_navHover").animate({
+				top: 0
+			}, "fast");
+		$("#J_listMenu").animate({
+		  left: '-203px',
+		}, "fast", 'ease-in');
+		$("#J_navToList").data("isHover", false);
+		$("#J_listPage").animate({
+			right: "-1024px"
+		}, "fast");
+		//icon
+		$('.side_bar a i').hide();
+		$(this).find('i').fadeIn();
+	})
+	// 点击划出菜单
+	$("#J_navToList").on("tap", function() {
+		var newTop = $(this).css("top");
+		if(!$(this).data("isHover") || $(this).data("isHover") !== true){			
+			$("#J_navHover").animate({
+				top: newTop
+			}, "fast");
+			$("#J_listMenu").animate({
+				  left: '60px',
+				}, "fast", 'ease-out')
+			$(this).data("isHover", true);
+			//icon
+			$('.side_bar a i').hide();
+			$(this).find('i').fadeIn();
+		} else {
+			hideCategory();
+		}
+	});
+	// 收起菜单
+	function hideCategory(){
+		$('.side_bar a i').hide();
+		$("#J_navToHome i").fadeIn();
+		//
+		$("#J_navHover").animate({
+			top: 0
+		}, "fast");
+		$("#J_listMenu").animate({
+			  left: '-203px',
+			}, "fast", 'ease-in')
+		$("#J_navToList").data("isHover", false);
+	}
+	$("#J_contentWraper").on("tap", function() {
+		hideCategory();
+	});
+	$("#J_contentWraper").on('swipe', function(e){
+		hideCategory();
+	});
+	// 点击菜单
+	$("#J_listMenu").on("tap", function() {
+		if($("#J_listMenu").hasClass('cur')){
+			return;
+		}
+		$("#J_listMenu").addClass('cur');
+		$("#J_listMenu a").css({
+			background: '#E43A3D url(img/category-selected.png) no-repeat',
+			opacity: 0
+		});
+		$("#J_listMenu a").fadeIn();
+		// $("#J_listMenu a").animate({
+		// 	opacity: 1
+		// }, 1000);
+		$("#J_listSub").animate({
+				left: 262,
+			}, "fast", 'ease-in')
+	});
+	$("#J_listSub").on("tap", function() {
+			//
+			
+			$("#J_navToList").data("isHover", false);
+			$("#J_listSub").animate({
+				left: -700,
+			}, 'fast', function(){
+				$("#J_listMenu").animate({
+					left: '-203px',
+				}, "fast", 'ease-in');
+			});
+			$("#J_listPage").animate({
+				right: '0',
+			}, "fast", 'ease-in');
+	});
+	//list-add
+	$('#J_listAdd a').on(_touchEvent, function(e){
+		//clean
+		$('.btn_add').removeClass('active')
+		var index = $(this).index();
+		var thumbNode = $('<img src="img/item_thumb.jpg" />');
+		thumbNode.css({
+			position: 'absolute',
+			left: 16+index*240,
+			top: 73,
+			width: 200,
+			height: 200,
+			opacity: 1
+		});
+		$('#J_listPage').append(thumbNode);
+		thumbNode.animate({
+			left: 938,
+			top: 340,
+			width: 50,
+			height: 50,
+			opacity: 0
+		},500, function(){
+			thumbNode.remove();
+		});
+		//btn
+		$('.btn_add').addClass('active');
+	});
+	//channel
+	$('#J_toChannle').on(_touchEvent, function(e){
+
+	});
+});
+</script>
+</body>
+</html>

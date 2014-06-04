@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>京东iPad测试版</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="css/reset.css">
+	<link href="http://42.120.1.172/touch/test/jd_ipaddemo/v1/img/icon.png" rel="apple-touch-icon-precomposed">
+</head>
+<body>
+<!-- 提交订单 -->
+<div id="J_detailInfo" class="detail_info">
+	<a href="javascript:" id="J_backBtn" class="back_btn">返回</a>
+	<a href="javascript:" class="send_address detailEdit" data-id="J_sendAdd">送货地址</a>
+	<a href="javascript:" class="pay_type detailEdit" data-id="J_pay_type">支付方式</a>
+	<a href="javascript:" class="send_type detailEdit" data-id="J_sendType">配送方式</a>
+	<a href="javascript:" class="invoice_info detailEdit" data-id="J_invoiceInfo">发票信息</a>
+	<a href="javascript:" class="discount_info detailEdit" data-id="J_discountInfo">京东豆</a>
+	<a href="javascript:;" class="order_submit detailEdit" data-id="J_orderSubmit">提交订单</a>
+	<input id="J_remark" class="remark" />
+</div>
+<!-- 修改部分 -->
+<div class="detail_edit">
+	<a href="javascript:;" id="J_detailBack" class="back_btn back_btn2">返回</a>
+	<div id="J_sendAdd" class="detail_edit_info J_detailEditInfo "><img src="img/address.png" width="1024"  alt=""></div>
+	<div id="J_pay_type" class="detail_edit_info J_detailEditInfo"><img src="img/paytype.png" width="1024" alt=""></div>
+	<div id="J_sendType" class="detail_edit_info J_detailEditInfo"><img src="img/calendar.png" width="1024" alt=""></div>
+	<div id="J_invoiceInfo" class="detail_edit_info J_detailEditInfo"><img src="img/fapiao.png" width="1024" alt=""></div>
+	<div id="J_discountInfo" class="detail_edit_info J_detailEditInfo"><img src="img/discount.png" width="1024" alt=""></div>
+	<div id="J_orderSubmit" class="detail_edit_info J_detailEditInfo"><a href="javascript:" id="J_paySure"><img src="img/pay_confirm2.png" alt="" width="1024"></a></div>
+</div>
+<!-- 键盘 -->
+<div id="J_keyboard" class="keyboard"><img src="img/keyboard.png" alt=""></div>
+<!-- 遮罩 -->
+<div id="J_overLay" class="overlay"></div>
+<!-- 主体部分 -->
+<div class="wrap">
+	<!-- 侧边栏 -->
+	<div class="side_bar">
+		<i id="J_navHover" class="nav_hover"></i>
+		<a href="javascript:;" id="J_navToHome" class="to_home"><i></i><span>首页</span></a>
+		<a href="javascript:;" class="J_otherNav" style="position: absolute; left: 0; top: 130px; width: 60px; height: 65px;"></a>
+		<a href="javascript:;" id="J_navToList" class="to_list"><i></i><span>列表</span></a>
+		<a href="javascript:;" class="J_otherNav" style="position: absolute; left: 0; top: 255px; width: 60px; height: 65px;"></a>
+		<a href="javascript:;" onclick="function(){alert('开发中,敬请期待')}"></a>
+		<a href="javascript:;" id="J_navToCart" class="to_cart"><i></i><span>购物车</span></a>
+		<a href="javascript:;" id="J_navEmpty" style="position: absolute; left: 0; top: 330px; width: 60px; height: 420px;"></a>
+	</div>
+	<!-- 导航列表 -->
+	<div id="J_listMenu" class="list_meun"><a href="javascript:;"></a></div>
+	<!-- 二级 -->
+	<div id="J_listSub" class="list_sub"><img src="img/category-sub.png" width="760" alt=""></div>
+	<!-- 首页主体部分 -->
+	<div id="J_contentWraper" class="container">
+		<div id="J_scroller" class="index_page">
+			<div id="J_indexP1" class="index_p1">
+				<div class="pic pic1">
+					<div class="front"><img width="197" src="img/index_1.jpg" alt=""></div>
+					<div class="back"><img width="197" src="img/index_1b.png" alt=""></div>
+				</div>
+				<div class="pic pic2">
+					<div class="front"><img width="286" src="img/index_2.jpg" alt=""></div>
+					<div class="back"><img width="286" src="img/index_2b.png" alt=""></div>
+				</div>
+				<div class="pic pic3">
+					<div class="front"><img width="191" src="img/index_3.jpg" alt=""></div>
+					<div class="back"><img width="191" src="img/index_3b.png" alt=""></div>
+				</div>
+			</div>
+			<div id="J_indexP1Link" class="index_p1_link">
+				<a href="javascript:">149</a>
+				<a href="javascript:">156</a>
+				<a href="javascript:">49</a>
+				<a href="javascript:">156-2</a>
+				<a href="javascript:">156-3</a>
+			</div>
+			<a href="javascript:" id="J_Apple" style="position: absolute; right: 0; top:0; width: 105px; height: 170px;"></a>
+			<img id="J_indexP1Img" src="img/index1.jpg" width="964" alt="">
+			<a href="javascript:" id="J_channelLink"><img src="img/index2.jpg" width="964" alt=""></a>
+			<img src="img/index3.jpg" width="964" alt="">
+		</div>
+	</div>
+
+
+	<!-- 列表页 -->
+	<div id="J_listPage" class="list_page J_page">
+		<a class="list" href="javascript:" id="J_listToDetail">
+			<img src="img/list.png" width="964" alt="">
+			<img src="img/list.png" width="964" alt="">
+		</a>
+		<div id="J_listAdd" class="list_add">
+			<a href="#">+</a>
+		</div>
+		<img class="btn_add" src="img/btn_add.jpg" alt="">
+	</div>
+	<!-- 频道页 -->
+	<div id="J_channel" class="channel_page J_page">
+		<img src="img/channel.jpg" width="964" alt="">
+	</div>
+	<!-- 购物车页 -->
+	<div id="J_cartPage" class="cart_page J_page">
+		<div id="J_cartStep1" class="cart_page_container">
+		    <div class="top_bar J_cartTopBar">
+		      <img src="img/list_total.png" width="964" alt="" />
+		      <a href="javascript:;" id="J_btnBuy" class="btn_buy" data-url="order_confirm">结算</a>
+		    </div>
+		    <div class="cart_con">
+		      <div class="cart_item cart_list">
+		        <img src="img/car_list.png" width="964" alt="">
+		      </div>
+		    </div>
+		  </div>
+		<div id="J_cartStep2" class="cart_page_container cart_step2">
+		    <div class="top_bar J_cartTopBar">
+		      <img src="img/total.png" width="964" alt="" />
+		      <a href="javascript:;" id="J_btnConfirm" class="btn_buy btn_confirm" data="url">确认订单</a>
+		    </div>
+		    <div class="order_con">
+		      <div class="order_item">
+		        <div id="J_orderPicL" class="pic_l">
+		          <img src="img/info_init.png" width="596" alt="">
+		          <a href="javascript:;" id="J_consignee" class="consignee" data-img="info_consignee">收件人</a>
+		          <a href="javascript:;" id="J_expressDate" class="express_date" data-img="info_express">配送方式</a>
+		          <a href="javascript:;" id="J_invoice" class="invoice" data-img="info_invoice">发票信息</a>
+		        </div>
+		        <div class="pic_r">
+		          <div id="J_orderPicCon" class="pic_con">
+		            <img src="img/package.png" width="368" alt="">
+		            <img src="img/consignee.png" width="368" alt="">
+		            <img src="img/express_date.png" width="368" alt="">  
+		            <img src="img/invoice.png" width="368" alt="">
+		            <img class="pic_consignee_new" width="368" src="img/consignee_new.png" alt="">
+		            <a href="javascript:;" id="J_consigneeNew" class="consignee_new">新建收货人</a>
+		            <a href="javascript:;" id="J_consigneeSave" class="consignee_save">保存收货人信息</a>
+		            <a href="javascript:;" id="J_close" class="close">关闭</a>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+	</div>
+
+	<!-- detail -->
+	<div id="detailPage" class="page_detail J_page">
+		<i id="J_detailTag" class="detail_tag"></i>
+		<div id="J_leftListWrap" class="left_list">
+			<div class="left_list_in">
+				<span class="J_leftList left_list_tab tab_on"><img src="img/tab5.png" alt=""></span>
+				<span class="J_leftList left_list_tab"><img src="img/tab2.png" alt=""></span>
+				<span class="J_leftList left_list_tab"><img src="img/tab3.png" alt=""></span>
+				<span class="J_leftList left_list_tab"><img src="img/tab4.png" alt=""></span>
+				<!-- <span class="J_leftList left_list_tab"><img src="img/tab1.png" alt=""></span>
+				<span class="J_leftList left_list_tab"><img src="img/tab1.png" alt=""></span> -->
+				<i></i>
+			</div>
+		</div>
+		<div class="list_main">
+			<div>
+				<a href="javascript:" class="add_to_cart1 J_addCart">加入购物车</a>
+				<a href="javascript:" class="easy_buy1 J_easyBuy">轻松购</a>
+				<a href="javascript:" class="add_to_cart2 J_addCart">加入购物车</a>
+				<div class="img_switch">
+					<ul id="J_imgUl" class="img_ul">
+						<li><img src="img/pic1.jpg" width="220" alt=""></li>
+						<li class="current"><img src="img/pic2.jpg" width="220" alt=""></li>
+						<li><img src="img/pic3.jpg" width="220" alt=""></li>
+					</ul>
+				</div>
+				<div class="detailImg" style="background-color: #FFF;"><img src="img/detail1.png" width="800" alt=""><img src="img/detail2.png" width="800" alt=""></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/iScroll.js"></script>
+<script src="js/pad.js"></script>
+<script>
+
+pageFun.init();
+
+</script>
+</body>
+</html>
